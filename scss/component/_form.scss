@@ -1,0 +1,90 @@
+@use "../abstracts/index" as *;
+
+.cols {
+    display: flex;
+
+    .item {
+        width: 100%;
+    }
+}
+
+.form-comment {
+    .title {
+        margin-bottom: 26px;
+    }
+
+    input {
+        border-color: var(--line-2) !important;
+        padding: 22px 30px !important;
+        height: 70px;
+
+        &::placeholder {
+            color: var(--text-color-2);
+        }
+    }
+
+    textarea {
+        height: 180px;
+        border-color: var(--line-2) !important;
+        padding: 22px 30px !important;
+
+        &::placeholder {
+            color: var(--text-color-2);
+        }
+    }
+}
+
+.form-search-siderbar {
+    width: 100%;
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 60px;
+        padding: 13px 25px !important;
+        border-color: var(--line-2) !important;
+
+        &::placeholder {
+            color: var(--white);
+        }
+    }
+
+    .tf-btn-search {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+
+        i {
+            font-size: 20px;
+            color: var(--primary);
+        }
+    }
+}
+
+.form-newsletter {
+    fieldset {
+        input {
+            border-color: var(--text-color-2);
+            padding: 24px 30px;
+            height: 60px;
+            &::placeholder {
+                color: var(--text-color-3);
+            }
+        }
+    }
+    .button-submit {
+        position: absolute;
+        right: 2px !important;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px 30px;
+        i{
+            font-size: 20px;
+            color: var(--main-color);
+        }
+    }
+    .subscribe-content {
+        position: relative;
+    }
+}

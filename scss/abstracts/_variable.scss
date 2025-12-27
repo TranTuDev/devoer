@@ -1,0 +1,69 @@
+$font-main: "Arimo", sans-serif;
+$font-2: "Nunito", sans-serif;
+$font-3: "Manrope", sans-serif;
+$font-4: "Libre Franklin", sans-serif;
+$font-5: "Livvic", sans-serif;
+$font-6: "Mada", sans-serif;
+
+
+
+$fontIcon: "icomoon";
+
+:root {
+    //main color
+    --main-color: #FEE100;
+    --primary-1: #598216;
+    --primary-2: #F6C206;
+    //text color
+    --text-color-1: #141C21;
+    --text-color-2: #3D3D3D;
+    --text-color-3: #8B8B8B;
+    --text-color-4: #D1D1D1;
+    --dark-5: #171717;
+    --dark-6: #1F1E17;
+    --dark-7: #333334;
+    --text-color-5: #CCCCCC;
+    --text-color-6: #000000;
+
+    --white-1: #F6F6F6;
+    --white-2: #FFFFFF;
+
+    //natural color
+    --white-3: #F8F8F8;
+    --white-4: #F4F9FD;
+    --natural-1: #D9D9D9;
+    --natural-2: #F2F0EC;
+
+    // line
+    --line-1: rgba(255, 255, 255, 0.1);
+    --line-2: rgba(20, 28, 33, 0.1);
+    --line-3: rgba(255, 255, 255, 0.2);
+    --line-4: rgba(0, 0, 0, 0.1);
+    --line-5: rgba(255, 255, 255, 0.1);
+    --line-6: rgba(31, 30, 23, 0.1);
+    --line-7: rgba(20, 28, 33, 0.6); //60%
+    --line-8: rgba(20, 28, 33, 0.72); //72%
+    --line-9: rgba(255, 255, 255, 0.05);
+    --line-10: rgba(0, 0, 0, 0.08);
+    --line-11: rgba(0, 0, 0, 0.05);
+    --line-12: rgba(0, 0, 0, 0.8) 0%;
+    --line-13: rgba(0, 0, 0, 0.6) 100%;
+    --line-14: rgba(254, 225, 0, 0.9);
+    --line-15: rgba(20, 28, 33, 0.8);
+    --line-70: rgba(20, 28, 33, 0.7);
+    --line-100: rgba(20, 28, 33, 1);
+    --line-16: rgba(255, 255, 255, 0.3);
+    --line-17: rgba(20, 28, 33, 0.1);
+    --line-18: rgba(20, 28, 33, 0);
+    --line-19: rgba(0, 0, 0, 0.77);
+    --line-20: rgba(20, 28, 33, 0.4);
+    --line-21: rgba(0, 0, 0, 0.7);
+    --line-22: rgba(254, 225, 0, 0.2);
+    --line-23: rgba(0, 0, 0, 0.86);
+    --line-24: rgba(20, 28, 33, 0.24);
+    --line-25: rgba(0, 0, 0, 0.89);
+    --line-26: rgba(255, 255, 255, 0.3);
+    --black: #000000;
+    //rgba
+
+}
