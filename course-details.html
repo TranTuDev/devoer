@@ -140,6 +140,7 @@
                         <a class="nav-search nav-item-icon nav-modal-item" href="#search" data-bs-toggle="modal">
                             <i class="icon-loupe"></i>
                         </a>
+                        <span class="header-line"></span>
                         <a class="nav-megamenu nav-item-icon nav-modal-item" href="#toggle" data-bs-toggle="modal">
                             <i class="icon-toggle"></i>
                         </a>
@@ -202,7 +203,7 @@
                             <span class="icon-close close-filter"></span>
                         </div>
                         <div class="sidebar-item sidebar-content sidebar-course-feature mb-30">
-                               
+
                             <ul class="list">
 
                                 <li class="item">
@@ -212,7 +213,7 @@
                                         <p>5 Hours</p>
                                     </div>
                                 </li>
-                              
+
                             </ul>
                         </div>
                         <div class="wg-help ">
@@ -398,17 +399,31 @@
         <!-- /footer -->
 
 
+        <!-- Popup -->
+        <div class="video-popup" id="videoPopup">
+            <div class="video-popup-inner">
+                <iframe id="videoFrame" src="" allow="autoplay" allowfullscreen></iframe>
+                <button class="video-popup-close" id="videoClose">&times;</button>
+            </div>
+        </div>
+        <!-- Popup -->
+
         <!-- search -->
         <div class="modal fade popup-search" id="search">
-            <div class="modal-dialog modal-dialog-centered popup-search-dialog">
-
+            <div class="modal-dialog  popup-search-dialog">
                 <div class="modal-content popup-search-content">
                     <button class="icon-close" data-bs-dismiss="modal"></button>
 
-
                     <div class="popup-body">
-                        <input type="text" class="form-control" placeholder="Search...">
+                        <div class="input-search">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <a href="#" class="search-btn">
+                                <i class="icon-loupe"></i>
+                            </a>
+                        </div>
                     </div>
+
+
 
                 </div>
             </div>
@@ -565,7 +580,12 @@
             </div>
         </div>
         <!-- /mobile menu -->
-
+        <!-- scroll Top -->
+        <button id="goTop">
+            <span class="border-progress"></span>
+            <span class="icon icon-up"></span>
+        </button>
+        <!-- /scroll Top -->
 
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>

@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="style.css">
-</head>
 
 <body>
     <div class="wrapper">
@@ -81,7 +80,7 @@
         <header id="header" class="header-default" style="top: unset;">
             <div class="header-inner">
                 <div class="header-left d-flex flex-grow-1">
-                    <div class="logo-header style-1">
+                    <div class="logo-header ">
                         <a href="#">
                             <img src="./images/logo/logo.svg" alt="">
                         </a>
@@ -93,9 +92,9 @@
                                 class="item-link"><span>HOME</span></a>
                             <div class="sub-menu">
                                 <ul class="menu-list">
-                                  <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="index.html">Home 1</a></li>
                                     <li><a href="home-2.html">Home 2</a></li>
-                                    <li><a href="#">Home 3</a></li>
+                                    <li><a href="home-3.html">Home 3</a></li>
 
                                 </ul>
                             </div>
@@ -104,9 +103,9 @@
                                 class="item-link "><span>PAGES</span></a>
                             <div class="sub-menu">
                                 <ul class="menu-list">
-                                    <li><a href="#">About US</a></li>
-                                    <li><a href="#">Course</a></li>
-                                    <li><a href="#">Course Details</a></li>
+                                    <li><a href="about-us.html">About US</a></li>
+                                    <li><a href="course.html">Course</a></li>
+                                    <li><a href="course-details.html">Course Details</a></li>
                                     <li><a href="instructor.html">Instructor</a></li>
                                     <li><a href="pricing-plan.html">Pricing</a></li>
                                     <li><a href="faq.html">FAQ</a></li>
@@ -117,7 +116,7 @@
                                 class="item-link "><span>SERVICES</span></a>
                             <div class="sub-menu">
                                 <ul class="menu-list">
-                                    <li><a href="#">Services</a></li>
+                                    <li><a href="services.html">Services</a></li>
                                     <li><a href="service-details.html">Services Details</a></li>
                                 </ul>
                             </div>
@@ -138,24 +137,23 @@
                 </nav>
                 <div class="header-right d-flex flex-grow-1">
                     <div class="header-icons nav-icon d-flex align-items-center gap-50">
-                        <a class="nav-search nav-item-icon" href="#search" data-bs-toggle="modal"
-                            class="nav-modal-item">
+                        <a class="nav-search nav-item-icon nav-modal-item" href="#search" data-bs-toggle="modal">
                             <i class="icon-loupe"></i>
                         </a>
-                        <a class="nav-megamenu nav-item-icon" href="#toggle" data-bs-toggle="modal"
-                            class="nav-modal-item">
+                        <span class="header-line"></span>
+                        <a class="nav-megamenu nav-item-icon nav-modal-item" href="#toggle" data-bs-toggle="modal">
                             <i class="icon-toggle"></i>
                         </a>
-                        <div class="mobile-button nav-item d-xl-none">
-                            <a href="#canvasMobile1" data-bs-toggle="offcanvas">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                        </div>
+
+                        <a class="mobile-button d-xl-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#mobileMenu">
+                            <span></span><span></span><span></span>
+                        </a>
+
+
                     </div>
                     <a href="#" class="tf-btn header-btn">
-                        GET CONSULTING
+                        <span>GET CONSULTING</span>
                         <i class="icon-next"></i>
                     </a>
                 </div>
@@ -742,10 +740,197 @@
 
         <div class="overlay-filter" id="overlay-filter"></div>
     </div>
+    <!-- Popup -->
+    <div class="video-popup" id="videoPopup">
+        <div class="video-popup-inner">
+            <iframe id="videoFrame" src="" allow="autoplay" allowfullscreen></iframe>
+            <button class="video-popup-close" id="videoClose">&times;</button>
+        </div>
+    </div>
+    <!-- Popup -->
 
-    <script src="js/bootstrap.min.js"></script>
+    <!-- search -->
+    <div class="modal fade popup-search" id="search">
+        <div class="modal-dialog  popup-search-dialog">
+            <div class="modal-content popup-search-content">
+                <button class="icon-close" data-bs-dismiss="modal"></button>
+
+                <div class="popup-body">
+                    <div class="input-search">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <a href="#" class="search-btn">
+                            <i class="icon-loupe"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- /search -->
+
+    <!-- mobile menu -->
+    <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
+
+        <div class="offcanvas-header">
+            <h5>Menu</h5>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="mb-canvas-content">
+            <div class="mb-body">
+
+                <div class="mb-content-top">
+                    <ul class="nav-ul-mb accordion" id="accordionMobile">
+                        <li class="nav-mb-item accordion-item">
+                            <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#accHome" aria-expanded="false">
+                                HOME
+                                <i class="icon-chevron-thin-down"></i>
+                            </a>
+                            <div id="accHome" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+                                <div class="accordion-body px-0">
+                                    <ul class="sub-nav-menu">
+                                        <li><a href="index.html" class="sub-nav-link">Home 1</a></li>
+                                        <li><a href="home-2.html" class="sub-nav-link">Home 2</a></li>
+                                        <li><a href="home-3.html" class="sub-nav-link">Home 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-mb-item accordion-item">
+
+                            <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#accPages"
+                                aria-expanded="false">
+                                PAGES
+                                <i class="icon-chevron-thin-down"></i>
+                            </a>
+
+
+                            <div id="accPages" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+                                <div class="accordion-body px-0">
+                                    <ul class="sub-nav-menu">
+                                        <li><a href="about-us.html" class="sub-nav-link">About Us</a></li>
+                                        <li><a href="course.html" class="sub-nav-link">Course</a></li>
+                                        <li><a href="course-details.html" class="sub-nav-link">Course Details</a>
+                                        </li>
+                                        <li><a href="instructor.html" class="sub-nav-link">Instructor</a></li>
+                                        <li><a href="pricing-plan.html" class="sub-nav-link">Pricing</a></li>
+                                        <li><a href="faq.html" class="sub-nav-link">FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-mb-item accordion-item">
+
+                            <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#accServices"
+                                aria-expanded="false">
+                                SERVICES
+                                <i class="icon-chevron-thin-down"></i>
+                            </a>
+
+
+                            <div id="accServices" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+                                <div class="accordion-body px-0">
+                                    <ul class="sub-nav-menu">
+                                        <li><a href="services.html" class="sub-nav-link">Services </a></li>
+                                        <li><a href="service-details.html" class="sub-nav-link">Services Details</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-mb-item accordion-item">
+
+                            <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#accNews" aria-expanded="false">
+                                NEWS
+                                <i class="icon-chevron-thin-down"></i>
+                            </a>
+
+
+                            <div id="accNews" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
+                                <div class="accordion-body px-0">
+                                    <ul class="sub-nav-menu">
+                                        <li><a href="blog-standard.html" class="sub-nav-link">Blog Standard</a></li>
+                                        <li><a href="blog-details.html" class="sub-nav-link">Blog Details</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-mb-item">
+                            <a href="contact-us.html"
+                                class=" accordion-button d-flex justify-content-between align-items-center">
+                                CONTRACT
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="mb-other-content">
+                    <div class="group-icon">
+                        <a href="#login" data-bs-toggle="offcanvas" class="site-nav-icon text-paragraph-2">
+                            <i class="icon-profile"></i>
+                            Login
+                        </a>
+                        <a href="" data-bs-toggle="offcanvas" class="site-nav-icon text-paragraph-2">
+                            <i class="icon-profile"></i>
+                            Register
+                        </a>
+                    </div>
+                    <div class="mb-notice">
+                        <a href="contact-us.html" class="text-need text-paragraph-2">Need Help?</a>
+                    </div>
+                    <div class="mb-contact text-paragraph-2">
+                        <p>Address: FWF4+Q3X Tobaccoville, Virginia, USA</p>
+                    </div>
+                    <ul class="mb-info text-paragraph-2">
+                        <li>
+                            Email:
+                            <b class="fw-medium ">info.help@gmail.com</b>
+                        </li>
+                        <li>
+                            Phone:
+                            <b class="fw-medium">+123 ( 458 ) 896 895</b>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="mb-bottom">
+            <div class="bottom-bar-language">
+                <div class="tf-currencies">
+
+                </div>
+                <div class="tf-languages">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /mobile menu -->
+    <!-- scroll Top -->
+    <button id="goTop">
+        <span class="border-progress"></span>
+        <span class="icon icon-up"></span>
+    </button>
+    <!-- /scroll Top -->
+
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/main.js"></script>
 </body>
 

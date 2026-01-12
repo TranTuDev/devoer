@@ -40,4 +40,29 @@ $(document).ready(function () {
 
 
 
+$(function () {
+    const $goTop = $("#goTop");
+
+    $(window).on("scroll", function () {
+        const scrollTop = $(this).scrollTop();
+        const docHeight = $(document).height() - $(window).height();
+        const progress = (scrollTop / docHeight) * 360;
+
+        if (scrollTop > 300) {
+            $goTop.addClass("show");
+        } else {
+            $goTop.removeClass("show");
+        }
+
+        $goTop.find(".border-progress")
+              .css("--progress-angle", progress + "deg");
+    });
+
+    $goTop.on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    });
+});
+
+
+
 
