@@ -162,3 +162,27 @@ popup.addEventListener('click', e => {
 });
 
 
+const serviceSlider = new Swiper('.course-details-slider', {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: false,
+  navigation: {
+    nextEl: '.sw-next',
+    prevEl: '.sw-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    1200: {
+      slidesPerView: 2,
+      slidesPerGroup: 3,
+    }
+  }
+});

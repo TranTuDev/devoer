@@ -157,10 +157,14 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    height: calc(101vh - 150px);
+    height: calc(102vh - 150px);
 
     &.style-2 {
-        height: 100vh;
+        height: 95vh;
+    }
+
+    &.style-3 {
+        height: calc(101vh - 150px);
     }
 
 }
@@ -415,6 +419,7 @@
 
 
 }
+
 .slider-wrap.style-4 {
     position: relative;
     height: 100%;
@@ -442,7 +447,7 @@
     .box-content {
         position: absolute;
         top: 50%;
-        transform: translateY(-35%) !important;
+        transform: translateY(-37%) !important;
         left: 0;
         right: 0;
 
@@ -483,6 +488,7 @@
 
 
 }
+
 // Desktop với sidebar (≥1200px)
 @media (min-width: 1200px) {
     .slider-wrap.style-2 {
@@ -712,3 +718,38 @@
 //         }
 //     }
 // }
+
+
+
+.slider-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-images {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.slider-images img {
+    position: absolute;
+   
+    transform: translateX(100px);
+    transition: all 0.8s ease;
+}
+
+.slider-images .img-car {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.slider-images .img-driver {
+    right: 120px;
+    bottom: 80px;
+    z-index: 1;
+}

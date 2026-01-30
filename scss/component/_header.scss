@@ -49,6 +49,7 @@
 
         .header-right {
             padding-right: 0px;
+            gap: 75px;
 
         }
     }
@@ -57,10 +58,8 @@
 
 .header-right {
 
-
     &.style-1 {
         gap: 70px;
-
 
         .header-line {
             display: block;
@@ -80,9 +79,31 @@
             margin-right: 60px;
         }
 
-        .header-icons {
-            gap: 0 !important;
+
+    }
+}
+
+@media (max-width: 1600px) {
+    .header-right {
+        &.style-1 {
+            padding-right: 5px !important;
         }
+
+
+
+    }
+
+    .box-nav-menu.style-1 {
+        gap: 30px !important;
+        padding-right: 10px !important;
+    }
+
+    .header-line {
+        display: none !important;
+    }
+
+    .header-icons {
+        gap: 25px !important;
     }
 }
 
@@ -98,7 +119,7 @@
 
         .header-right {
             gap: 20px;
-            padding-right: 0;
+            padding-right: 0 !important;
         }
     }
 
@@ -123,26 +144,39 @@
     }
 }
 
+@media (max-width: 1199px) {
+
+    .header-icons {
+        padding-right: 15px;
+
+        .icon-loupe {
+            padding-right: 0px !important;
+        }
+
+
+    }
+}
+
 .header-icons {
     &.style-1 {
         a {
             .icon-loupe {
                 color: var(--white-1);
             }
+
             .icon-toggle {
                 color: var(--white-1);
             }
         }
     }
 }
-.header-icons {
+
+
+
+.mobile-button {
     &.style-1 {
-        .mobile-button {
-            a {
-                span {
-                    background-color: var(--white-1);
-                }
-            }
+        span {
+            background-color: var(--white-1);
         }
     }
 }
@@ -200,12 +234,18 @@
         gap: 65px;
         padding-right: 25px;
     }
+
+    &.style-2 {
+        gap: 65px;
+        padding-left: 80px;
+        padding-right: 0px;
+    }
 }
 
 //topbar
 .tf-topbar {
     background-color: var(--text-color-1);
-    padding: 10px 0px;
+    padding: 9px 0px;
 
     .topbar-wraper {
         display: flex;
@@ -257,7 +297,7 @@
     ul {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 
     .social-item {
@@ -471,6 +511,15 @@
         &:hover {
             color: var(--main-color);
         }
+
+        &.style-1 {
+            color: var(--white-2);
+
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+
     }
 
     .nav-search {
@@ -484,6 +533,7 @@
             font-size: 40px;
         }
     }
+
 }
 
 .mobile-button {

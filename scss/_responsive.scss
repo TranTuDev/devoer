@@ -1,13 +1,12 @@
 @use "./abstracts/index" as *;
-
-
-/* ============================================================
-   XXL: max-width 1600px
-   ============================================================ */
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
     .logo-header {
         max-width: 200px !important;
         padding: 28px 30px;
+
+        &.style-3 {
+            padding: 35px 30px 35px 30px !important;
+        }
     }
 
     .box-nav-menu {
@@ -27,6 +26,74 @@
 
     .header-right {
         gap: 30px !important;
+        padding-right: 75px !important;
+
+        &.style-2 {
+            padding-right: 0px !important;
+            gap: 20px !important;
+        }
+    }
+
+    .box-nav-menu {
+        &.style-2 {
+            padding-left: 0px !important;
+
+        }
+    }
+
+    .tf-btn {
+        &.style-1 {
+            padding: 40px 40px !important;
+        }
+    }
+
+}
+
+
+/* ============================================================
+   XXL: max-width 1600px
+   ============================================================ */
+@media (max-width: 1600px) {
+    // .logo-header {
+    //     max-width: 200px !important;
+    //     padding: 28px 30px;
+    // }
+
+    // .box-nav-menu {
+    //     padding-right: 0;
+    //     gap: 30px;
+    // }
+
+    // .header-default {
+    //     .flex-grow-1 {
+    //         flex-grow: unset !important;
+    //     }
+    // }
+
+    // .nav-icon {
+    //     gap: 30px;
+    // }
+
+    // .header-right {
+    //     gap: 30px !important;
+    // }
+    .start-course {
+        .start-course-content {
+            padding-left: 100px !important;
+            padding-right: 50px !important;
+            width: 60% !important;
+        }
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .testimonial-video {
+        .video-play-button {
+            &.style-1 {
+                margin-right: 35px !important;
+            }
+        }
     }
 }
 
@@ -44,6 +111,52 @@
 }
 
 @media (max-width: 1199px) {
+    .contact-us {
+        .contact-us-right {
+            margin-top: 15px;
+            margin-left: 0px !important;
+        }
+
+        .contact-us-left {
+            margin-bottom: 15px;
+            margin-right: 0px !important;
+        }
+
+    }
+
+    .driving-safety {
+        .image-banner {
+            margin-left: 0px !important;
+
+            .image-1 {
+                top: 150px !important;
+                left: 150px !important;
+            }
+        }
+    }
+
+    .about-us-section {
+        .image-banner {
+            .image-2 {
+                max-width: 100% !important;
+
+                height: 600px;
+            }
+        }
+    }
+
+    .about-us-section {
+        align-items: center;
+
+        &.style-3 {
+
+            .image-2 {
+                max-width: 100% !important;
+                margin-right: auto;
+            }
+        }
+
+    }
 
 
     .blog-post {
@@ -88,15 +201,10 @@
 
 
 
-    .contact-us-left {
-        margin-bottom: 15px;
-    }
 
 
 
-    .contact-us-right {
-        margin-top: 15px;
-    }
+
 
     .box-navigation {
         display: none;
@@ -167,6 +275,78 @@
 
 @media (max-width: 991px) {
 
+    .start-course {
+        .start-course-content {
+            padding-left: 100px !important;
+            padding-right: 20px !important;
+            width: 60% !important;
+        }
+    }
+
+    .about-us-section {
+        .image-banner {
+            .image-2 {
+                margin-bottom: 50px;
+
+                height: 500px;
+            }
+        }
+    }
+
+    .wg-community {
+        margin-bottom: 50px;
+    }
+
+    .about-us-section {
+        &.style-3 {
+
+            .image-2 {
+                max-width: 100% !important;
+
+                height: 500px;
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+
+
+    .service-grid {
+        .service-card {
+            &.style-3 {
+                padding: 40px 25px !important
+            }
+        }
+    }
+
+    .blog-post-1 {
+        height: 500px;
+        margin-bottom: 50px;
+    }
+
+
+
+    .wg-course-details {
+        max-width: 100%;
+    }
+
+
+    .about-details-content {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .about-us-section {
+
+        .image-banner {
+            .image-2 {
+                max-width: 0px;
+                margin-right: auto;
+            }
+        }
+
+    }
+
     .develop-skills-content {
         display: block !important;
     }
@@ -203,7 +383,7 @@
         display: block !important;
 
         .about-info {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             width: 100% !important;
             text-align: center;
         }
@@ -301,7 +481,7 @@
 
     .about-main-image {
         img {
-            height: 350px !important;
+            height: 500px !important;
         }
 
     }
@@ -516,21 +696,7 @@
         }
     }
 
-    .testimonial-section {
-        .img-video {
-            height: 420px !important;
-        }
 
-        .testimonial-video {
-            padding-top: 80px !important;
-        }
-
-        .wg-testimonial {
-
-            margin-top: -100px !important;
-
-        }
-    }
 
     .swiper-testimonial-all {
         padding: 30px 15px !important;
@@ -552,6 +718,13 @@
 
 
 @media (max-width: 767px) {
+    .start-course {
+        .start-course-content {
+            padding-left: 100px !important;
+            padding-right: 20px !important;
+            width: 65% !important;
+        }
+    }
 
     .header-inner {
         height: 70px !important;
@@ -662,9 +835,7 @@
             height: 360px;
         }
 
-        .wg-testimonial {
-            margin-top: 40px;
-        }
+
     }
 
     .swiper-testimonial-all {
@@ -694,7 +865,29 @@
 
 /* MOBILE: ≤575px */
 @media (max-width: 575px) {
+    .start-course {
+        .start-course-content {
+            padding-left: 100px !important;
+            padding-right: 15px !important;
+            width: 85% !important;
+        }
+    }
 
+
+    .about-main-image {
+        img {
+            height: auto !important;
+        }
+
+    }
+
+    .about-us-section {
+        .image-banner {
+            .image-2 {
+                height: auto;
+            }
+        }
+    }
 
     .founder-signature-block {
         flex-direction: column !important;
@@ -704,8 +897,6 @@
     }
 
     .about-details-content {
-
-
         .story-media {
             img {
                 height: 300px !important;
@@ -733,11 +924,27 @@
 }
 
 @media (max-width: 575px) {
+
+    .about-us-section {
+        &.style-3 {
+            .image-2 {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+        }
+    }
+
+    .blog-post-1 {
+        height: 400px !important;
+        margin-bottom: 50px;
+    }
+
     .about-content {
         display: block !important;
 
         .about-info {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             width: 100% !important;
 
         }
@@ -1131,9 +1338,7 @@
         height: 60px;
     }
 
-    .wg-testimonial {
-        margin-top: 40px;
-    }
+
 
     .swiper-testimonial-all {
         grid-template-columns: 1fr !important;

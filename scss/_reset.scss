@@ -368,6 +368,13 @@ h2 {
 		line-height: 60px;
 	}
 
+	&.size-3 {
+		font-size: 45px;
+		line-height: 60px;
+		font-weight: 600;
+	}
+
+
 }
 
 h3 {
@@ -606,9 +613,14 @@ a {
 .pd-120-bt {
 	padding-bottom: 120px;
 }
-
+.pd-160-bt {
+	padding-bottom: 160px;
+}
 .pd-120-top {
 	padding-top: 120px;
+}
+.pd-160-top {
+	padding-top: 160px;
 }
 
 // margin
@@ -796,7 +808,7 @@ a {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.3s ease;
-	
+
 	z-index: 1000;
 
 	.border-progress {
@@ -1058,7 +1070,9 @@ a {
 }
 
 // fw
-
+.fw-4 {
+	font-weight: 400;
+}
 .fw-5 {
 	font-weight: 500;
 }
@@ -1066,10 +1080,18 @@ a {
 .fw-6 {
 	font-weight: 600 !important;
 }
+.fw-7 {
+	font-weight: 700;
+}
+
 
 // gap
 .gap-20 {
 	gap: 20px;
+}
+
+.gap-25 {
+	gap: 25px;
 }
 
 .gap-30 {
