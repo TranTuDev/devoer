@@ -315,7 +315,7 @@
     }
 
     &.style-2 {
-        padding-bottom: 20px !important;
+        padding-bottom: 30px !important;
         border-bottom: 1px solid var(--line-2);
 
         .price-value {
@@ -1349,6 +1349,7 @@
 //===================widget-develop-skills==============//
 
 .develop-skills {
+    margin-top: -60px;
     background-color: var(--text-color-1);
 
     .develop-skills-content {
@@ -1695,15 +1696,17 @@
 .wg-video-left {
     position: relative;
     padding: 86px 70px;
-
+    overflow: hidden;
 
     img {
-        width: 100%;
         object-fit: cover;
-        height: auto;
-        inset: 0;
-        display: block;
+
+        width: 100%;
         position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+
 
     }
 
@@ -1712,8 +1715,6 @@
         inset: 0;
         background-color: var(--line-14);
         z-index: 1;
-        width: 100%;
-        height: auto;
     }
 
     .wg-video-text {
@@ -1731,9 +1732,10 @@
 .wg-video-right {
     position: relative;
     margin-left: 20px;
+    height: 100%;
 
     img {
-        height: auto;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         display: block;
@@ -1941,27 +1943,66 @@
 
 }
 
+.course {
+    .heading-section {
+        margin-bottom: 70px;
+    }
+
+}
+
 .course-content {
-    // overflow: hidden;
-    width: 100%;
-    max-width: 370px;
     position: relative;
 
     .course-header {
         padding: 40px 40px 115px;
-        // position: absolute;
-        // z-index: 1;
-        border: 1px solid red;
 
+        border: 1px solid var(--line-20);
+
+        h4 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            transition: all 0.3s ease;
+            background-color: var(--text-color-1);
+
+            h4 {
+                color: var(--white-2);
+            }
+
+            p {
+                color: var(--white-2);
+            }
+
+            b {
+                color: var(--white-2);
+            }
+
+            .currency {
+                color: var(--white-2);
+            }
+
+            .prices {
+                color: var(--white-2);
+            }
+
+            .per {
+                color: var(--white-2);
+            }
+        }
     }
 }
 
 .course-img {
-    position: absolute;
-    bottom: -90px;
-    left: 0;
+
+    margin-top: -100px;
+
     width: 100%;
-    clip-path: polygon(0 21.5%, 100% 62%, 100% 100%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0.0%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
 
     img {
         height: auto;
@@ -2007,79 +2048,93 @@
 //===================================widget-update===========================//
 
 //===================widget-since==============//
-.about-content {
+
+.about-metrics-decor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-info {
+
+
+    .info-title {
+        color: var(--text-color-1);
+        margin-bottom: 20px;
+        font-family: $font-6;
+    }
+
+    .info-description {
+        color: var(--text-color-2);
+        margin-bottom: 35px;
+        font-family: $font-2;
+    }
+}
+
+.line-gradient {
+    display: block;
+    height: 226px;
+    width: 1px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0));
+}
+
+.about-metrics-media::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 226px;
+    width: 1px;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0));
+}
+
+.about-metrics-media {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
+    position: relative;
+    padding-left: 50px;
 
-    .about-info {
-        width: 49%;
+    // .metrics-block {
+    //     width: 37%;
+    // }
 
-        .info-title {
-            color: var(--text-color-1);
-            margin-bottom: 20px;
-            font-family: $font-6;
-        }
-
-        .info-description {
-            color: var(--text-color-2);
-            margin-bottom: 35px;
-            font-family: $font-2;
-        }
+    .metric-text {
+        font-family: $font-4;
+        color: var(--text-color-2);
+        margin-top: 20px;
     }
 
-    .line-gradient {
-        display: block;
-        height: 226px;
-        width: 1px;
-        background: linear-gradient(to bottom,
-                rgba(0, 0, 0, 0),
-                rgba(0, 0, 0, 0.3),
-                rgba(0, 0, 0, 0));
+    .metric-number {
+        color: var(--text-color-1);
     }
 
-    .about-metrics-media {
-        display: flex;
-        align-items: center;
-        gap: 35px;
+    .media-image-wrapper {
+        position: relative;
+        line-height: 0;
 
-        .metrics-block {
-            width: 37%;
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
-        .metric-text {
-            font-family: $font-4;
-            color: var(--text-color-2);
-            margin-top: 20px;
-        }
-
-        .metric-number {
-            color: var(--text-color-1);
-        }
-
-        .media-image-wrapper {
-
-            position: relative;
-            line-height: 0;
-
-            img {
-                width: 100%;
-                height: auto;
-
-                object-fit: cover;
-            }
-
-            .image-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: var(--line-8);
-            }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--line-8);
         }
     }
 }
+
 
 //===================widget-heading-section==============//
 .heading-section {
@@ -2939,20 +2994,6 @@
 
 
 
-@media (max-width: 767px) {
-    .stat-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-grid__item:nth-child(odd) {
-        border-right: none;
-    }
-
-    .stat-grid__item {
-        padding: 25px 15px;
-        text-align: center;
-    }
-}
 
 //===================widget-service-box===================//
 // .service-box-card {
@@ -3433,9 +3474,10 @@
         box-shadow: none !important;
         align-items: stretch;
 
+        background-color: transparent !important;
 
         .swiper-testimonial-left {
-            width: 70%;
+            width: 60%;
 
             img {
                 border-radius: 9999px;
@@ -3452,15 +3494,17 @@
 }
 
 .testimonial-right::before {
+    background: var(--white-2);
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 83.684%;
-    background-color: var(--main-color);
+
     z-index: 0;
 }
+
 
 .swiper-testimonial-left,
 .swiper-testimonial-right {
@@ -3506,6 +3550,8 @@
     cursor: pointer;
     position: relative;
 
+
+
     .heading-section {
         margin-bottom: 30px !important;
     }
@@ -3527,6 +3573,9 @@
 
     }
 
+    &.style-1 {
+        width: 100%;
+    }
 }
 
 
@@ -3536,7 +3585,7 @@
 
         .quote-box {
             display: block;
-            padding-right: 40px;
+            padding-right: 10px;
 
 
             .abc {
@@ -3557,10 +3606,8 @@
 
 
 .testimonial-info {
-    margin-top: 40px;
+    padding-top: 40px;
     margin-left: 70px;
-
-
 
     p {
         color: var(--text-color-3);
@@ -3618,6 +3665,7 @@
     &.style-1 {
         left: 110px;
         flex-direction: column;
+        top: 56%;
     }
 
 
@@ -3681,6 +3729,8 @@
 
 .course-details-slider {
     position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .sw-nav {
@@ -3693,6 +3743,9 @@
     z-index: 20;
 }
 
+.bcv {
+    padding-bottom: 100px;
+}
 
 .sw-next {
 
@@ -3704,7 +3757,7 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    margin-right: -24px;
+
 
     i {
         font-size: 20px;
@@ -4177,9 +4230,12 @@
 
 //==========service-section===========
 .service-section {
+    background-color: var(--white-3);
+
     .heading-section {
         margin-bottom: 70px;
     }
+
 }
 
 
@@ -4325,13 +4381,24 @@
     background-color: var(--white-3);
 }
 
+.fun-pack-card:nth-child(-n+3)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+    border-right: 1px dashed var(--text-color-1);
+}
+
 .fun-pack-card {
-    padding: 80px 70px;
+    position: relative;
+    padding: 80px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    border-right: 1px dashed var(--text-color-1);
+
 
     i {
         font-size: 40px;
@@ -4399,11 +4466,7 @@
 }
 
 
-.btn-course {
-    margin-top: 30px;
-    width: 220px;
-    height: 50px;
-}
+
 
 .image-course {
     img {
@@ -4495,5 +4558,20 @@
 .nav-tab-item {
     margin-bottom: 15px;
 }
+
+
+
+.testimonial-section {
+    background-color: var(--white-3);
+}
+
+
+
+
+.service-item-grid {
+    gap: 30px;
+}
+
+
 
 // tu

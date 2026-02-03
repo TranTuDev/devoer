@@ -696,6 +696,10 @@ a:focus, a:hover {
   padding: 120px 0px;
 }
 
+.pd-65-top {
+  padding-top: 65px;
+}
+
 .pd-15 {
   padding: 15px;
 }
@@ -1387,6 +1391,39 @@ a:focus, a:hover {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.tf-btn-3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: var(--main-color);
+  z-index: 1;
+  transition: width 0.45s ease;
+}
+.tf-btn-3:hover::before {
+  width: 100%;
+}
+.tf-btn-3 i {
+  position: relative;
+  z-index: 3;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn-3:hover i {
+  transform: translateX(8px);
+}
+.tf-btn-3 > *:not(i) {
+  position: relative;
+  z-index: 4;
+  transition: color 0.35s ease;
+}
+.tf-btn-3:hover > *:not(i) {
+  color: var(--text-color-1) !important;
+}
+.tf-btn-3 {
   background-color: var(--white-2);
   border: 1px solid var(--line-4);
   color: var(--text-color-1);
@@ -2007,6 +2044,12 @@ a:focus, a:hover {
     opacity: 0;
   }
 }
+.btn-course {
+  margin-top: 30px;
+  width: 220px;
+  height: 50px;
+}
+
 /*------------ header ---------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -2187,8 +2230,13 @@ a:focus, a:hover {
 }
 .box-nav-menu.style-2 {
   gap: 65px;
-  padding-left: 80px;
+  padding-left: 285px;
   padding-right: 0px;
+}
+.box-nav-menu.style-3 {
+  gap: 60px;
+  padding-right: 0px !important;
+  padding-left: 100px !important;
 }
 
 .tf-topbar {
@@ -2993,6 +3041,10 @@ a:focus, a:hover {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.wg-help .image-bg img {
+  width: 100%;
+  object-fit: cover;
+}
 .wg-help .help-content {
   text-align: center;
   background-color: var(--white-2);
@@ -3784,6 +3836,15 @@ a:focus, a:hover {
   right: 120px;
   bottom: 80px;
   z-index: 1;
+}
+
+.course-slider {
+  padding-top: 120px;
+}
+.course-slider h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 /*------------ pop-up ---------------- */
@@ -4744,6 +4805,30 @@ a:focus, a:hover {
   color: var(--text-color-2);
 }
 
+.tf-sidebar {
+  margin-right: 75px;
+}
+.tf-sidebar.style-1 {
+  margin-right: 0px !important;
+  margin-left: 75px;
+}
+
+.wg-course-details {
+  margin-left: -30px;
+}
+
+.wg-service-details {
+  margin-left: -30px;
+}
+
+.wg-blog-details {
+  margin-right: -75px;
+}
+
+.list-blog {
+  margin-right: -75px;
+}
+
 /*-------------- Responsive ----------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -4914,6 +4999,21 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 991px) {
+  .stat-grid {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+    margin-right: 90px !important;
+  }
+  .header-inner.style-3 {
+    background-color: rgb(110, 161, 161);
+  }
+  .testimonial-right::before {
+    height: 100% !important;
+  }
+  .swiper-testimonial-all.style-1 .swiper-testimonial-left img {
+    border-radius: 20px !important;
+    height: 400px;
+  }
   .start-course .start-course-content {
     padding-left: 100px !important;
     padding-right: 20px !important;
@@ -5179,19 +5279,37 @@ a:focus, a:hover {
   .faq .faq-left {
     width: 100% !important;
   }
-  .swiper-testimonial-all {
-    padding: 30px 15px !important;
-    display: block !important;
+  .driving-safety .image-banner .image-1 {
+    top: 0px !important;
+    left: 0px !important;
+    position: unset !important;
   }
-  .swiper-testimonial-all .swiper-testimonial-right .sw-pagination-testimonial {
-    justify-content: center !important;
-    margin-top: 0px !important;
+  .driving-safety .image-banner .image-2 {
+    max-width: 320px !important;
+    margin-right: 0 !important;
+  }
+  .driving-safety .image-banner {
+    padding-top: 30px;
+    display: flex !important;
+    gap: 20px !important;
+    justify-content: space-between !important;
+    position: unset !important;
+    margin-left: 0 !important;
   }
 }
 /* ============================================================
    MD: max-width 767px (Bootstrap 5: < 768px)
    ============================================================ */
 @media (max-width: 767px) {
+  .course-content .course-header {
+    border: none !important;
+  }
+  .sw-pagination-testimonial.style-1 {
+    position: unset !important;
+  }
+  .testimonial-info {
+    padding-top: 20px !important;
+  }
   .start-course .start-course-content {
     padding-left: 100px !important;
     padding-right: 20px !important;
@@ -5267,14 +5385,32 @@ a:focus, a:hover {
     height: 360px;
   }
   .swiper-testimonial-all {
-    padding: 20px 10px !important;
+    padding: 30px 15px !important;
+    display: block !important;
   }
-  .swiper-testimonial-all .sw-pagination-testimonial {
+  .swiper-testimonial-all .swiper-testimonial-right .sw-pagination-testimonial {
+    justify-content: center !important;
+    margin-top: 0px !important;
+    padding-top: 10px !important;
+  }
+  .portfolio-sub {
+    display: block !important;
+    margin-bottom: 30px !important;
+  }
+  .portfolio-sub .sw-pagination-portfolio {
+    width: 100% !important;
+    padding-top: 20px;
     justify-content: center !important;
   }
-  .swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
+  .service-media {
+    margin-top: 0px !important;
+    display: block !important;
+    margin-bottom: 30px !important;
+  }
+  .stat-grid {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    margin-right: 0px !important;
   }
 }
 /* ============================================================
@@ -5293,6 +5429,9 @@ a:focus, a:hover {
     padding-left: 100px !important;
     padding-right: 15px !important;
     width: 85% !important;
+  }
+  .swiper-testimonial-all.style-1 .swiper-testimonial-left img {
+    height: auto;
   }
   .about-main-image img {
     height: auto !important;
@@ -5517,9 +5656,6 @@ a:focus, a:hover {
   .swiper-testimonial-all {
     gap: 40px;
   }
-  .swiper-box {
-    padding: 40px;
-  }
   .swiper-box.style-1 .quote-box {
     padding-right: 20px;
   }
@@ -5638,9 +5774,6 @@ a:focus, a:hover {
   }
   .swiper-testimonial-right {
     order: 1;
-  }
-  .swiper-box {
-    padding: 30px;
   }
   .swiper-box.style-1 .quote-box {
     padding-right: 0;
@@ -5768,9 +5901,6 @@ a:focus, a:hover {
   }
   .img-video {
     height: 300px;
-  }
-  .swiper-box {
-    padding: 20px;
   }
   .icon-qoutes-1 {
     font-size: 40px;
@@ -6064,7 +6194,7 @@ a:focus, a:hover {
   color: var(--text-color-1);
 }
 .price-box.style-2 {
-  padding-bottom: 20px !important;
+  padding-bottom: 30px !important;
   border-bottom: 1px solid var(--line-2);
 }
 .price-box.style-2 .price-value {
@@ -6848,6 +6978,7 @@ a:focus, a:hover {
 }
 
 .develop-skills {
+  margin-top: -60px;
   background-color: var(--text-color-1);
 }
 .develop-skills .develop-skills-content {
@@ -7111,22 +7242,21 @@ a:focus, a:hover {
 .wg-video-left {
   position: relative;
   padding: 86px 70px;
+  overflow: hidden;
 }
 .wg-video-left img {
-  width: 100%;
   object-fit: cover;
-  height: auto;
-  inset: 0;
-  display: block;
+  width: 100%;
   position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 .wg-video-left .over-play {
   position: absolute;
   inset: 0;
   background-color: var(--line-14);
   z-index: 1;
-  width: 100%;
-  height: auto;
 }
 .wg-video-left .wg-video-text {
   position: relative;
@@ -7141,9 +7271,10 @@ a:focus, a:hover {
 .wg-video-right {
   position: relative;
   margin-left: 20px;
+  height: 100%;
 }
 .wg-video-right img {
-  height: auto;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;
@@ -7258,22 +7389,50 @@ a:focus, a:hover {
   color: var(--text-color-1);
 }
 
+.course .heading-section {
+  margin-bottom: 70px;
+}
+
 .course-content {
-  width: 100%;
-  max-width: 370px;
   position: relative;
 }
 .course-content .course-header {
   padding: 40px 40px 115px;
-  border: 1px solid red;
+  border: 1px solid var(--line-20);
+}
+.course-content .course-header h4 {
+  margin-bottom: 15px;
+}
+.course-content .course-header p {
+  margin-bottom: 20px;
+}
+.course-content .course-header:hover {
+  transition: all 0.3s ease;
+  background-color: var(--text-color-1);
+}
+.course-content .course-header:hover h4 {
+  color: var(--white-2);
+}
+.course-content .course-header:hover p {
+  color: var(--white-2);
+}
+.course-content .course-header:hover b {
+  color: var(--white-2);
+}
+.course-content .course-header:hover .currency {
+  color: var(--white-2);
+}
+.course-content .course-header:hover .prices {
+  color: var(--white-2);
+}
+.course-content .course-header:hover .per {
+  color: var(--white-2);
 }
 
 .course-img {
-  position: absolute;
-  bottom: -90px;
-  left: 0;
+  margin-top: -100px;
   width: 100%;
-  clip-path: polygon(0 21.5%, 100% 62%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
 }
 .course-img img {
   height: auto;
@@ -7299,56 +7458,64 @@ a:focus, a:hover {
   margin-bottom: 15px;
 }
 
-.about-content {
+.about-metrics-decor {
   display: flex;
-  align-items: center;
-  gap: 50px;
+  justify-content: space-between;
 }
-.about-content .about-info {
-  width: 49%;
-}
-.about-content .about-info .info-title {
+
+.about-info .info-title {
   color: var(--text-color-1);
   margin-bottom: 20px;
   font-family: "Mada", sans-serif;
 }
-.about-content .about-info .info-description {
+.about-info .info-description {
   color: var(--text-color-2);
   margin-bottom: 35px;
   font-family: "Nunito", sans-serif;
 }
-.about-content .line-gradient {
+
+.line-gradient {
   display: block;
   height: 226px;
   width: 1px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
-.about-content .about-metrics-media {
+
+.about-metrics-media::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 226px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.about-metrics-media {
   display: flex;
   align-items: center;
   gap: 35px;
+  position: relative;
+  padding-left: 50px;
 }
-.about-content .about-metrics-media .metrics-block {
-  width: 37%;
-}
-.about-content .about-metrics-media .metric-text {
+.about-metrics-media .metric-text {
   font-family: "Libre Franklin", sans-serif;
   color: var(--text-color-2);
   margin-top: 20px;
 }
-.about-content .about-metrics-media .metric-number {
+.about-metrics-media .metric-number {
   color: var(--text-color-1);
 }
-.about-content .about-metrics-media .media-image-wrapper {
+.about-metrics-media .media-image-wrapper {
   position: relative;
   line-height: 0;
 }
-.about-content .about-metrics-media .media-image-wrapper img {
+.about-metrics-media .media-image-wrapper img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.about-content .about-metrics-media .media-image-wrapper .image-overlay {
+.about-metrics-media .media-image-wrapper .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -7962,18 +8129,6 @@ a:focus, a:hover {
   color: var(--text-color-4);
 }
 
-@media (max-width: 767px) {
-  .stat-grid {
-    grid-template-columns: 1fr;
-  }
-  .stat-grid__item:nth-child(odd) {
-    border-right: none;
-  }
-  .stat-grid__item {
-    padding: 25px 15px;
-    text-align: center;
-  }
-}
 .service-box-card .card-media {
   position: relative;
   width: 100%;
@@ -8334,9 +8489,10 @@ a:focus, a:hover {
   gap: 40px !important;
   box-shadow: none !important;
   align-items: stretch;
+  background-color: transparent !important;
 }
 .swiper-testimonial-all.style-1 .swiper-testimonial-left {
-  width: 70%;
+  width: 60%;
 }
 .swiper-testimonial-all.style-1 .swiper-testimonial-left img {
   border-radius: 9999px;
@@ -8348,13 +8504,13 @@ a:focus, a:hover {
 }
 
 .testimonial-right::before {
+  background: var(--white-2);
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 83.684%;
-  background-color: var(--main-color);
   z-index: 0;
 }
 
@@ -8398,13 +8554,16 @@ a:focus, a:hover {
   font-size: 50px;
   color: var(--main-color);
 }
+.swiper-testimonial-right.style-1 {
+  width: 100%;
+}
 
 .swiper-box.style-1 {
   padding-top: 20px;
 }
 .swiper-box.style-1 .quote-box {
   display: block;
-  padding-right: 40px;
+  padding-right: 10px;
 }
 .swiper-box.style-1 .quote-box .abc {
   display: flex;
@@ -8416,7 +8575,7 @@ a:focus, a:hover {
 }
 
 .testimonial-info {
-  margin-top: 40px;
+  padding-top: 40px;
   margin-left: 70px;
 }
 .testimonial-info p {
@@ -8460,6 +8619,7 @@ a:focus, a:hover {
 .sw-navigation-wrap.style-1 {
   left: 110px;
   flex-direction: column;
+  top: 56%;
 }
 
 .sw-btn-next {
@@ -8514,6 +8674,8 @@ a:focus, a:hover {
 
 .course-details-slider {
   position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .sw-nav {
@@ -8526,6 +8688,10 @@ a:focus, a:hover {
   z-index: 20;
 }
 
+.bcv {
+  padding-bottom: 100px;
+}
+
 .sw-next {
   border-radius: 50%;
   height: 60px;
@@ -8535,7 +8701,6 @@ a:focus, a:hover {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  margin-right: -24px;
 }
 .sw-next i {
   font-size: 20px;
@@ -8899,6 +9064,9 @@ a:focus, a:hover {
   margin-bottom: 30px;
 }
 
+.service-section {
+  background-color: var(--white-3);
+}
 .service-section .heading-section {
   margin-bottom: 70px;
 }
@@ -9011,13 +9179,23 @@ a:focus, a:hover {
   background-color: var(--white-3);
 }
 
+.fun-pack-card:nth-child(-n+3)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+  border-right: 1px dashed var(--text-color-1);
+}
+
 .fun-pack-card {
-  padding: 80px 70px;
+  position: relative;
+  padding: 80px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  border-right: 1px dashed var(--text-color-1);
 }
 .fun-pack-card i {
   font-size: 40px;
@@ -9064,12 +9242,6 @@ a:focus, a:hover {
 }
 .person-list-wrap .person-list .person-houurs a {
   color: var(--text-color-3);
-}
-
-.btn-course {
-  margin-top: 30px;
-  width: 220px;
-  height: 50px;
 }
 
 .image-course img {
@@ -9146,6 +9318,14 @@ a:focus, a:hover {
 
 .nav-tab-item {
   margin-bottom: 15px;
+}
+
+.testimonial-section {
+  background-color: var(--white-3);
+}
+
+.service-item-grid {
+  gap: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */

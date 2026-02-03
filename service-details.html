@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="icons/style.css">
 
@@ -78,15 +78,15 @@
         <!-- /header -->
         <header id="header" class="header-default" style="top: unset;">
             <div class="header-inner">
-                <div class="header-left d-flex flex-grow-1">
+                <div class="header-left d-flex ">
                     <div class="logo-header ">
                         <a href="#">
                             <img src="./images/logo/logo.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <nav class="box-navigation flex-grow-1">
-                    <ul class="box-nav-menu list-unstyled mb-0 d-flex justify-content-start">
+                <nav class="box-navigation flex-grow-1 ">
+                    <ul class="box-nav-menu list-unstyled mb-0 d-flex justify-content-start style-3">
                         <li class="menu-item text-tagline menu-item-has-children"><a href="#"
                                 class="item-link"><span>HOME</span></a>
                             <div class="sub-menu">
@@ -134,8 +134,8 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-right d-flex flex-grow-1">
-                    <div class="header-icons nav-icon d-flex align-items-center gap-50">
+                <div class="header-right d-flex ">
+                    <div class="header-icons nav-icon d-flex align-items-center gap-25">
                         <a class="nav-search nav-item-icon nav-modal-item" href="#search" data-bs-toggle="modal">
                             <i class="icon-loupe"></i>
                         </a>
@@ -189,203 +189,223 @@
         <!-- service-details -->
         <section class="service-details pd-120">
             <div class="container">
-                <div class="d-flex justify-content-between gap-60 service-details-content">
-                    <button id="filterShop" class="fillter-btn style-fixed d-lg-none" aria-label="sibar-btn">
-                        <i class="icon-toggle"></i>
-                    </button>
-                    <div class="tf-sidebar sidebar-filter left">
-                        <div class="header-fillter flex justify-content-between align-items-center d-lg-none mb-30">
-                            <h3 class="title">
-                                Fillter
-                            </h3>
-                            <span class="icon-close close-filter"></span>
-                        </div>
-                        <div class="sidebar-item sidebar-content sidebar-categories mb-20">
-                            <h6 class="title-content fw-5">
-                                Category
-                            </h6>
-                            <ul class="list">
-                                <li class="item">
-                                    <a href="#" class="body-2 fw-5">Instructor training</a>
-                                    <i class="icon-read-more"></i>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="body-2 fw-5">Traffic guidelines</a>
-                                    <i class="icon-read-more"></i>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="body-2 fw-5">Vesicle Insurance</a>
-                                    <i class="icon-read-more"></i>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="body-2 fw-5">Motorcycle Training</a>
-                                    <i class="icon-read-more"></i>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="body-2 fw-5">Road safety Guidelines</a>
-                                    <i class="icon-read-more"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="wg-help ">
-                            <div class="image-bg">
-                                <img loading="lazy" alt="" width="300" height="390" src="images/blog/img-bg-help.jpg">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <button id="filterShop" class="fillter-btn style-fixed d-lg-none" aria-label="sibar-btn">
+                            <i class="icon-toggle"></i>
+                        </button>
+                        <div class="tf-sidebar sidebar-filter left">
+                            <div class="header-fillter flex justify-content-between align-items-center d-lg-none mb-30">
+                                <h3 class="title">
+                                    Fillter
+                                </h3>
+                                <span class="icon-close close-filter"></span>
                             </div>
-                            <div class="help-content">
-                                <div class="help-icon">
-                                    <i class="icon-phone"></i>
+                            <div class="sidebar-item sidebar-content sidebar-categories mb-20">
+                                <h6 class="title-content fw-5">
+                                    Category
+                                </h6>
+                                <ul class="list">
+                                    <li class="item">
+                                        <a href="#" class="body-2 fw-5">Instructor training</a>
+                                        <i class="icon-read-more"></i>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="body-2 fw-5">Traffic guidelines</a>
+                                        <i class="icon-read-more"></i>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="body-2 fw-5">Vesicle Insurance</a>
+                                        <i class="icon-read-more"></i>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="body-2 fw-5">Motorcycle Training</a>
+                                        <i class="icon-read-more"></i>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#" class="body-2 fw-5">Road safety Guidelines</a>
+                                        <i class="icon-read-more"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wg-help ">
+                                <div class="image-bg">
+                                    <img loading="lazy" alt="" width="300" height="390"
+                                        src="images/blog/img-bg-help.jpg">
                                 </div>
-                                <div class="content">
-                                    <p class="text-tagline tagline-3 text">Any Support?</p>
-                                    <a href="#" class="number-phone text-body-2 fw-6">
-                                        +123 (568) 584 856
-                                    </a>
-                                    <a href="#" class="mail-help text-body-2 fw-6">help@gmail.com</a>
+                                <div class="help-content">
+                                    <div class="help-icon">
+                                        <i class="icon-phone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p class="text-tagline tagline-3 text">Any Support?</p>
+                                        <a href="#" class="number-phone text-body-2 fw-6">
+                                            +123 (568) 584 856
+                                        </a>
+                                        <a href="#" class="mail-help text-body-2 fw-6">help@gmail.com</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wg-service-details">
-                        <div class="image-service">
-                            <img alt="" src="images/section/service-details/img-1.png">
+                    <div class="col-lg-8">
+                        <div class="wg-service-details">
+                            <div class="image-service">
+                                <img alt="" src="images/section/service-details/img-1.png">
 
-                        </div>
-
-                        <div class="box-content-service">
-                            <h2>Driving licence</h2>
-                            <p class="service-text text-paragraph">Proin sit amet nunc urna. Duis nec condimentum elit,
-                                vel mollis
-                                tellus. Nam mattis elit
-                                nec ipsum tempor, eu vehicula mauris varius. Phasellus molestie, turpis ac sodales
-                                tincidunt, nisl dolor porta nulla, nec blandit justo mi eget justo. Cras et nisi eget
-                                enim condimentum efficitur nec in dolor.
-                                <br>
-                                <br>
-                                Donec vestibulum massa lectus, a viverra odio eleifend vel. Sed viverra libero quis
-                                lacus sollicitudin vestibulum. Aliquam lobortis vestibulum massa. Integer erat libero,
-                                pretium ac ligula sed, pretium congue erat. Integer maximus feugiat nunc, eget fermentum
-                                dui porttitor at.
-                            </p>
-                            <div class="feature">
-                                <div class="feature-left">
-                                    <i class="icon-traces"></i>
-                                    <div class="feature-content">
-                                        <h5>Learning License </h5>
-                                        <p>Pellentesque aliquam risus leo, sed feugiat ante auctor sit amet.</p>
-                                    </div>
-                                </div>
-                                <span class="feature-line d-none d-md-inline"></span>
-
-                                <div class="feature-right">
-                                    <i class="icon-traces"></i>
-                                    <div class="feature-content">
-                                        <h5>Permanent License </h5>
-                                        <p>Pellentesque aliquam risus leo, sed feugiat ante auctor sit amet. Donec non
-                                            mi urna.
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="our-benefits">
-                                <div class="our-benefits-img">
-                                    <img src="./images/section/service-details/img-2.png" alt="">
-                                </div>
-                                <div class="our-benefits-content">
-                                    <h4 class="our-benefits-title">Others benefits</h4>
-                                    <ul class="benefits-list">
-                                        <li class="item"><span class="dot-1"></span><a href="">Geneva Conventions
-                                                Identification Card</a></li>
-                                        <li class="item"><span class="dot-1"></span><a href="">Identification and
-                                                Privilege Card</a></li>
-                                        <li class="item"><span class="dot-1"></span><a href="">Merchant Marine
-                                                Credential</a></li>
-                                        <li class="item"><span class="dot-1"></span><a href="">Permanent Resident
-                                                Card</a></li>
-                                        <li class="item"><span class="dot-1"></span><a href="">Employment Authorization
-                                                Card</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="faq">
-                                <div class="accordion accordion-flush" id="faqFlush">
-                                    <div class="accordion-item">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                            aria-expanded="false" aria-controls="flush-collapseOne">
-                                            <p class="text-paragraph-3"> What does the gold star on Utah license
-                                                mean?</p>
-                                            <span class="icon ms-auto"><i class="icon-down"></i></span>
 
-                                        </button>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            aria-labelledby="flush-headingOne" data-bs-parent="#faqFlush">
-                                            <div class="accordion-body">
-                                                <p class="text-paragraph">
-                                                    Proin enim nulla, fringilla eget euismod id, malesuada non est.
-                                                    Sed fermentum mauris a est lobortis, sed hendrerit tortor laoreet.
-                                                    Etiam id viverra risus. Etiam fermentum in tortor efficitur iaculis.
-                                                    Duis posuere porttitor sapien, vitae euismod enim ullamcorper vitae.
-                                                    Nunc lorem ante.
-                                                </p>
-                                            </div>
+                            <div class="box-content-service">
+                                <h2>Driving licence</h2>
+                                <p class="service-text text-paragraph">Proin sit amet nunc urna. Duis nec condimentum
+                                    elit,
+                                    vel mollis
+                                    tellus. Nam mattis elit
+                                    nec ipsum tempor, eu vehicula mauris varius. Phasellus molestie, turpis ac sodales
+                                    tincidunt, nisl dolor porta nulla, nec blandit justo mi eget justo. Cras et nisi
+                                    eget
+                                    enim condimentum efficitur nec in dolor.
+                                    <br>
+                                    <br>
+                                    Donec vestibulum massa lectus, a viverra odio eleifend vel. Sed viverra libero quis
+                                    lacus sollicitudin vestibulum. Aliquam lobortis vestibulum massa. Integer erat
+                                    libero,
+                                    pretium ac ligula sed, pretium congue erat. Integer maximus feugiat nunc, eget
+                                    fermentum
+                                    dui porttitor at.
+                                </p>
+                                <div class="feature">
+                                    <div class="feature-left">
+                                        <i class="icon-traces"></i>
+                                        <div class="feature-content">
+                                            <h5>Learning License </h5>
+                                            <p>Pellentesque aliquam risus leo, sed feugiat ante auctor sit amet.</p>
                                         </div>
                                     </div>
+                                    <span class="feature-line d-none d-md-inline"></span>
 
-                                    <div class="accordion-item">
-
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                            aria-expanded="false" aria-controls="flush-collapseTwo">
-                                            <p class="text-paragraph-3"> How long does a Utah driver's license
-                                                last?</p>
-                                            <span class="icon ms-auto"><i class="icon-down"></i></span>
-
-                                        </button>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                            aria-labelledby="flush-headingTwo" data-bs-parent="#faqFlush">
-                                            <div class="accordion-body">
-                                                <p class="text-paragraph">
-                                                    Proin enim nulla, fringilla eget euismod id, malesuada non est.
-                                                    Sed fermentum mauris a est lobortis, sed hendrerit tortor laoreet.
-                                                    Etiam id viverra risus. Etiam fermentum in tortor efficitur iaculis.
-                                                    Duis posuere porttitor sapien, vitae euismod enim ullamcorper vitae.
-                                                    Nunc lorem ante.
-                                                </p>
-                                            </div>
+                                    <div class="feature-right">
+                                        <i class="icon-traces"></i>
+                                        <div class="feature-content">
+                                            <h5>Permanent License </h5>
+                                            <p>Pellentesque aliquam risus leo, sed feugiat ante auctor sit amet. Donec
+                                                non
+                                                mi urna.
+                                            </p>
                                         </div>
-
-
                                     </div>
+                                </div>
+                                <div class="our-benefits">
+                                    <div class="our-benefits-img">
+                                        <img src="./images/section/service-details/img-2.png" alt="">
+                                    </div>
+                                    <div class="our-benefits-content">
+                                        <h4 class="our-benefits-title">Others benefits</h4>
+                                        <ul class="benefits-list">
+                                            <li class="item"><span class="dot-1"></span><a href="">Geneva Conventions
+                                                    Identification Card</a></li>
+                                            <li class="item"><span class="dot-1"></span><a href="">Identification and
+                                                    Privilege Card</a></li>
+                                            <li class="item"><span class="dot-1"></span><a href="">Merchant Marine
+                                                    Credential</a></li>
+                                            <li class="item"><span class="dot-1"></span><a href="">Permanent Resident
+                                                    Card</a></li>
+                                            <li class="item"><span class="dot-1"></span><a href="">Employment
+                                                    Authorization
+                                                    Card</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="faq">
+                                    <div class="accordion accordion-flush" id="faqFlush">
+                                        <div class="accordion-item">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                <p class="text-paragraph-3"> What does the gold star on Utah license
+                                                    mean?</p>
+                                                <span class="icon ms-auto"><i class="icon-down"></i></span>
 
-                                    <div class="accordion-item">
-
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                            aria-expanded="false" aria-controls="flush-collapseThree">
-                                            <p class="text-paragraph-3"> Can I drive home after passing my
-                                                driving test?</p>
-
-                                            <span class="icon ms-auto"><i class="icon-down"></i></span>
-
-                                        </button>
-
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                            aria-labelledby="flush-headingThree" data-bs-parent="#faqFlush">
-                                            <div class="accordion-body">
-                                                <p class="text-paragraph">
-                                                    Proin enim nulla, fringilla eget euismod id, malesuada non est.
-                                                    Sed fermentum mauris a est lobortis, sed hendrerit tortor laoreet.
-                                                    Etiam id viverra risus. Etiam fermentum in tortor efficitur iaculis.
-                                                    Duis posuere porttitor sapien, vitae euismod enim ullamcorper vitae.
-                                                    Nunc lorem ante.
-                                                </p>
+                                            </button>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingOne" data-bs-parent="#faqFlush">
+                                                <div class="accordion-body">
+                                                    <p class="text-paragraph">
+                                                        Proin enim nulla, fringilla eget euismod id, malesuada non est.
+                                                        Sed fermentum mauris a est lobortis, sed hendrerit tortor
+                                                        laoreet.
+                                                        Etiam id viverra risus. Etiam fermentum in tortor efficitur
+                                                        iaculis.
+                                                        Duis posuere porttitor sapien, vitae euismod enim ullamcorper
+                                                        vitae.
+                                                        Nunc lorem ante.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
 
+                                        <div class="accordion-item">
 
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                <p class="text-paragraph-3"> How long does a Utah driver's license
+                                                    last?</p>
+                                                <span class="icon ms-auto"><i class="icon-down"></i></span>
+
+                                            </button>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingTwo" data-bs-parent="#faqFlush">
+                                                <div class="accordion-body">
+                                                    <p class="text-paragraph">
+                                                        Proin enim nulla, fringilla eget euismod id, malesuada non est.
+                                                        Sed fermentum mauris a est lobortis, sed hendrerit tortor
+                                                        laoreet.
+                                                        Etiam id viverra risus. Etiam fermentum in tortor efficitur
+                                                        iaculis.
+                                                        Duis posuere porttitor sapien, vitae euismod enim ullamcorper
+                                                        vitae.
+                                                        Nunc lorem ante.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="accordion-item">
+
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                aria-expanded="false" aria-controls="flush-collapseThree">
+                                                <p class="text-paragraph-3"> Can I drive home after passing my
+                                                    driving test?</p>
+
+                                                <span class="icon ms-auto"><i class="icon-down"></i></span>
+
+                                            </button>
+
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingThree" data-bs-parent="#faqFlush">
+                                                <div class="accordion-body">
+                                                    <p class="text-paragraph">
+                                                        Proin enim nulla, fringilla eget euismod id, malesuada non est.
+                                                        Sed fermentum mauris a est lobortis, sed hendrerit tortor
+                                                        laoreet.
+                                                        Etiam id viverra risus. Etiam fermentum in tortor efficitur
+                                                        iaculis.
+                                                        Duis posuere porttitor sapien, vitae euismod enim ullamcorper
+                                                        vitae.
+                                                        Nunc lorem ante.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>

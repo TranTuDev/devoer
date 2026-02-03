@@ -606,6 +606,10 @@ a {
 	padding: 120px 0px;
 }
 
+.pd-65-top {
+	padding-top: 65px;
+}
+
 .pd-15 {
 	padding: 15px;
 }
@@ -613,15 +617,21 @@ a {
 .pd-120-bt {
 	padding-bottom: 120px;
 }
+
 .pd-160-bt {
 	padding-bottom: 160px;
 }
+
 .pd-120-top {
 	padding-top: 120px;
 }
+
 .pd-160-top {
 	padding-top: 160px;
 }
+
+
+
 
 // margin
 
@@ -1073,6 +1083,7 @@ a {
 .fw-4 {
 	font-weight: 400;
 }
+
 .fw-5 {
 	font-weight: 500;
 }
@@ -1080,6 +1091,7 @@ a {
 .fw-6 {
 	font-weight: 600 !important;
 }
+
 .fw-7 {
 	font-weight: 700;
 }

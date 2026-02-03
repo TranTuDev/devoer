@@ -237,8 +237,15 @@
 
     &.style-2 {
         gap: 65px;
-        padding-left: 80px;
+        padding-left: 285px;
         padding-right: 0px;
+    }
+
+    &.style-3 {
+        gap: 60px;
+        padding-right: 0px !important;
+        padding-left: 100px !important;
+
     }
 }
 

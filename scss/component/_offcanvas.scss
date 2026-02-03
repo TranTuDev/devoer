@@ -73,3 +73,28 @@
         color: var(--text-color-2);
     }
 }
+
+.tf-sidebar {
+    margin-right: 75px;
+
+    &.style-1 {
+        margin-right: 0px !important;
+        margin-left: 75px;
+    }
+}
+
+.wg-course-details {
+    margin-left: -30px;
+}
+
+.wg-service-details {
+    margin-left: -30px;
+}
+
+.wg-blog-details {
+    margin-right: -75px;
+}
+
+.list-blog {
+    margin-right: -75px;
+}

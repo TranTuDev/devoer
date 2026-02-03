@@ -369,6 +369,12 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        img {
+            width: 100%;
+           
+            object-fit: cover;
+        }
     }
 
     .help-content {

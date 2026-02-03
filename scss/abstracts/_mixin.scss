@@ -144,10 +144,9 @@
     transition: width 0.45s ease;
   }
 
-  // mở rộng full khi hover
   &:hover::before { width: 100%; }
 
-  // icon animation (luôn trên)
+ 
   i {
     position: relative;
     z-index: 3;
@@ -155,15 +154,14 @@
   }
   &:hover i { transform: translateX(8px); }
 
-  // text/node (mọi child trừ i) luôn trên ::before
-  // đảm bảo không cần phải có <span>
+  
   & > *:not(i) {
     position: relative;
     z-index: 4;
     transition: color 0.35s ease;
   }
 
-  // đổi màu chữ khi hover (áp dụng cho mọi child trừ i)
+ 
   &:hover > *:not(i) {
     color: $textColor !important;
   }
