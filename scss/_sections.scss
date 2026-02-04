@@ -2349,7 +2349,12 @@
     }
 
     &.style-1 {
+        .heading-section {
+            margin-bottom: 35px !important;
+        }
+
         .image-banner {
+
             position: relative;
             overflow: unset !important;
 
@@ -2399,11 +2404,26 @@
 
             }
 
-
         }
 
+        .btn-about-us {
+            margin-bottom: 20px;
+        }
 
+        .story-text {
+            margin-bottom: 20px !important;
+        }
 
+        .list-benefit {
+            &.style-2 {
+                padding-bottom: 30px;
+                border-bottom: 1px solid var(--line-2);
+            }
+        }
+
+        .founder-signature-block {
+            padding-top: 30px;
+        }
     }
 
     &.style-2 {
@@ -4572,8 +4592,8 @@
     gap: 30px;
 }
 
-.service-item{
-    .heading-section{
+.service-item {
+    .heading-section {
         margin-bottom: 70px;
     }
 }

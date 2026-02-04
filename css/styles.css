@@ -5100,6 +5100,9 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 1199px) {
+  .fun-pack-card {
+    padding: 40px !important;
+  }
   .contact-us .contact-us-right {
     margin-top: 15px;
     margin-left: 0px !important;
@@ -5118,6 +5121,10 @@ a:focus, a:hover {
   .about-us-section .image-banner .image-2 {
     max-width: 100% !important;
     height: 600px;
+  }
+  .about-us-section.style-1 .image-banner .image-2 {
+    max-width: 65% !important;
+    height: auto !important;
   }
   .about-us-section {
     align-items: center;
@@ -5196,10 +5203,30 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 991px) {
+  .about-us-section.style-1 .image-banner {
+    position: unset !important;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  .about-us-section.style-1 .image-banner .image-2 {
+    max-width: 350px !important;
+    height: auto !important;
+    margin-bottom: 0px !important;
+    margin-left: unset !important;
+    border: 10px solid var(--white-2);
+  }
+  .about-us-section.style-1 .image-banner .image-1 {
+    position: unset !important;
+    max-width: 350px !important;
+    height: auto !important;
+    margin-right: unset !important;
+  }
   .fun-pack-card:nth-child(-n+3)::after {
     display: none;
   }
-  .wg-video.style-1 .wg-video-right {
+  .wg-video .wg-video-right {
     margin-left: 0px !important;
     padding-top: 20px;
   }
@@ -7928,6 +7955,9 @@ a:focus, a:hover {
   height: 100%;
   object-fit: cover;
 }
+.about-us-section.style-1 .heading-section {
+  margin-bottom: 35px !important;
+}
 .about-us-section.style-1 .image-banner {
   position: relative;
   overflow: unset !important;
@@ -7967,6 +7997,19 @@ a:focus, a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.about-us-section.style-1 .btn-about-us {
+  margin-bottom: 20px;
+}
+.about-us-section.style-1 .story-text {
+  margin-bottom: 20px !important;
+}
+.about-us-section.style-1 .list-benefit.style-2 {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line-2);
+}
+.about-us-section.style-1 .founder-signature-block {
+  padding-top: 30px;
 }
 .about-us-section.style-2 .about-details-content {
   padding-right: 0px !important;

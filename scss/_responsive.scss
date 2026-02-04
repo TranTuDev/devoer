@@ -119,6 +119,10 @@
 }
 
 @media (max-width: 1199px) {
+    .fun-pack-card {
+        padding: 40px !important;
+    }
+
     .contact-us {
         .contact-us-right {
             margin-top: 15px;
@@ -147,11 +151,24 @@
         .image-banner {
             .image-2 {
                 max-width: 100% !important;
-
                 height: 600px;
+            }
+
+
+        }
+
+        &.style-1 {
+            .image-banner {
+                .image-2 {
+                    max-width: 65% !important;
+                    height: auto !important;
+                }
+
             }
         }
     }
+
+
 
     .about-us-section {
         align-items: center;
@@ -205,14 +222,6 @@
             padding-top: 15px !important;
         }
     }
-
-
-
-
-
-
-
-
 
     .box-navigation {
         display: none;
@@ -282,17 +291,45 @@
 }
 
 @media (max-width: 991px) {
+    .about-us-section {
+        &.style-1 {
+            .image-banner {
+                position: unset !important;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                padding-top: 20px;
+
+                .image-2 {
+                    max-width: 350px !important;
+                    height: auto !important;
+                    margin-bottom: 0px !important;
+                    margin-left: unset !important;
+                    border: 10px solid var(--white-2);
+                }
+
+                .image-1 {
+                    position: unset !important;
+                    max-width: 350px !important;
+                    height: auto !important;
+                    margin-right: unset !important;
+
+                }
+            }
+        }
+    }
+
     .fun-pack-card:nth-child(-n+3)::after {
         display: none;
     }
 
     .wg-video {
-        &.style-1 {
-            .wg-video-right {
-                margin-left: 0px !important;
-                padding-top: 20px;
-            }
+
+        .wg-video-right {
+            margin-left: 0px !important;
+            padding-top: 20px;
         }
+
     }
 
     .service-details {
