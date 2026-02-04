@@ -34,6 +34,10 @@
         justify-content: space-between;
         gap: 30px;
         border-bottom: 1px solid var(--line-1);
+
+        &.style-1 {
+            padding-top: 150px !important;
+        }
     }
 
     .footer-left {
@@ -46,6 +50,7 @@
         .text {
             color: var(--text-color-4);
             margin-bottom: 30px;
+            font-family: $font-2;
         }
     }
 
@@ -94,6 +99,7 @@
         a {
             color: var(--text-color-4);
             position: relative;
+            font-family: $font-2;
 
             &:hover {
                 color: var(--main-color);
@@ -126,13 +132,21 @@
 
     .footer-heading {
         color: var(--white-2);
-        margin-bottom: 41px;
+        margin-bottom: 40px;
+
+        &.style-1 {
+            margin-bottom: 0px !important;
+        }
     }
 
     .box-icon-footer {
         margin-top: 40px;
     }
 
+    .footer-list {
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -192,9 +206,9 @@
 
     li {
         a {
-            border-right: 1px solid var(--white-2);
+            border-right: 1px solid var(--text-color-4);
             padding-right: 15px;
-            color: var(--white-2);
+            color: var(--text-color-4);
         }
 
         &:last-child {
@@ -207,7 +221,178 @@
 
     .right {
         p {
-            color: var(--white-2);
+            color: var(--line-27);
+        }
+    }
+
+    &.style-1 {
+        li {
+            a {
+
+                padding-right: 0px;
+
+            }
+        }
+    }
+}
+
+.subscribe-footer {
+    background-color: var(--main-color);
+
+    clip-path: polygon(0 0, 80% 0, 75% 100%, 0% 100%);
+
+
+
+    .subscribe {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-right: 200px;
+
+
+    }
+
+    .subscribe-title {
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: var(--text-color-);
+        }
+    }
+
+    .subscribe-form {
+        display: flex;
+
+        input {
+            border: none;
+            background: var(--white-2);
+        }
+
+    }
+}
+
+.wg-contact {
+    ul {
+        margin-top: 18px;
+    }
+
+    .contact-item-footer {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+
+        .box-icon {
+            flex-shrink: 0;
+            color: var(--main-color);
+            background-color: var(--line-1);
+            height: 40px;
+            width: 40px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        a {
+            color: var(--text-color-4);
+            font-family: $font-2;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transition: all 0.3s ease-in-out;
+                color: var(--main-color);
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .img {
+        position: relative;
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .over-play {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        background-color: rgba(5, 10, 18, 0.68);
+        transition: opacity 0.3s ease;
+    }
+
+    .post-title {
+        color: var(--white-2);
+        margin-bottom: 5px;
+
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+
+    .date-post {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+            color: var(--main-color);
+        }
+
+        a {
+            color: var(--text-color-5);
+
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+    }
+
+    &:last-child {
+        padding-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .img:hover {
+        .over-play {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-section {
+    .subscribe-footer {
+        margin-bottom: -90px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .footer {
+        &.style-1 {
+            position: relative;
+            z-index: 1;
         }
     }
 }

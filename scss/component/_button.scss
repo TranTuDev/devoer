@@ -658,7 +658,24 @@
     }
 }
 
+.btn-footer {
+    @include transition3;
+    @include btnFill(var(--white-2), var(--text-color-1));
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 30px;
+    font-weight: 600;
+    color: var(--white-2);
+    background-color: var(--text-color-1);
+    border: 1px solid var(--text-color-1);
+    font-family: $font-4;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
 
+}
 
 .btn-course {
     margin-top: 30px;

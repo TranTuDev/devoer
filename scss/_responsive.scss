@@ -85,6 +85,14 @@
         }
     }
 
+    .box-nav-menu {
+        &.style-3 {
+            gap: 30px !important;
+
+            padding-left: 50px !important;
+        }
+    }
+
 }
 
 @media (max-width: 1300px) {
@@ -274,6 +282,82 @@
 }
 
 @media (max-width: 991px) {
+    .fun-pack-card:nth-child(-n+3)::after {
+        display: none;
+    }
+
+    .wg-video {
+        &.style-1 {
+            .wg-video-right {
+                margin-left: 0px !important;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .service-details {
+        .tf-sidebar {
+            margin-right: 0px !important;
+        }
+
+        .wg-service-details {
+            margin-left: 0px !important;
+        }
+    }
+
+    .course-details {
+        .tf-sidebar {
+            margin-right: 0px !important;
+        }
+
+        .wg-course-details {
+            margin-left: 0px !important;
+        }
+    }
+
+    .blog-standard {
+        .list-blog {
+            margin-right: 0px !important;
+        }
+
+        .tf-sidebar {
+            &.style-1 {
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+            }
+        }
+    }
+
+    .blog-details {
+        .wg-blog-details {
+            margin-right: 0px !important;
+        }
+
+        .tf-sidebar {
+            &.style-1 {
+                margin-right: 0px !important;
+                margin-left: 0px !important;
+            }
+        }
+    }
+
+    .subscribe-footer {
+        clip-path: polygon(0 0, 95% 0, 90% 100%, 0% 100%);
+
+        .subscribe {
+
+            padding-top: 40px !important;
+            padding-bottom: 40px !important;
+            padding-right: 75px !important;
+        }
+    }
+
+    .blog-section {
+        .blog-post {
+            margin-bottom: 30px !important;
+        }
+    }
+
     .stat-grid {
 
         margin-top: 60px !important;
@@ -407,8 +491,8 @@
         }
     }
 
-    .about-content {
-        display: block !important;
+    .company-about {
+
 
         .about-info {
             margin-bottom: 50px;
@@ -418,6 +502,11 @@
 
         .about-metrics-media {
             justify-content: center;
+            padding-left: 0 !important;
+        }
+
+        .about-metrics-media::before {
+            display: none;
         }
     }
 
@@ -751,7 +840,7 @@
         }
     }
 
-   
+
 }
 
 /* ============================================================
@@ -760,6 +849,28 @@
 
 
 @media (max-width: 767px) {
+    .wg-course-details {
+        .box-content-course {
+            padding: 15px !important;
+        }
+
+        .license-gird {
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 25px !important;
+
+            .license-gird-item {
+                padding-right: 0px !important;
+                border-right: none !important;
+                padding-bottom: 15px !important;
+                padding-left: 0px !important;
+
+                &:last-child {
+                    padding-bottom: 0px !important;
+                }
+            }
+        }
+    }
+
     .course-content {
         .course-header {
 
@@ -966,7 +1077,22 @@
 /* MOBILE: ≤575px */
 @media (max-width: 575px) {
 
+    .subscribe-footer {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
+        .subscribe {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            padding-right: 0px !important;
+        }
+
+        .subscribe-title {
+            h3 {
+
+                margin-bottom: 5px !important;
+            }
+        }
+    }
 
 
 
@@ -1693,9 +1819,7 @@
 
 
 @media (max-width: 1199px) {
-    .blog-section .blog-post {
-        margin-bottom: 100px !important;
-    }
+
 
     .blog-section .row>[class*="col-"]:last-of-type .blog-post {
         margin-bottom: 0 !important;
