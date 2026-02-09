@@ -107,5 +107,84 @@ counters.forEach(el => observer.observe(el));
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.querySelector(".page-transition");
+  const logo = document.querySelector(".transition-logo");
+  const links = document.querySelectorAll("a:not([href^='#'])");
+
+  // Split text → span
+  logo.innerHTML = logo.textContent.trim()
+    .split("")
+    .map(l => `<span>${l}</span>`)
+    .join("");
+
+  const letters = document.querySelectorAll(".transition-logo span");
+  const panelLeft = document.querySelector(".panel-left");
+  const panelRight = document.querySelector(".panel-right");
+
+  // ===== ANIMATION DUY NHẤT - Chữ bay lên → Rèm mở =====
+  function playTransition(callback) {
+    overlay.style.display = "flex";
+
+    anime.timeline({ easing: "easeInOutExpo" })
+      // 1. Chữ bay lên
+      .add({
+        targets: letters,
+        translateY: [60, 0],
+        opacity: [0, 1],
+        filter: ["blur(8px)", "blur(0px)"],
+        delay: anime.stagger(80),
+        duration: 800
+      })
+
+      // 2. Chữ biến mất
+      .add({
+        targets: letters,
+        opacity: [1, 0],
+        duration: 400,
+        delay: 200
+      })
+
+      // 3. Rèm mở ra
+      .add({
+        targets: panelLeft,
+        translateX: ["0%", "-100%"],
+        duration: 900
+      })
+      .add({
+        targets: panelRight,
+        translateX: ["0%", "100%"],
+        duration: 900
+      }, "-=900")
+
+      // 4. Complete
+      .add({
+        complete: () => {
+          overlay.style.display = "none";
+
+          // Reset chữ về trạng thái ban đầu cho lần sau
+          anime.set(letters, {
+            translateY: 60,
+            opacity: 0,
+            filter: "blur(8px)"
+          });
+
+          // Reset panel về vị trí ban đầu
+          anime.set([panelLeft, panelRight], {
+            translateX: "0%"
+          });
+
+          // Callback nếu có (để chuyển trang)
+          if (callback) callback();
+        }
+      });
+  }
+
+
+  playTransition();
+
+ 
+});
+
 
 

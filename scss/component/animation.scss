@@ -15,9 +15,67 @@
 [data-animate="fade-left"] {
     transform: translateX(-60px);
 }
+
 [data-animate="fade-right"] {
     transform: translateX(60px);
 }
+
 [data-animate="fade-up"] {
     transform: translateY(60px);
+}
+
+.page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    /* ẩn ban đầu */
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+    background: transparent;
+    /* trong suốt để thấy panel */
+}
+
+.panel {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #111;
+    z-index: 5;
+}
+
+/* Panel ban đầu che full màn hình */
+.panel-left {
+    left: 0;
+    transform: translateX(0%);
+}
+
+.panel-right {
+    right: 0;
+    transform: translateX(0%);
+}
+
+.transition-logo {
+    font-size: 72px;
+    /* to hơn, nổi bật */
+    font-weight: 900;
+    /* dày hơn */
+    letter-spacing: 12px;
+    /* khoảng cách ký tự đẹp */
+    color: #fff;
+    z-index: 10;
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 16px rgba(255, 255, 255, 0.3);
+}
+
+.transition-logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(60px) scale(0.8) rotateZ(-10deg);
+    filter: blur(8px);
 }
