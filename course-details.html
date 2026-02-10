@@ -150,7 +150,7 @@
                             <i class="icon-toggle"></i>
                         </a>
 
-                        <a class="mobile-button d-xl-none" type="button" data-bs-toggle="offcanvas"
+                        <a class="mobile-button d-xl-none" href="#mobileMenu" data-bs-toggle="offcanvas"
                             data-bs-target="#mobileMenu">
                             <span></span><span></span><span></span>
                         </a>
@@ -286,8 +286,8 @@
 
                                 <ul class="tab-btn-wrap-v2 nav" role="tablist">
                                     <li class="nav-tab-item" role="presentation">
-                                        <a class="tf-btn-tab active text-tagline " data-bs-toggle="tab" href="#overview"
-                                            role="tab" aria-selected="true">
+                                        <a id="overview-tab" class="tf-btn-tab active text-tagline" data-bs-toggle="tab"
+                                            href="#overview" role="tab" aria-selected="true">
                                             Overview
                                         </a>
                                     </li>
@@ -314,7 +314,8 @@
                                     </li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                                        aria-labelledby="overview-tab">
                                         <div class="tab-tilte">
                                             <h3>Driving licence</h3>
                                             <p class="text-tagline ">Proin sit amet nunc urna. Duis nec condimentum
@@ -377,21 +378,18 @@
                                             </div>
                                         </div>
                                         <div class="accordion accordion-flush style-1" id="faqFlushStyle1">
-
-
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq1-collapseOne"
+                                                    aria-expanded="false" aria-controls="faq1-collapseOne">
 
                                                     <span class="text-tagline">Q: How long does a Utah driver's license
                                                         last?</span>
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
                                                 </button>
 
-                                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                <div id="faq1-collapseOne" class="accordion-collapse collapse"
                                                     data-bs-parent="#faqFlushStyle1">
-
                                                     <div class="accordion-body">
                                                         <p class="text-tagline">
                                                             <span class="answer-label text-tagline">A:</span>
@@ -406,8 +404,8 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq1-collapseTwo"
+                                                    aria-expanded="false" aria-controls="faq1-collapseTwo">
 
                                                     <span class="text-tagline">Q: What does the gold star on Utah
                                                         license
@@ -415,9 +413,8 @@
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
                                                 </button>
 
-                                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                <div id="faq1-collapseTwo" class="accordion-collapse collapse"
                                                     data-bs-parent="#faqFlushStyle1">
-
                                                     <div class="accordion-body">
                                                         <p class="text-tagline">
                                                             <span class="answer-label text-tagline">A:</span>
@@ -432,8 +429,8 @@
                                             </div>
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq1-collapseThree"
+                                                    aria-expanded="false" aria-controls="faq1-collapseThree">
 
                                                     <span class="text-tagline">Q: Can I drive home after passing my
                                                         driving
@@ -441,7 +438,7 @@
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
                                                 </button>
 
-                                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                <div id="faq1-collapseThree" class="accordion-collapse collapse"
                                                     data-bs-parent="#faqFlushStyle1">
 
                                                     <div class="accordion-body">
@@ -456,9 +453,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
 
                                     <div class="tab-pane fade" id="curriculum" role="tabpanel">
@@ -527,7 +522,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq2-collapseOne"
-                                                    aria-controls="faq2-collapseOne">
+                                                    aria-expanded="false" aria-controls="faq2-collapseOne">
                                                     <span class="text-tagline">Q: How long does a Utah driver's license
                                                         last?</span>
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
@@ -535,6 +530,7 @@
 
                                                 <div id="faq2-collapseOne" class="accordion-collapse collapse"
                                                     data-bs-parent="#faqFlushStyle2">
+
                                                     <div class="accordion-body">
                                                         <p class="text-tagline">
                                                             <span class="answer-label text-tagline">A:</span>
@@ -550,7 +546,8 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq2-collapseTwo"
-                                                    aria-controls="faq2-collapseTwo">
+                                                    aria-expanded="false" aria-controls="faq2-collapseTwo">
+
                                                     <span class="text-tagline">Q: What does the gold star on Utah
                                                         license
                                                         mean?</span>
@@ -574,7 +571,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq2-collapseThree"
-                                                    aria-controls="faq2-collapseThree">
+                                                    aria-expanded="false" aria-controls="faq2-collapseThree">
                                                     <span class="text-tagline">Q: Can I drive home after passing my
                                                         driving
                                                         test?</span>
@@ -665,7 +662,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq3-collapseOne"
-                                                    aria-controls="faq2-collapseOne">
+                                                    aria-expanded="false" aria-controls="faq2-collapseOne">
                                                     <span class="text-tagline">Q: How long does a Utah driver's license
                                                         last?</span>
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
@@ -688,7 +685,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq3-collapseTwo"
-                                                    aria-controls="faq2-collapseTwo">
+                                                    aria-expanded="false" aria-controls="faq2-collapseTwo">
                                                     <span class="text-tagline">Q: What does the gold star on Utah
                                                         license
                                                         mean?</span>
@@ -712,7 +709,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq3-collapseThree"
-                                                    aria-controls="faq2-collapseThree">
+                                                    aria-expanded="false" aria-controls="faq2-collapseThree">
                                                     <span class="text-tagline">Q: Can I drive home after passing my
                                                         driving
                                                         test?</span>
@@ -802,14 +799,15 @@
                                         <div class="accordion accordion-flush style-1" id="faqFlushStyle4">
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#faq3-collapseOne"
-                                                    aria-controls="faq4-collapseOne">
+                                                    data-bs-toggle="collapse" data-bs-target="#faq4-collapseOne"
+                                                    aria-expanded="false" aria-controls="faq4-collapseOne">
+
                                                     <span class="text-tagline">Q: How long does a Utah driver's license
                                                         last?</span>
                                                     <span class="icon ms-auto"><i class="icon-down"></i></span>
                                                 </button>
 
-                                                <div id="faq3-collapseOne" class="accordion-collapse collapse"
+                                                <div id="faq4-collapseOne" class="accordion-collapse collapse"
                                                     data-bs-parent="#faqFlushStyle4">
                                                     <div class="accordion-body">
                                                         <p class="text-tagline">
@@ -826,7 +824,8 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq4-collapseTwo"
-                                                    aria-controls="faq4-collapseTwo">
+                                                    aria-expanded="false" aria-controls="faq4-collapseTwo">
+
                                                     <span class="text-tagline">Q: What does the gold star on Utah
                                                         license
                                                         mean?</span>
@@ -850,7 +849,7 @@
                                             <div class="accordion-item">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq4-collapseThree"
-                                                    aria-controls="faq4-collapseThree">
+                                                    aria-expanded="false" aria-controls="faq4-collapseThree">
                                                     <span class="text-tagline">Q: Can I drive home after passing my
                                                         driving
                                                         test?</span>
@@ -886,7 +885,7 @@
                                                 <div class="service-box-card style-1">
                                                     <div class="card-media ">
                                                         <img src="./images/section/service-box/img-4.jpg" loading="lazy"
-                                                            height="270" width="370">
+                                                            height="270" width="370" alt="">
                                                         <div class="media-overlay"></div>
 
 
@@ -903,7 +902,8 @@
                                                             </h5>
                                                             <div class="instructor-info">
                                                                 <img class="img-info"
-                                                                    src="./images/section/home-2/service.png">
+                                                                    src="./images/section/home-2/service.png"
+                                                                    loading="lazy" alt="">
                                                                 <div class="instructor-details">
                                                                     <b class="text-paragraph">David Fincher</b>
                                                                     <p class="text-tagline tagline-4">20 Hours</p>
@@ -921,7 +921,7 @@
                                             <div class="service-box-card style-1">
                                                 <div class="card-media ">
                                                     <img src="./images/section/service-box/img-4.jpg" loading="lazy"
-                                                        height="270" width="370">
+                                                        height="270" width="370" alt="">
                                                     <div class="media-overlay"></div>
 
 
@@ -935,7 +935,8 @@
                                                     <div class="service-meta">
                                                         <h5 class="service-title size-3">Extended Driving Service</h5>
                                                         <div class="instructor-info">
-                                                            <img src="./images/section/home-2/service.png">
+                                                            <img src="./images/section/home-2/service.png" alt=""
+                                                                loading="lazy">
                                                             <div class="instructor-details">
                                                                 <b class="text-paragraph">David Fincher</b>
                                                                 <p class="text-tagline tagline-4">20 Hours</p>
@@ -952,7 +953,7 @@
                                             <div class="service-box-card style-1">
                                                 <div class="card-media ">
                                                     <img src="./images/section/service-box/img-4.jpg" loading="lazy"
-                                                        height="270" width="370">
+                                                        height="270" width="370" alt="">
                                                     <div class="media-overlay"></div>
 
 
@@ -966,7 +967,8 @@
                                                     <div class="service-meta">
                                                         <h5 class="service-title size-3">Extended Driving Service</h5>
                                                         <div class="instructor-info">
-                                                            <img src="./images/section/home-2/service.png">
+                                                            <img src="./images/section/home-2/service.png" alt=""
+                                                                loading="lazy">
                                                             <div class="instructor-details">
                                                                 <b class="text-paragraph">David Fincher</b>
                                                                 <p class="text-tagline tagline-4">20 Hours</p>
@@ -978,20 +980,20 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
 
 
 
                                     <div class="sw-nav">
-                                        <div class=" sw-prev" aria-label="Previous">
+                                        <div class="sw-prev" role="button" tabindex="0" aria-label="Previous">
                                             <i class="icon-provides"></i>
                                         </div>
-                                        <div class=" sw-next" aria-label="Next">
+
+                                        <div class="sw-next" role="button" tabindex="0" aria-label="Next">
                                             <i class="icon-next"></i>
                                         </div>
                                     </div>
+
 
                                 </div>
                             </div>
@@ -1105,8 +1107,7 @@
                                         <div class="subscribe-content">
                                             <fieldset class="email">
                                                 <input type="email" name="email-form" class="subscribe-email"
-                                                    placeholder="Email address" tabindex="0" aria-required="true"
-                                                    required>
+                                                    placeholder="Email address" tabindex="0" required>
                                             </fieldset>
                                             <div class="button-submit">
                                                 <button class="subscribe-button animate-btn">
@@ -1158,7 +1159,7 @@
         <!-- Popup -->
         <div class="video-popup" id="videoPopup">
             <div class="video-popup-inner">
-                <iframe id="videoFrame" src="" allow="autoplay" allowfullscreen></iframe>
+                <iframe id="videoFrame" src="about:blank" allow="autoplay" allowfullscreen></iframe>
                 <button class="video-popup-close" id="videoClose">&times;</button>
             </div>
         </div>
@@ -1198,13 +1199,16 @@
 
                     <div class="mb-content-top">
                         <ul class="nav-ul-mb accordion" id="accordionMobile">
+
+                            <!-- HOME -->
                             <li class="nav-mb-item accordion-item">
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accHome"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accHome">
                                     HOME
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accHome" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
@@ -1216,16 +1220,15 @@
                                 </div>
                             </li>
 
+                            <!-- PAGES -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accPages"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accPages">
                                     PAGES
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accPages" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
@@ -1242,38 +1245,36 @@
                                 </div>
                             </li>
 
-
+                            <!-- SERVICES -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accServices"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accServices">
                                     SERVICES
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accServices" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
-                                            <li><a href="services.html" class="sub-nav-link">Services </a></li>
-                                            <li><a href="service-details.html" class="sub-nav-link">Services Details</a>
+                                            <li><a href="services.html" class="sub-nav-link">Services</a></li>
+                                            <li><a href="service-details.html" class="sub-nav-link">Service Details</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
+
+                            <!-- NEWS -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accNews"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accNews">
                                     NEWS
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accNews" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
@@ -1283,6 +1284,8 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <!-- CONTACT -->
                             <li class="nav-mb-item">
                                 <a href="contact-us.html"
                                     class=" accordion-button d-flex justify-content-between align-items-center">
@@ -1290,6 +1293,7 @@
                                 </a>
                             </li>
                         </ul>
+
 
                     </div>
                     <div class="mb-other-content">
@@ -1320,7 +1324,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
             </div>

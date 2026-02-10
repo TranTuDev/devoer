@@ -152,13 +152,10 @@
                         <a class="nav-megamenu nav-item-icon nav-modal-item" href="#toggle" data-bs-toggle="modal">
                             <i class="icon-toggle"></i>
                         </a>
-
-                        <a class="mobile-button d-xl-none" type="button" data-bs-toggle="offcanvas"
+                        <a class="mobile-button d-xl-none" href="#mobileMenu" data-bs-toggle="offcanvas"
                             data-bs-target="#mobileMenu">
                             <span></span><span></span><span></span>
                         </a>
-
-
                     </div>
                     <a href="#" class="tf-btn header-btn">
                         <span>GET CONSULTING</span>
@@ -212,8 +209,8 @@
                             </div>
 
                             <div class="btn-about-us">
-                                <button class="tf-btn-1">01. Our Misson <i class="icon-down"></i></button>
-                                <button class="tf-btn-3"> 02. Our Goal <i class="icon-down"></i></button>
+                                <button class="tf-btn-1"> <span>01. Our Misson </span><i class="icon-down"></i></button>
+                                <button class="tf-btn-3"><span> 02. Our Goal</span> <i class="icon-down"></i></button>
                             </div>
 
                             <div class="story-text">
@@ -234,7 +231,7 @@
                             <div class="founder-signature-block d-flex align-items-center ">
                                 <div class="founder-info d-flex align-items-center">
                                     <figure class="founder-figure">
-                                        <img src="./images/section/home-2/CEO-img.png" loading="lazy">
+                                        <img src="./images/section/home-2/CEO-img.png" loading="lazy" alt="">
                                     </figure>
                                     <div class="founder-text">
                                         <h6>David beckham</h6>
@@ -242,7 +239,7 @@
                                     </div>
                                 </div>
                                 <div class="signature-image">
-                                    <img src="./images/section/home-2/signature.svg">
+                                    <img src="./images/section/home-2/signature.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -375,7 +372,7 @@
                     </div>
 
                 </div>
-
+            </div>
         </section>
         <!-- / service-item -->
 
@@ -613,8 +610,7 @@
                                         <div class="subscribe-content">
                                             <fieldset class="email">
                                                 <input type="email" name="email-form" class="subscribe-email"
-                                                    placeholder="Email address" tabindex="0" aria-required="true"
-                                                    required>
+                                                    placeholder="Email address" tabindex="0" required>
                                             </fieldset>
                                             <div class="button-submit">
                                                 <button class="subscribe-button animate-btn">
@@ -666,7 +662,7 @@
         <!-- Popup -->
         <div class="video-popup" id="videoPopup">
             <div class="video-popup-inner">
-                <iframe id="videoFrame" src="" allow="autoplay" allowfullscreen></iframe>
+                <iframe id="videoFrame" src="about:blank" allow="autoplay" allowfullscreen></iframe>
                 <button class="video-popup-close" id="videoClose">&times;</button>
             </div>
         </div>
@@ -706,13 +702,16 @@
 
                     <div class="mb-content-top">
                         <ul class="nav-ul-mb accordion" id="accordionMobile">
+
+                            <!-- HOME -->
                             <li class="nav-mb-item accordion-item">
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accHome"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accHome">
                                     HOME
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accHome" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
@@ -724,16 +723,15 @@
                                 </div>
                             </li>
 
+                            <!-- PAGES -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accPages"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accPages">
                                     PAGES
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accPages" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
@@ -750,38 +748,36 @@
                                 </div>
                             </li>
 
-
+                            <!-- SERVICES -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accServices"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accServices">
                                     SERVICES
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accServices" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
-                                            <li><a href="services.html" class="sub-nav-link">Services </a></li>
-                                            <li><a href="service-details.html" class="sub-nav-link">Services Details</a>
+                                            <li><a href="services.html" class="sub-nav-link">Services</a></li>
+                                            <li><a href="service-details.html" class="sub-nav-link">Service Details</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </li>
+
+                            <!-- NEWS -->
                             <li class="nav-mb-item accordion-item">
-
-                                <a class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#accNews"
-                                    aria-expanded="false">
+                                    aria-expanded="false" aria-controls="accNews">
                                     NEWS
-                                    <i class="icon-chevron-thin-down"></i>
-                                </a>
-
-
+                                    <i class="icon-chevron-thin-down ms-2"></i>
+                                </button>
                                 <div id="accNews" class="accordion-collapse collapse" data-bs-parent="#accordionMobile">
                                     <div class="accordion-body px-0">
                                         <ul class="sub-nav-menu">
@@ -791,6 +787,8 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <!-- CONTACT -->
                             <li class="nav-mb-item">
                                 <a href="contact-us.html"
                                     class=" accordion-button d-flex justify-content-between align-items-center">
@@ -798,6 +796,7 @@
                                 </a>
                             </li>
                         </ul>
+
 
                     </div>
                     <div class="mb-other-content">
@@ -828,7 +827,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
             </div>
