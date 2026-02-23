@@ -8213,7 +8213,6 @@ a:focus, a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 .service-card .card-body {
   padding: 0px !important;
