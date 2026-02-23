@@ -886,6 +886,11 @@
 
 
 @media (max-width: 767px) {
+    .instructor-gird {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+
     .wg-course-details {
         .box-content-course {
             padding: 15px !important;
@@ -1113,6 +1118,10 @@
 
 /* MOBILE: ≤575px */
 @media (max-width: 575px) {
+    .instructor-gird {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
 
     .subscribe-footer {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);

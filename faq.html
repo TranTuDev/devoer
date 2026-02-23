@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Devoer - Professional Driving Courses</title>
+    <meta name="description"
+        content="Devoer is a modern, responsive HTML template designed for driving schools and driver training centers to build professional, SEO-friendly websites for car and motorcycle license courses.">
+    <meta name="keywords"
+        content="driving school html template, driving course website, car license training, motorcycle license, driver education, driving lessons, responsive bootstrap 5 template">
+    <meta name="author" content="themesflat.com" />
+
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="icons/style.css">
 
@@ -20,7 +28,7 @@
     <div class="page-transition">
         <div class="panel panel-left"></div>
         <div class="panel panel-right"></div>
-        <h1 class="transition-logo">DEVOER</h1>
+        <h2 class="transition-logo">DEVOER</h2>
     </div>
     <div class="wrapper">
         <!-- Top bar -->
@@ -149,13 +157,10 @@
                         <a class="nav-megamenu nav-item-icon nav-modal-item" href="#toggle" data-bs-toggle="modal">
                             <i class="icon-toggle"></i>
                         </a>
-
-                        <a class="mobile-button d-xl-none" type="button" data-bs-toggle="offcanvas"
+                        <a class="mobile-button d-xl-none" href="#mobileMenu" data-bs-toggle="offcanvas"
                             data-bs-target="#mobileMenu">
                             <span></span><span></span><span></span>
                         </a>
-
-
                     </div>
                     <a href="#" class="tf-btn header-btn">
                         <span>GET CONSULTING</span>
@@ -352,14 +357,14 @@
                             <h4>Send Massage Us</h4>
                             <div class="subscribe-content">
                                 <input type="text" name="full-name-form" class="input-form" placeholder="Full Name"
-                                    tabindex="0" aria-required="true" required>
-                                <input type="emaill" name="emaill-form" class="input-form" placeholder="Email Address"
-                                    tabindex="0" aria-required="true" required>
-                                <input type="tel" name="phone-form" class="input-form" placeholder="Phone" tabindex="0"
-                                    aria-required="true" required>
+                                    required>
+                                <input type="email" name="email-form" class="input-form" placeholder="Email Address"
+                                    required>
+                                <input type="tel" name="phone-form" class="input-form" placeholder="Phone" required>
                                 <input type="text" name="subject-form" class="input-form" placeholder="Subject"
-                                    tabindex="0" aria-required="true" required>
-                                <textarea class="input-massage" placeholder="Massage"></textarea>
+                                    required>
+                                <textarea name="message-form" class="input-massage" placeholder="Message"
+                                    required></textarea>
                             </div>
 
                             <button class="tf-btn-1 btn-contact"><span>SEND A MASSAGE</span><i
@@ -368,6 +373,7 @@
 
                     </div>
                 </div>
+            </div>
         </section>
         <!-- / FAQ -->
         <!-- community -->
@@ -490,8 +496,7 @@
                                         <div class="subscribe-content">
                                             <fieldset class="email">
                                                 <input type="email" name="email-form" class="subscribe-email"
-                                                    placeholder="Email address" tabindex="0" aria-required="true"
-                                                    required>
+                                                    placeholder="Email address" tabindex="0" required>
                                             </fieldset>
                                             <div class="button-submit">
                                                 <button class="subscribe-button animate-btn">
@@ -530,7 +535,7 @@
                         </div>
                         <div class="right">
                             <p>
-                                © 2025 Devoer, All Rights Reserved
+                                © 2026 Devoer, All Rights Reserved
                             </p>
                         </div>
                     </div>
@@ -563,7 +568,14 @@
         <!-- /search -->
 
 
-
+        <!-- Popup -->
+        <div class="video-popup" id="videoPopup">
+            <div class="video-popup-inner">
+                <iframe id="videoFrame" src="about:blank" allow="autoplay" allowfullscreen></iframe>
+                <button class="video-popup-close" id="videoClose">&times;</button>
+            </div>
+        </div>
+        <!-- Popup -->
 
         <!-- mobile menu -->
         <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
@@ -726,7 +738,6 @@
         </button>
         <!-- /scroll Top -->
         <script src="js/anime.min.js"></script>
-
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.nice-select.min.js"></script>

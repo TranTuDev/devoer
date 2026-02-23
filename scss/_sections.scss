@@ -435,6 +435,13 @@
     }
 }
 
+.instructor-gird {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
+
+
 .card-item-img {
     position: relative;
     overflow: hidden;
