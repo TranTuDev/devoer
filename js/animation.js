@@ -265,3 +265,268 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+
+  $('.animation-img').each(function () {
+
+    const img = this;
+    let animated = false;
+
+    const rows = 4;
+    const cols = 6;
+
+    const parent = img.parentElement;
+    parent.style.position = 'relative';
+    parent.style.overflow = 'hidden';
+
+    const imgWidth = img.offsetWidth;
+    const imgHeight = img.offsetHeight;
+
+    img.style.opacity = 0;
+
+    const pieces = [];
+
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+
+        const piece = document.createElement('div');
+
+        piece.style.position = 'absolute';
+        piece.style.width = imgWidth / cols + 'px';
+        piece.style.height = imgHeight / rows + 'px';
+        piece.style.left = (c * imgWidth / cols) + 'px';
+        piece.style.top = (r * imgHeight / rows) + 'px';
+        piece.style.backgroundImage = `url(${img.src})`;
+        piece.style.backgroundSize = `${imgWidth}px ${imgHeight}px`;
+        piece.style.backgroundPosition =
+          `-${c * imgWidth / cols}px -${r * imgHeight / rows}px`;
+
+        parent.appendChild(piece);
+        pieces.push(piece);
+      }
+    }
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $(img).offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 100) {
+
+        anime({
+          targets: pieces,
+          translateY: () => anime.random(-200, 200),
+          translateX: () => anime.random(-200, 200),
+          opacity: [0, 1],
+          duration: 0
+        });
+
+        anime({
+          targets: pieces,
+          translateX: 0,
+          translateY: 0,
+          opacity: 1,
+          delay: anime.stagger(40),
+          duration: 1200,
+          easing: 'easeOutExpo',
+          complete: function () {
+            img.style.opacity = 1;
+            pieces.forEach(p => p.remove());
+          }
+        });
+
+        animated = true;
+      }
+    }
+
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+
+  });
+
+});
+
+$(document).ready(function () {
+
+  function animateOnScroll(selector, direction) {
+
+    $(selector).each(function () {
+
+      const el = this;
+      let animated = false;
+
+      // trạng thái ban đầu
+      el.style.opacity = 0;
+
+      if (direction === 'left') {
+        el.style.transform = 'translateX(-150px)';
+      }
+
+      if (direction === 'right') {
+        el.style.transform = 'translateX(150px)';
+      }
+
+      if (direction === 'top') {
+        el.style.transform = 'translateY(-150px)';
+      }
+
+      if (direction === 'bottom') {
+        el.style.transform = 'translateY(150px)';
+      }
+
+      function checkScroll() {
+        if (animated) return;
+
+        const elementTop = $(el).offset().top;
+        const windowBottom = $(window).scrollTop() + $(window).height();
+
+        if (windowBottom > elementTop + 100) {
+
+          anime({
+            targets: el,
+            translateX: 0,
+            translateY: 0,
+            opacity: [0, 1],
+            duration: 1000,
+            easing: 'easeOutExpo'
+          });
+
+          animated = true;
+        }
+      }
+
+      $(window).on('scroll', checkScroll);
+      checkScroll();
+
+    });
+  }
+
+  animateOnScroll('.animation-left', 'left');
+  animateOnScroll('.animation-right', 'right');
+  animateOnScroll('.animation-top', 'top');
+  animateOnScroll('.animation-bottom', 'bottom');
+
+});
+$(document).ready(function () {
+
+  $('.anim-zoom').each(function () {
+
+    const el = this;
+    let animated = false;
+
+    // Trạng thái ban đầu
+    el.style.opacity = 0;
+    el.style.transform = 'scale(1.3)';
+    el.style.filter = 'brightness(0.7)';
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $(el).offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 100) {
+
+        anime({
+          targets: el,
+          scale: [1.3, 1],
+          opacity: [0, 1],
+          duration: 1400,
+          easing: 'easeOutExpo',
+          update: function (anim) {
+            const progress = anim.progress / 100;
+            el.style.filter = `brightness(${0.7 + (0.3 * progress)})`;
+          }
+        });
+
+        animated = true;
+      }
+    }
+
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+
+  });
+
+});
+$(document).ready(function () {
+
+  $('.anim-flip').each(function () {
+
+    const el = this;
+    let animated = false;
+
+    // Setup 3D context
+    el.style.opacity = 0;
+    el.style.transform = 'perspective(1000px) rotateY(90deg)';
+    el.style.transformOrigin = 'center';
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $(el).offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 100) {
+
+        anime({
+          targets: el,
+          rotateY: [90, 0],
+          opacity: [0, 1],
+          duration: 1200,
+          easing: 'easeOutExpo'
+        });
+
+        animated = true;
+      }
+    }
+
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+
+  });
+
+});
+$(document).ready(function () {
+
+  $('.anim-blur').each(function () {
+
+    const el = this;
+    let animated = false;
+
+    // Trạng thái ban đầu
+    el.style.opacity = 0;
+    el.style.filter = 'blur(15px)';
+    el.style.transform = 'translateY(40px)';
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $(el).offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 100) {
+
+        anime({
+          targets: el,
+          opacity: [0, 1],
+          translateY: [40, 0],
+          duration: 1200,
+          easing: 'easeOutExpo',
+          update: function (anim) {
+            const progress = anim.progress / 100;
+            el.style.filter = `blur(${15 - (15 * progress)}px)`;
+          }
+        });
+
+        animated = true;
+      }
+    }
+
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+
+  });
+
+});

@@ -8015,7 +8015,7 @@ a:focus, a:hover {
   margin-bottom: 40px;
 }
 .about-us-section .about-details-content {
-  padding-right: 70px;
+  padding-right: 50px;
 }
 .about-us-section .image-banner {
   position: relative;
@@ -8053,6 +8053,9 @@ a:focus, a:hover {
 }
 .about-us-section.style-1 .heading-section {
   margin-bottom: 35px !important;
+}
+.about-us-section.style-1 .about-details-content {
+  padding-right: 70px !important;
 }
 .about-us-section.style-1 .image-banner {
   position: relative;

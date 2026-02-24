@@ -2170,9 +2170,9 @@
     .section-title {
         color: var(--text-color-1);
         width: 100%;
-       
+
         overflow: visible !important;
-       
+
         word-wrap: normal;
         overflow-wrap: normal;
         white-space: normal;
@@ -2306,7 +2306,7 @@
     }
 
     .about-details-content {
-        padding-right: 70px;
+        padding-right: 50px;
     }
 
     .image-banner {
@@ -2359,6 +2359,10 @@
     &.style-1 {
         .heading-section {
             margin-bottom: 35px !important;
+        }
+
+        .about-details-content {
+            padding-right: 70px !important;
         }
 
         .image-banner {
