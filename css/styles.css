@@ -4978,6 +4978,28 @@ a:focus, a:hover {
   filter: blur(8px);
 }
 
+.heading-section .section-title .word,
+.section-title .word {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  vertical-align: top !important;
+  overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  word-spacing: normal !important;
+}
+
+.heading-section .section-title .char,
+.section-title .char {
+  display: inline-block !important;
+  line-height: 1 !important;
+  vertical-align: baseline !important;
+  will-change: transform, opacity;
+  margin: 0 !important;
+  padding: 0 !important;
+  letter-spacing: normal !important;
+}
+
 /*------------ _offcanvas ---------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -7909,6 +7931,11 @@ a:focus, a:hover {
 }
 .heading-section .section-title {
   color: var(--text-color-1);
+  width: 100%;
+  overflow: visible !important;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  white-space: normal;
 }
 .heading-section.style-1 {
   text-align: start;
@@ -7988,7 +8015,7 @@ a:focus, a:hover {
   margin-bottom: 40px;
 }
 .about-us-section .about-details-content {
-  padding-right: 30px;
+  padding-right: 70px;
 }
 .about-us-section .image-banner {
   position: relative;
@@ -9568,7 +9595,7 @@ a:focus, a:hover {
 
 .fun-pack-card {
   position: relative;
-  padding: 80px;
+  padding: 80px 70px;
   align-items: center;
   justify-content: center;
   display: flex;

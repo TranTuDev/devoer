@@ -183,8 +183,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
   playTransition();
 
- 
+
 });
 
+$(document).ready(function () {
+  $('.section-title').each(function () {
+    const $title = $(this);
 
+    // ✅ FIX: Lưu text gốc trước khi split
+    const text = $title.text().trim();
+
+    // ✅ FIX: Kiểm tra nếu đã được process rồi thì skip
+    if ($title.find('.word').length > 0) {
+      return;
+    }
+
+    let newHTML = '';
+    const words = text.split(/\s+/); // ✅ Split by any whitespace
+
+    words.forEach((word, wordIndex) => {
+      // ✅ Bỏ qua word rỗng
+      if (!word) return;
+
+      // ✅ Wrap word
+      newHTML += '<span class="word">';
+
+      // ✅ Split thành char
+      for (let i = 0; i < word.length; i++) {
+        const char = word[i];
+        newHTML += `<span class="char">${char}</span>`;
+      }
+
+      newHTML += '</span>';
+
+      // ✅ CRITICAL: Thêm space NGOÀI .word bằng text node
+      if (wordIndex < words.length - 1) {
+        newHTML += ' '; // Space giữa các word
+      }
+    });
+
+    $title.html(newHTML);
+
+    const chars = $title.find('.char');
+
+    // ✅ Set initial state
+    chars.css({
+      'transform': 'translateY(1.2em)',
+      'opacity': '0',
+      'display': 'inline-block'
+    });
+
+    let animated = false;
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $title.offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 50) {
+        anime({
+          targets: chars.toArray(), // ✅ Use toArray() not get()
+          translateY: [
+            { value: '-0.4em', duration: 400, easing: 'easeOutExpo' },
+            { value: 0, duration: 600, easing: 'easeOutBounce' }
+          ],
+          opacity: [0, 1],
+          delay: anime.stagger(30),
+          easing: 'easeOutExpo'
+        });
+
+        animated = true;
+
+        // ✅ Unbind scroll sau khi animate xong
+        $(window).off('scroll', checkScroll);
+      }
+    }
+
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+  });
+});
 

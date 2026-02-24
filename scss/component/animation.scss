@@ -79,3 +79,25 @@
     transform: translateY(60px) scale(0.8) rotateZ(-10deg);
     filter: blur(8px);
 }
+
+.heading-section .section-title .word,
+.section-title .word {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    vertical-align: top !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    word-spacing: normal !important;
+}
+
+.heading-section .section-title .char,
+.section-title .char {
+    display: inline-block !important;
+    line-height: 1 !important;
+    vertical-align: baseline !important;
+    will-change: transform, opacity;
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: normal !important;
+}
