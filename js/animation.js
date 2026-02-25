@@ -349,184 +349,145 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-  function animateOnScroll(selector, direction) {
+  const isMobile = window.innerWidth <= 768;
 
-    $(selector).each(function () {
+  // Giảm giá trị trên mobile
+  const moveDistance = isMobile ? 60 : 150;
+  const zoomScale = isMobile ? 1.05 : 1.3;
+  const blurAmount = isMobile ? 8 : 15;
 
-      const el = this;
-      let animated = false;
+  const animatedElements = [];
 
-      // trạng thái ban đầu
-      el.style.opacity = 0;
+  function setupElement(el, type, direction = null) {
 
-      if (direction === 'left') {
-        el.style.transform = 'translateX(-150px)';
-      }
+    el.style.opacity = 0;
+    el.style.willChange = 'transform, opacity';
+    el.style.backfaceVisibility = 'hidden';
 
-      if (direction === 'right') {
-        el.style.transform = 'translateX(150px)';
-      }
+    if (type === 'slide') {
+      if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
+      if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
+      if (direction === 'top') el.style.transform = `translateY(-${moveDistance}px)`;
+      if (direction === 'bottom') el.style.transform = `translateY(${moveDistance}px)`;
+    }
 
-      if (direction === 'top') {
-        el.style.transform = 'translateY(-150px)';
-      }
+    if (type === 'zoom') {
+      el.style.transform = `scale(${zoomScale})`;
+      el.style.overflow = 'hidden';
+    }
 
-      if (direction === 'bottom') {
-        el.style.transform = 'translateY(150px)';
-      }
+    if (type === 'flip') {
+      el.style.transform = 'perspective(1000px) rotateY(90deg)';
+    }
 
-      function checkScroll() {
-        if (animated) return;
+    if (type === 'blur') {
+      el.style.transform = `translateY(${isMobile ? 20 : 40}px)`;
+      el.style.filter = `blur(${blurAmount}px)`;
+    }
 
-        const elementTop = $(el).offset().top;
-        const windowBottom = $(window).scrollTop() + $(window).height();
+    animatedElements.push({
+      el,
+      type,
+      direction,
+      animated: false
+    });
+  }
 
-        if (windowBottom > elementTop + 100) {
+  // SETUP
+  $('.animation-left').each(function () {
+    setupElement(this, 'slide', 'left');
+  });
 
+  $('.animation-right').each(function () {
+    setupElement(this, 'slide', 'right');
+  });
+
+  $('.animation-top').each(function () {
+    setupElement(this, 'slide', 'top');
+  });
+
+  $('.animation-bottom').each(function () {
+    setupElement(this, 'slide', 'bottom');
+  });
+
+  $('.anim-zoom').each(function () {
+    setupElement(this, 'zoom');
+  });
+
+  $('.anim-flip').each(function () {
+    setupElement(this, 'flip');
+  });
+
+  $('.anim-blur').each(function () {
+    setupElement(this, 'blur');
+  });
+
+  // ONE scroll listener duy nhất
+  function checkScroll() {
+
+    const windowBottom = $(window).scrollTop() + $(window).height();
+
+    animatedElements.forEach(item => {
+
+      if (item.animated) return;
+
+      const elementTop = $(item.el).offset().top;
+
+      if (windowBottom > elementTop + 80) {
+
+        if (item.type === 'slide') {
           anime({
-            targets: el,
+            targets: item.el,
             translateX: 0,
             translateY: 0,
+            opacity: [0, 1],
+            duration: 900,
+            easing: 'easeOutExpo'
+          });
+        }
+
+        if (item.type === 'zoom') {
+          anime({
+            targets: item.el,
+            scale: [zoomScale, 1],
             opacity: [0, 1],
             duration: 1000,
             easing: 'easeOutExpo'
           });
-
-          animated = true;
         }
-      }
 
-      $(window).on('scroll', checkScroll);
-      checkScroll();
+        if (item.type === 'flip') {
+          anime({
+            targets: item.el,
+            rotateY: [90, 0],
+            opacity: [0, 1],
+            duration: 1000,
+            easing: 'easeOutExpo'
+          });
+        }
+
+        if (item.type === 'blur') {
+          anime({
+            targets: item.el,
+            translateY: 0,
+            opacity: [0, 1],
+            duration: 1000,
+            easing: 'easeOutExpo',
+            update: function (anim) {
+              const progress = anim.progress / 100;
+              item.el.style.filter = `blur(${blurAmount - (blurAmount * progress)}px)`;
+            }
+          });
+        }
+
+        item.animated = true;
+      }
 
     });
   }
 
-  animateOnScroll('.animation-left', 'left');
-  animateOnScroll('.animation-right', 'right');
-  animateOnScroll('.animation-top', 'top');
-  animateOnScroll('.animation-bottom', 'bottom');
+  $(window).on('scroll', checkScroll);
+  checkScroll();
 
 });
-$(document).ready(function () {
 
-  $('.anim-zoom').each(function () {
-
-    const el = this;
-    let animated = false;
-
-    // Trạng thái ban đầu
-    el.style.opacity = 0;
-    el.style.transform = 'scale(1.3)';
-    el.style.filter = 'brightness(0.7)';
-
-    function checkScroll() {
-      if (animated) return;
-
-      const elementTop = $(el).offset().top;
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom > elementTop + 100) {
-
-        anime({
-          targets: el,
-          scale: [1.3, 1],
-          opacity: [0, 1],
-          duration: 1400,
-          easing: 'easeOutExpo',
-          update: function (anim) {
-            const progress = anim.progress / 100;
-            el.style.filter = `brightness(${0.7 + (0.3 * progress)})`;
-          }
-        });
-
-        animated = true;
-      }
-    }
-
-    $(window).on('scroll', checkScroll);
-    checkScroll();
-
-  });
-
-});
-$(document).ready(function () {
-
-  $('.anim-flip').each(function () {
-
-    const el = this;
-    let animated = false;
-
-    // Setup 3D context
-    el.style.opacity = 0;
-    el.style.transform = 'perspective(1000px) rotateY(90deg)';
-    el.style.transformOrigin = 'center';
-
-    function checkScroll() {
-      if (animated) return;
-
-      const elementTop = $(el).offset().top;
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom > elementTop + 100) {
-
-        anime({
-          targets: el,
-          rotateY: [90, 0],
-          opacity: [0, 1],
-          duration: 1200,
-          easing: 'easeOutExpo'
-        });
-
-        animated = true;
-      }
-    }
-
-    $(window).on('scroll', checkScroll);
-    checkScroll();
-
-  });
-
-});
-$(document).ready(function () {
-
-  $('.anim-blur').each(function () {
-
-    const el = this;
-    let animated = false;
-
-    // Trạng thái ban đầu
-    el.style.opacity = 0;
-    el.style.filter = 'blur(15px)';
-    el.style.transform = 'translateY(40px)';
-
-    function checkScroll() {
-      if (animated) return;
-
-      const elementTop = $(el).offset().top;
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom > elementTop + 100) {
-
-        anime({
-          targets: el,
-          opacity: [0, 1],
-          translateY: [40, 0],
-          duration: 1200,
-          easing: 'easeOutExpo',
-          update: function (anim) {
-            const progress = anim.progress / 100;
-            el.style.filter = `blur(${15 - (15 * progress)}px)`;
-          }
-        });
-
-        animated = true;
-      }
-    }
-
-    $(window).on('scroll', checkScroll);
-    checkScroll();
-
-  });
-
-});

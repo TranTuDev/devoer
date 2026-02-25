@@ -291,6 +291,11 @@
 }
 
 @media (max-width: 991px) {
+    .transition-logo {
+        font-size: 48px;
+        letter-spacing: 8px;
+    }
+
     .about-us-section {
         &.style-1 {
             .image-banner {
@@ -886,6 +891,11 @@
 
 
 @media (max-width: 767px) {
+    .transition-logo {
+        font-size: 36px;
+        letter-spacing: 6px;
+    }
+
     .instructor-gird {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 15px;
@@ -1118,6 +1128,16 @@
 
 /* MOBILE: ≤575px */
 @media (max-width: 575px) {
+    .transition-logo {
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .transition-logo span {
+        transform: translateY(30px) scale(0.9) rotateZ(-5deg);
+        filter: blur(4px);
+    }
+
     .instructor-gird {
         grid-template-columns: 1fr !important;
         gap: 10px;

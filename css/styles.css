@@ -4959,11 +4959,8 @@ a:focus, a:hover {
 
 .transition-logo {
   font-size: 72px;
-  /* to hơn, nổi bật */
   font-weight: 900;
-  /* dày hơn */
   letter-spacing: 12px;
-  /* khoảng cách ký tự đẹp */
   color: #fff;
   z-index: 10;
   position: relative;
@@ -5280,6 +5277,10 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 991px) {
+  .transition-logo {
+    font-size: 48px;
+    letter-spacing: 8px;
+  }
   .about-us-section.style-1 .image-banner {
     position: unset !important;
     display: flex;
@@ -5647,6 +5648,10 @@ a:focus, a:hover {
    MD: max-width 767px (Bootstrap 5: < 768px)
    ============================================================ */
 @media (max-width: 767px) {
+  .transition-logo {
+    font-size: 36px;
+    letter-spacing: 6px;
+  }
   .instructor-gird {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px;
@@ -5791,6 +5796,14 @@ a:focus, a:hover {
 
 /* MOBILE: ≤575px */
 @media (max-width: 575px) {
+  .transition-logo {
+    font-size: 26px;
+    letter-spacing: 4px;
+  }
+  .transition-logo span {
+    transform: translateY(30px) scale(0.9) rotateZ(-5deg);
+    filter: blur(4px);
+  }
   .instructor-gird {
     grid-template-columns: 1fr !important;
     gap: 10px;
