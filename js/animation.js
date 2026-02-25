@@ -351,38 +351,48 @@ $(document).ready(function () {
 
   const isMobile = window.innerWidth <= 768;
 
-  // Giảm giá trị trên mobile
-  const moveDistance = isMobile ? 60 : 150;
-  const zoomScale = isMobile ? 1.05 : 1.3;
-  const blurAmount = isMobile ? 8 : 15;
+  // ✅ FIX: Giảm mạnh giá trị trên mobile để không vỡ layout
+  const moveDistance = isMobile ? 20 : 150;      // 20px thay vì 60px
+  const zoomScale = isMobile ? 1.02 : 1.3;       // 1.02 thay vì 1.05
+  const blurAmount = isMobile ? 3 : 15;          // 3px thay vì 8px
 
   const animatedElements = [];
 
   function setupElement(el, type, direction = null) {
 
+    // ✅ FIX: Set position relative để tránh overflow
+    el.style.position = 'relative';
     el.style.opacity = 0;
     el.style.willChange = 'transform, opacity';
     el.style.backfaceVisibility = 'hidden';
 
-    if (type === 'slide') {
-      if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
-      if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
-      if (direction === 'top') el.style.transform = `translateY(-${moveDistance}px)`;
-      if (direction === 'bottom') el.style.transform = `translateY(${moveDistance}px)`;
-    }
+    // ✅ FIX: Trên mobile, chỉ dùng opacity, không dùng transform
+    if (isMobile) {
+      // Không set transform ban đầu trên mobile
+      // Chỉ animate opacity
+      el.setAttribute('data-mobile-simple', 'true');
+    } else {
+      // Desktop: dùng transform như bình thường
+      if (type === 'slide') {
+        if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
+        if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
+        if (direction === 'top') el.style.transform = `translateY(-${moveDistance}px)`;
+        if (direction === 'bottom') el.style.transform = `translateY(${moveDistance}px)`;
+      }
 
-    if (type === 'zoom') {
-      el.style.transform = `scale(${zoomScale})`;
-      el.style.overflow = 'hidden';
-    }
+      if (type === 'zoom') {
+        el.style.transform = `scale(${zoomScale})`;
+        el.style.overflow = 'hidden';
+      }
 
-    if (type === 'flip') {
-      el.style.transform = 'perspective(1000px) rotateY(90deg)';
-    }
+      if (type === 'flip') {
+        el.style.transform = 'perspective(1000px) rotateY(90deg)';
+      }
 
-    if (type === 'blur') {
-      el.style.transform = `translateY(${isMobile ? 20 : 40}px)`;
-      el.style.filter = `blur(${blurAmount}px)`;
+      if (type === 'blur') {
+        el.style.transform = `translateY(40px)`;
+        el.style.filter = `blur(${blurAmount}px)`;
+      }
     }
 
     animatedElements.push({
@@ -435,6 +445,19 @@ $(document).ready(function () {
 
       if (windowBottom > elementTop + 80) {
 
+        // ✅ FIX: Mobile - chỉ fade in
+        if (isMobile) {
+          anime({
+            targets: item.el,
+            opacity: [0, 1],
+            duration: 600,
+            easing: 'easeOutQuad'
+          });
+          item.animated = true;
+          return;
+        }
+
+        // Desktop - animation đầy đủ
         if (item.type === 'slide') {
           anime({
             targets: item.el,

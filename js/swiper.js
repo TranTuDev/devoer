@@ -4,7 +4,7 @@ if ($(".swiper-portfolio").length) {
     slidesPerView: 5,
     spaceBetween: 10,
     speed: 1000,
-    loop: false, // khuyên TẮT nếu dùng pagination
+    loop: false, 
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -162,27 +162,32 @@ popup.addEventListener('click', e => {
 });
 
 
-const serviceSlider = new Swiper('.course-details-slider', {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  slidesPerGroup: 3,
-  loop: false,
-  navigation: {
-    nextEl: '.sw-next',
-    prevEl: '.sw-prev',
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
+document.addEventListener("DOMContentLoaded", function () {
+
+  const courseSlider = new Swiper('.course-details-slider', {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 30,
+    loop: false,
+    speed: 800,
+
+    navigation: {
+      nextEl: '.course-details-slider .sw-next',
+      prevEl: '.course-details-slider .sw-prev',
     },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    1200: {
-      slidesPerView: 2,
-      slidesPerGroup: 3,
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      }
     }
-  }
+  });
+
 });
+
+

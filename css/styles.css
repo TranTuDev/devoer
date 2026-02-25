@@ -9121,6 +9121,8 @@ a:focus, a:hover {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .sw-next i {
   font-size: 20px;
@@ -9147,6 +9149,8 @@ a:focus, a:hover {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .sw-prev i {
   font-size: 20px;
