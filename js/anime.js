@@ -216,9 +216,9 @@ $(document).ready(function () {
 
       newHTML += '</span>';
 
-      // ✅ CRITICAL: Thêm space NGOÀI .word bằng text node
+      
       if (wordIndex < words.length - 1) {
-        newHTML += ' '; // Space giữa các word
+        newHTML += ' '; 
       }
     });
 
@@ -226,7 +226,7 @@ $(document).ready(function () {
 
     const chars = $title.find('.char');
 
-    // ✅ Set initial state
+   
     chars.css({
       'transform': 'translateY(1.2em)',
       'opacity': '0',
@@ -243,7 +243,7 @@ $(document).ready(function () {
 
       if (windowBottom > elementTop + 50) {
         anime({
-          targets: chars.toArray(), // ✅ Use toArray() not get()
+          targets: chars.toArray(), 
           translateY: [
             { value: '-0.4em', duration: 400, easing: 'easeOutExpo' },
             { value: 0, duration: 600, easing: 'easeOutBounce' }
@@ -255,7 +255,7 @@ $(document).ready(function () {
 
         animated = true;
 
-        // ✅ Unbind scroll sau khi animate xong
+        
         $(window).off('scroll', checkScroll);
       }
     }
@@ -351,28 +351,27 @@ $(document).ready(function () {
 
   const isMobile = window.innerWidth <= 768;
 
-  // ✅ FIX: Giảm mạnh giá trị trên mobile để không vỡ layout
-  const moveDistance = isMobile ? 20 : 150;      // 20px thay vì 60px
-  const zoomScale = isMobile ? 1.02 : 1.3;       // 1.02 thay vì 1.05
-  const blurAmount = isMobile ? 3 : 15;          // 3px thay vì 8px
+ 
+  const moveDistance = isMobile ? 20 : 150;     
+  const zoomScale = isMobile ? 1.02 : 1.3;      
+  const blurAmount = isMobile ? 3 : 15;          
 
   const animatedElements = [];
 
   function setupElement(el, type, direction = null) {
 
-    // ✅ FIX: Set position relative để tránh overflow
+   
     el.style.position = 'relative';
     el.style.opacity = 0;
     el.style.willChange = 'transform, opacity';
     el.style.backfaceVisibility = 'hidden';
 
-    // ✅ FIX: Trên mobile, chỉ dùng opacity, không dùng transform
+   
     if (isMobile) {
-      // Không set transform ban đầu trên mobile
-      // Chỉ animate opacity
+      
       el.setAttribute('data-mobile-simple', 'true');
     } else {
-      // Desktop: dùng transform như bình thường
+    
       if (type === 'slide') {
         if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
         if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
@@ -403,7 +402,6 @@ $(document).ready(function () {
     });
   }
 
-  // SETUP
   $('.animation-left').each(function () {
     setupElement(this, 'slide', 'left');
   });
@@ -432,7 +430,6 @@ $(document).ready(function () {
     setupElement(this, 'blur');
   });
 
-  // ONE scroll listener duy nhất
   function checkScroll() {
 
     const windowBottom = $(window).scrollTop() + $(window).height();
@@ -444,8 +441,6 @@ $(document).ready(function () {
       const elementTop = $(item.el).offset().top;
 
       if (windowBottom > elementTop + 80) {
-
-        // ✅ FIX: Mobile - chỉ fade in
         if (isMobile) {
           anime({
             targets: item.el,
@@ -457,7 +452,7 @@ $(document).ready(function () {
           return;
         }
 
-        // Desktop - animation đầy đủ
+      
         if (item.type === 'slide') {
           anime({
             targets: item.el,

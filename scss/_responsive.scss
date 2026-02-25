@@ -891,6 +891,23 @@
 
 
 @media (max-width: 767px) {
+    .feature {
+        display: block !important;
+
+        .feature-left {
+            margin-bottom: 20px;
+        }
+    }
+
+    .our-benefits {
+        display: block !important;
+
+        .our-benefits-img {
+            max-height: 250px;
+            margin-bottom: 20px;
+        }
+    }
+
     .transition-logo {
         font-size: 36px;
         letter-spacing: 6px;

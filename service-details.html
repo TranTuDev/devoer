@@ -153,7 +153,8 @@
                             <i class="icon-loupe"></i>
                         </a>
                         <span class="header-line"></span>
-                        <a class="nav-megamenu nav-item-icon nav-modal-item" href="#toggle" data-bs-toggle="modal">
+                        <a class="nav-megamenu nav-item-icon nav-modal-item" data-bs-toggle="offcanvas"
+                            href="#sidebarOffcanvas" role="button" aria-controls="sidebarOffcanvas">
                             <i class="icon-toggle"></i>
                         </a>
 
@@ -207,14 +208,14 @@
                         <button id="filterShop" class="fillter-btn style-fixed d-lg-none" aria-label="sibar-btn">
                             <i class="icon-toggle"></i>
                         </button>
-                        <div class="tf-sidebar sidebar-filter left">
+                        <div class="tf-sidebar sidebar-filter left ">
                             <div class="header-fillter flex justify-content-between align-items-center d-lg-none mb-30">
                                 <h3 class="title">
                                     Fillter
                                 </h3>
                                 <span class="icon-close close-filter"></span>
                             </div>
-                            <div class="sidebar-item sidebar-content sidebar-categories mb-20">
+                            <div class="sidebar-item sidebar-content sidebar-categories mb-20 animation-left">
                                 <h6 class="title-content fw-5">
                                     Category
                                 </h6>
@@ -241,7 +242,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="wg-help ">
+                            <div class="wg-help animation-left">
                                 <div class="image-bg">
                                     <img loading="lazy" alt="" width="300" height="390"
                                         src="images/blog/img-bg-help.jpg">
@@ -287,7 +288,7 @@
                                     fermentum
                                     dui porttitor at.
                                 </p>
-                                <div class="feature">
+                                <div class="feature animation-right">
                                     <div class="feature-left">
                                         <i class="icon-traces"></i>
                                         <div class="feature-content">
@@ -308,7 +309,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="our-benefits">
+                                <div class="our-benefits animation-left">
                                     <div class="our-benefits-img">
                                         <img src="./images/section/service-details/img-2.png" alt=""
                                             class="animation-img">
@@ -330,7 +331,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="faq">
+                                <div class="faq animation-bottom">
                                     <div class="accordion accordion-flush" id="faqFlush">
                                         <div class="accordion-item " id="flush-headingOne">
                                             <button class="accordion-button collapsed" type="button"
@@ -597,7 +598,6 @@
         </footer>
         <!-- /footer -->
 
-
         <!-- search -->
         <div class="modal fade popup-search" id="search">
             <div class="modal-dialog  popup-search-dialog">
@@ -619,8 +619,6 @@
             </div>
         </div>
         <!-- /search -->
-
-
 
         <!-- mobile menu -->
         <div class="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
@@ -774,6 +772,120 @@
             </div>
         </div>
         <!-- /mobile menu -->
+
+        <!-- sidebarOffcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarOffcanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Sidebar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div class="sidebar-item sidebar-content sidebar-categories mb-30">
+                    <h6 class="title-content fw-5">Category</h6>
+                    <ul class="list">
+                        <li class="item">
+                            <a href="#" class="body-2 fw-5">Instructor training</a>
+                            <i class="icon-read-more"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="body-2 fw-5">Traffic guidelines</a>
+                            <i class="icon-read-more"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="body-2 fw-5">Vesicle Insurance</a>
+                            <i class="icon-read-more"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="body-2 fw-5">Motorcycle Training</a>
+                            <i class="icon-read-more"></i>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="body-2 fw-5">Road safety Guidelines</a>
+                            <i class="icon-read-more"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-item sidebar-content sidebar-recent-post mb-30">
+                    <h6 class="title-content fw-5">
+                        Recent Post
+                    </h6>
+                    <div class="post-list">
+                        <a href="blog-details.html" class="image">
+                            <img loading="lazy" alt="" width="70" height="80" src="images/blog/post-list-1.jpg">
+                        </a>
+                        <div class="post-content">
+                            <a href="blog-details.html" class="post-title text-tagline fw-6 text-line-clamp-2">
+                                Best Driving School Company
+                            </a>
+                            <div class="date-post">
+                                <i class="icon-tool-7"></i>
+                                <a href="#" class="text-tagline tagline-3">20 June, 2022</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-list">
+                        <a href="blog-details.html" class="image">
+                            <img loading="lazy" alt="" width="70" height="80" src="images/blog/post-list-2.jpg">
+                        </a>
+                        <div class="post-content">
+                            <a href="blog-details.html" class="post-title text-tagline fw-6 text-line-clamp-2">
+                                Best Driving School Company
+                            </a>
+                            <div class="date-post">
+                                <i class="icon-tool-7"></i>
+                                <a href="#" class="text-tagline tagline-3">20 June, 2022</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-list">
+                        <a href="blog-details.html" class="image">
+                            <img loading="lazy" alt="" width="70" height="80" src="images/blog/post-list-3.jpg">
+                        </a>
+                        <div class="post-content">
+                            <a href="blog-details.html" class="post-title text-tagline fw-6 text-line-clamp-2">
+                                Best Driving School Company
+                            </a>
+                            <div class="date-post">
+                                <i class="icon-tool-7"></i>
+                                <a href="#" class="text-tagline tagline-3">20 June, 2022</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wg-help mb-30">
+                    <div class="image-bg">
+                        <img loading="lazy" alt="" width="300" height="390" src="images/blog/img-bg-help.jpg">
+                    </div>
+                    <div class="help-content">
+                        <div class="help-icon">
+                            <i class="icon-phone-1"></i>
+                        </div>
+                        <div class="content">
+                            <p class="text-tagline tagline-3 text">Any Support?</p>
+                            <a href="#" class="number-phone text-body-2 fw-6">
+                                +123 (568) 584 856
+                            </a>
+                            <a href="#" class="mail-help text-body-2 fw-6">help@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-item sidebar-content sidebar-tags">
+                    <h6 class="title-content">
+                        Tag
+                    </h6>
+                    <div class="tabs-list">
+                        <a href="#" class="tabs-item text-paragraph text-paragraph-2">Car Driving</a>
+                        <a href="#" class="tabs-item text-paragraph text-paragraph-2">Driving</a>
+                        <a href="#" class="tabs-item text-paragraph text-paragraph-2">Bike Driving</a>
+                        <a href="#" class="tabs-item text-paragraph text-paragraph-2">Learn</a>
+                        <a href="#" class="tabs-item text-paragraph text-paragraph-2">Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /sidebarOffcanvas -->
+
         <!-- scroll Top -->
         <button id="goTop">
             <span class="border-progress"></span>
@@ -784,7 +896,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.nice-select.min.js"></script>
-        <script src="js/animation.js"></script>
+        <script src="js/anime.js"></script>
         <script src="js/swiper-bundle.min.js"></script>
         <script src="js/gsap.min.js"></script>
         <script src="js/swiper.js"></script>

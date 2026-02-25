@@ -5096,6 +5096,10 @@ a:focus, a:hover {
   margin-right: -75px;
 }
 
+#sidebarOffcanvas {
+  width: 320px;
+}
+
 /*-------------- Responsive ----------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -5648,6 +5652,19 @@ a:focus, a:hover {
    MD: max-width 767px (Bootstrap 5: < 768px)
    ============================================================ */
 @media (max-width: 767px) {
+  .feature {
+    display: block !important;
+  }
+  .feature .feature-left {
+    margin-bottom: 20px;
+  }
+  .our-benefits {
+    display: block !important;
+  }
+  .our-benefits .our-benefits-img {
+    max-height: 250px;
+    margin-bottom: 20px;
+  }
   .transition-logo {
     font-size: 36px;
     letter-spacing: 6px;
@@ -7007,16 +7024,9 @@ a:focus, a:hover {
   border-top: 1px solid var(--line-6);
   padding-bottom: 50px;
 }
-.our-benefits .our-benefits-img {
-  position: relative;
-  width: 100%;
-  max-width: 410px;
-  aspect-ratio: 410/268;
-  overflow: hidden;
-}
 .our-benefits .our-benefits-img img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -9741,7 +9751,21 @@ a:focus, a:hover {
 }
 
 .nav-tab-item {
-  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.nav-tab-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+.nav-tab-item:hover::before {
+  width: 100%;
 }
 
 .testimonial-section {

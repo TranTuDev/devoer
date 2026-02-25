@@ -5,8 +5,6 @@
     margin-bottom: 120px;
 }
 
-
-
 .tf-page-title {
     padding: 150px 0px;
     position: relative;
@@ -850,15 +848,10 @@
     padding-bottom: 50px;
 
     .our-benefits-img {
-        position: relative;
-        width: 100%;
-        max-width: 410px;
-        aspect-ratio: 410 / 268;
-        overflow: hidden;
 
         img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             display: block;
         }
@@ -4591,9 +4584,24 @@
 }
 
 .nav-tab-item {
-    margin-bottom: 15px;
-}
+    position: relative;
+    padding-bottom: 15px;
 
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color);
+        transition: width 0.3s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+}
 
 
 .testimonial-section {
