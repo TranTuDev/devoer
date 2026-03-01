@@ -26,9 +26,8 @@
 
         .infiniteslide {
             gap: 126px;
-
             padding-top: 80px;
-
+            border-top: 1px solid var(--line-28);
         }
 
     }
@@ -41,6 +40,6 @@
         mask-repeat: no-repeat;
         mask-size: 0% 0%;
         background-color: var(--text-color-1);
-        padding: 80px  0px !important;
+        padding: 80px 0px !important;
     }
 }

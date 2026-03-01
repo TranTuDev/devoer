@@ -321,8 +321,9 @@
         }
     }
 
-    p {
+    h6 {
         color: var(--white-2);
+        word-spacing: 10px;
     }
 
     &.style-text-color-1 {
@@ -364,13 +365,22 @@
     }
 
     &.style-1 {
-        gap: 30px;
+        gap: 20px;
 
         ul {
             display: flex;
             align-items: center;
-            gap: 35px;
-            font-size: 20px;
+            gap: 30px;
+
+            justify-content: space-between;
+
+            .social-item {
+                i {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+            }
         }
     }
 }

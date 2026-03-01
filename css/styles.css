@@ -61,6 +61,7 @@
   --line-25: rgba(0, 0, 0, 0.9);
   --line-26: rgba(255, 255, 255, 0.3);
   --line-27: rgba(255, 255, 255, 0.6);
+  --line-28: rgba(31, 30, 23, 0.05);
   --black: #000000;
 }
 
@@ -697,8 +698,20 @@ a:focus, a:hover {
   padding: 120px 0px;
 }
 
+.pd-267-top {
+  padding-top: 267px;
+}
+
 .pd-65-top {
   padding-top: 65px;
+}
+
+.pd-100-bt {
+  padding-bottom: 100px;
+}
+
+.pd-50-top {
+  padding-top: 50px;
 }
 
 .pd-15 {
@@ -715,6 +728,10 @@ a:focus, a:hover {
 
 .pd-120-top {
   padding-top: 120px;
+}
+
+.pd-80-top {
+  padding-top: 80px;
 }
 
 .pd-160-top {
@@ -1309,7 +1326,7 @@ a:focus, a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 18px 25px;
+  padding: 18px 35px;
   font-weight: 600;
   color: var(--text-color-1);
   background-color: var(--main-color);
@@ -1324,6 +1341,9 @@ a:focus, a:hover {
   font-size: 20px;
   line-height: 20px;
   transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn-1.style-1 {
+  padding: 30px 42px;
 }
 
 .tf-btn-2 {
@@ -1368,7 +1388,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--main-color);
   color: var(--text-color-1);
-  padding: 18px 25px;
+  padding: 18px 35px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1428,7 +1448,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--line-4);
   color: var(--text-color-1);
-  padding: 18px 25px;
+  padding: 18px 35px;
   display: inline-flex;
   font-weight: 600;
   align-items: center;
@@ -1491,7 +1511,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--text-color-4);
   color: var(--main-color);
-  padding: 18px 25px;
+  padding: 18px 35px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1555,7 +1575,7 @@ a:focus, a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 13px 15px;
+  padding: 13px 23px;
   font-weight: 600;
   color: var(--text-color-1);
   background-color: var(--main-color);
@@ -1581,7 +1601,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--main-color);
   color: var(--text-color-1);
-  padding: 13px 15px;
+  padding: 13px 23px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1642,7 +1662,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--line-4);
   color: var(--text-color-1);
-  padding: 13px 15px;
+  padding: 13px 23px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1671,7 +1691,7 @@ a:focus, a:hover {
   background-color: var(--white-2);
   border: 1px solid var(--text-color-4);
   color: var(--main-color);
-  padding: 13px 15px;
+  padding: 13px 23px;
   display: inline-flex;
   font-weight: 600;
   align-items: center;
@@ -2351,8 +2371,9 @@ a:focus, a:hover {
 .wg-social .social-item:hover i {
   color: var(--main-color);
 }
-.wg-social p {
+.wg-social h6 {
   color: var(--white-2);
+  word-spacing: 10px;
 }
 .wg-social.style-text-color-1 .social-item i {
   color: var(--text-color-1);
@@ -2380,13 +2401,17 @@ a:focus, a:hover {
   color: var(--white-2);
 }
 .wg-social.style-1 {
-  gap: 30px;
+  gap: 20px;
 }
 .wg-social.style-1 ul {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 30px;
+  justify-content: space-between;
+}
+.wg-social.style-1 ul .social-item i {
   font-size: 20px;
+  line-height: 20px;
 }
 
 .tf-languages {
@@ -3013,11 +3038,13 @@ a:focus, a:hover {
   display: none !important;
 }
 .sidebar-item.sidebar-categories .item {
+  padding-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 26.5px;
+  margin-bottom: 15px;
   justify-content: space-between;
+  border-bottom: 1px solid var(--line-2);
 }
 .sidebar-item.sidebar-categories .item i {
   font-size: 12px;
@@ -3037,6 +3064,8 @@ a:focus, a:hover {
 }
 .sidebar-item.sidebar-categories .item:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 .sidebar-item.sidebar-recent-post .post-list {
   margin-bottom: 20px;
@@ -3305,8 +3334,8 @@ a:focus, a:hover {
 }
 .form-search-siderbar input {
   width: 100%;
-  height: 60px;
-  padding: 13px 25px !important;
+  height: 70px;
+  padding: 22px 30px !important;
   border-color: var(--line-2) !important;
 }
 .form-search-siderbar input::placeholder {
@@ -4874,6 +4903,7 @@ a:focus, a:hover {
 .infiniteslide_wrap.style-1 .infiniteslide {
   gap: 126px;
   padding-top: 80px;
+  border-top: 1px solid var(--line-28);
 }
 .infiniteslide_wrap.style-2 {
   -webkit-mask-image: none;
@@ -6544,7 +6574,10 @@ a:focus, a:hover {
   margin-bottom: 40px;
 }
 .price-section.style-1 .pricing-card {
-  padding: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 45px;
   background-color: var(--white-2);
   box-shadow: 0px 0px 5px var(--line-2) !important;
 }
@@ -7450,7 +7483,7 @@ a:focus, a:hover {
 }
 
 .work-process .work-process-left {
-  padding-right: 130px;
+  padding-right: 30px;
 }
 .work-process .work-process-left .heading-section {
   margin-bottom: 20px;
@@ -7483,7 +7516,7 @@ a:focus, a:hover {
   font-weight: 600;
 }
 .work-process .work-process-item {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   background-color: var(--white-2);
@@ -7502,6 +7535,9 @@ a:focus, a:hover {
 .work-process .work-process-item.style-1 {
   margin-right: 150px;
   margin-bottom: 0px;
+}
+.work-process .process {
+  margin-left: 70px;
 }
 
 .work-process-content {
@@ -7567,8 +7603,8 @@ a:focus, a:hover {
 }
 .wg-video.style-1 {
   background-color: var(--text-color-1);
-  padding-top: 260px;
-  padding-bottom: 120px;
+  margin-top: -147px;
+  position: unset !important;
 }
 .wg-video.style-2 .overlay-img {
   background: var(--line-25);
@@ -7901,9 +7937,9 @@ a:focus, a:hover {
 .about-metrics-media {
   display: flex;
   align-items: center;
-  gap: 35px;
   position: relative;
   padding-left: 50px;
+  margin-left: 30px;
 }
 .about-metrics-media .metric-text {
   font-family: "Libre Franklin", sans-serif;
@@ -7918,7 +7954,7 @@ a:focus, a:hover {
   line-height: 0;
 }
 .about-metrics-media .media-image-wrapper img {
-  width: 100%;
+  width: auto;
   height: auto;
   object-fit: cover;
 }
@@ -8255,6 +8291,9 @@ a:focus, a:hover {
   align-items: center;
   text-align: center;
   cursor: pointer;
+}
+.service-card .service-icon-wrapper {
+  margin-bottom: 25px;
 }
 .service-card .service-item-icon {
   width: 80px;
@@ -8926,11 +8965,14 @@ a:focus, a:hover {
 }
 .swiper-testimonial-all.style-1 .swiper-testimonial-left img {
   border-radius: 9999px;
+  width: auto !important;
 }
 
 .testimonial-right {
   position: relative;
-  padding: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .testimonial-right::before {
@@ -8999,9 +9041,13 @@ a:focus, a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -30px;
+}
+.swiper-box.style-1 .quote-box .abc img {
+  margin-right: 30px;
 }
 .swiper-box.style-1 .quote-box .testimonial-info.style-1 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .testimonial-info {
@@ -9012,10 +9058,11 @@ a:focus, a:hover {
   color: var(--text-color-3);
 }
 .testimonial-info.style-1 {
-  margin-top: 0px !important;
   margin-left: 0px !important;
+  padding-top: 0px !important;
 }
 .testimonial-info.style-1 p {
+  padding-top: 5px;
   color: var(--text-color-2);
 }
 
@@ -9652,6 +9699,7 @@ a:focus, a:hover {
 
 .service-item-section.style-1 {
   background-color: var(--text-color-1);
+  margin-top: -147px;
 }
 
 .box-content-course {

@@ -267,13 +267,14 @@
     }
 
     &.sidebar-categories {
-
         .item {
+            padding-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 26.5px;
+            margin-bottom: 15px;
             justify-content: space-between;
+            border-bottom: 1px solid var(--line-2);
 
             i {
                 font-size: 12px;
@@ -295,6 +296,8 @@
 
             &:last-child {
                 margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
             }
         }
     }
@@ -372,7 +375,7 @@
 
         img {
             width: 100%;
-           
+
             object-fit: cover;
         }
     }

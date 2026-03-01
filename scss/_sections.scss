@@ -240,7 +240,10 @@
     &.style-1 {
 
         .pricing-card {
-            padding: 40px;
+            padding-left: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-right: 45px;
             background-color: var(--white-2);
             box-shadow: 0px 0px 5px var(--line-2) !important;
 
@@ -940,6 +943,9 @@
 
         .heading-section {
             margin-bottom: 40px;
+
+            
+
         }
 
     }
@@ -1434,7 +1440,7 @@
 .work-process {
 
     .work-process-left {
-        padding-right: 130px;
+        padding-right: 30px;
 
         .heading-section {
             margin-bottom: 20px;
@@ -1478,7 +1484,7 @@
 
 
     .work-process-item {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         background-color: var(--white-2);
@@ -1504,6 +1510,9 @@
         }
     }
 
+    .process {
+        margin-left: 70px;
+    }
 
 }
 
@@ -1587,15 +1596,13 @@
 
     &.style-1 {
         background-color: var(--text-color-1);
-        padding-top: 260px;
-        padding-bottom: 120px;
+        margin-top: -147px;
+        position: unset !important;
     }
 
     &.style-2 {
         .overlay-img {
             background: var(--line-25);
-
-
         }
 
     }
@@ -1603,7 +1610,6 @@
     &.style-3 {
         .overlay-img {
             background: var(--line-23);
-
         }
 
         .video-img {
@@ -1611,7 +1617,6 @@
         }
 
     }
-
 }
 
 .testimonial-video {
@@ -2096,9 +2101,9 @@
 .about-metrics-media {
     display: flex;
     align-items: center;
-    gap: 35px;
     position: relative;
     padding-left: 50px;
+    margin-left: 30px;
 
     // .metrics-block {
     //     width: 37%;
@@ -2119,7 +2124,7 @@
         line-height: 0;
 
         img {
-            width: 100%;
+            width: auto;
             height: auto;
             object-fit: cover;
         }
@@ -2608,6 +2613,10 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
+
+    .service-icon-wrapper {
+        margin-bottom: 25px;
+    }
 
     .service-item-icon {
         width: 80px;
@@ -3506,7 +3515,7 @@
 
             img {
                 border-radius: 9999px;
-
+                width: auto !important;
             }
         }
 
@@ -3515,7 +3524,9 @@
 
 .testimonial-right {
     position: relative;
-    padding: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .testimonial-right::before {
@@ -3617,11 +3628,15 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-top: -30px;
 
+                img {
+                    margin-right: 30px;
+                }
             }
 
             .testimonial-info.style-1 {
-                margin-top: 30px;
+                margin-top: 20px;
 
             }
         }
@@ -3639,10 +3654,11 @@
     }
 
     &.style-1 {
-        margin-top: 0px !important;
         margin-left: 0px !important;
+        padding-top: 0px !important;
 
         p {
+            padding-top: 5px;
             color: var(--text-color-2);
         }
 
@@ -4455,6 +4471,7 @@
 .service-item-section {
     &.style-1 {
         background-color: var(--text-color-1);
+        margin-top: -147px;
     }
 
 }
