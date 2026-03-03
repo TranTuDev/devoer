@@ -1,10 +1,10 @@
-// Portfolio Swiper
+// ================= PORTFOLIO SWIPER =================
 if ($(".swiper-portfolio").length) {
   new Swiper(".swiper-portfolio", {
     slidesPerView: 5,
     spaceBetween: 10,
     speed: 1000,
-    loop: false, 
+    loop: false,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -22,17 +22,13 @@ if ($(".swiper-portfolio").length) {
   });
 }
 
-// autoplay: {
-//   delay: 2500,
-//   disableOnInteraction: false,
-// },
-// Testimonial Swiper
+
+// ================= TESTIMONIAL SWIPER =================
 $(document).ready(function () {
 
   let swiperTestimonialLeft = null;
   let swiperTestimonialRight = null;
 
-  // Slider trái (ảnh)
   if ($(".swiper-testimonial-left").length > 0) {
     swiperTestimonialLeft = new Swiper(".swiper-testimonial-left", {
       slidesPerView: 1,
@@ -42,22 +38,19 @@ $(document).ready(function () {
       allowTouchMove: true,
       grabCursor: true,
 
-      // ✔ Thêm breakpoints để căn giữa khi < 991px
       breakpoints: {
         0: {
           slidesPerView: 1,
-          centeredSlides: true,   // slide nằm giữa
+          centeredSlides: true,
         },
         992: {
-          slidesPerView: 1,       // hoặc 2, tuỳ desktop layout
+          slidesPerView: 1,
           centeredSlides: false,
         }
       }
     });
   }
 
-
-  // Slider phải (nội dung)
   if ($(".swiper-testimonial-right").length > 0) {
     swiperTestimonialRight = new Swiper(".swiper-testimonial-right", {
       slidesPerView: 1,
@@ -65,7 +58,6 @@ $(document).ready(function () {
       speed: 800,
       loop: true,
       autoHeight: true,
-
       pagination: {
         el: ".sw-pagination-testimonial",
         clickable: true,
@@ -73,7 +65,6 @@ $(document).ready(function () {
     });
   }
 
-  // Sync 2 slider
   if (swiperTestimonialLeft && swiperTestimonialRight) {
     swiperTestimonialLeft.controller.control = swiperTestimonialRight;
     swiperTestimonialRight.controller.control = swiperTestimonialLeft;
@@ -82,9 +73,7 @@ $(document).ready(function () {
 });
 
 
-
-
-
+// ================= HOME RIGHT SLIDER =================
 if ($(".slider-home-right").length > 0) {
   var swiperTestimonialLeft = new Swiper(".slider-home-right", {
     slidesPerView: 1,
@@ -104,6 +93,8 @@ if ($(".slider-home-right").length > 0) {
   });
 }
 
+
+// ================= PORTFOLIO SLIDER =================
 if ($(".portfolio-slider").length > 0) {
 
   var swiperPortfolio = new Swiper(".portfolio-slider", {
@@ -133,36 +124,35 @@ if ($(".portfolio-slider").length > 0) {
 }
 
 
-const playButtons = document.querySelectorAll('.video-play-button');
-const popup = document.getElementById('videoPopup');
-const iframe = document.getElementById('videoFrame');
-const closeBtn = document.getElementById('videoClose');
+// ================= VIDEO POPUP =================
+$(document).ready(function () {
 
-playButtons.forEach(btn => {
-  btn.addEventListener('click', e => {
+
+  $('.video-play-button').on('click', function (e) {
     e.preventDefault();
-    const videoSrc = btn.getAttribute('data-video');
-    iframe.src = videoSrc;  // Gán URL vào iframe
-    popup.style.display = 'flex';
+    var videoSrc = $(this).attr('data-video');
+    $('#videoFrame').attr('src', videoSrc); 
+    $('#videoPopup').css('display', 'flex');
   });
+
+ 
+  $('#videoClose').on('click', function () {
+    $('#videoFrame').attr('src', ''); 
+    $('#videoPopup').css('display', 'none');
+  });
+
+  $('#videoPopup').on('click', function (e) {
+    if (e.target === this) {
+      $('#videoFrame').attr('src', '');
+      $('#videoPopup').css('display', 'none');
+    }
+  });
+
 });
 
-// Close popup
-closeBtn.addEventListener('click', () => {
-  iframe.src = ''; // Dừng video khi đóng
-  popup.style.display = 'none';
-});
 
-// Close khi click ra ngoài video
-popup.addEventListener('click', e => {
-  if (e.target === popup) {
-    iframe.src = '';
-    popup.style.display = 'none';
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
+// ================= COURSE DETAILS SLIDER =================
+$(document).ready(function () {
 
   const courseSlider = new Swiper('.course-details-slider', {
     slidesPerView: 2,
@@ -189,4 +179,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 

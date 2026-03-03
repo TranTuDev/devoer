@@ -2,28 +2,42 @@
 
 /* ========== home-2 ========== */
 
-
-
 .swiper-slide-active {
     .box-content {
         opacity: 1;
         transform: translateY(0) scale(1);
+
+        b {
+            transition-delay: 1.2s;
+        }
+
+        h1 {
+            transition-delay: 1.4s;
+        }
+
+        p {
+            transition-delay: 1.6s;
+        }
+
+        .tf-btn-1 {
+            transition-delay: 1.8s;
+        }
 
         b,
         h1,
         p,
         .tf-btn-1 {
             opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-
-        .tf-btn-1 {
-
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: translateY(0);
         }
     }
 }
 
+// .slider-home-right .swiper-slide-active .box-content {
+//     opacity: 1;
+//     transform: translateY(0);
+//     transition-delay: 2.5s;
+// }
 
 .sw-dot-default {
     display: flex;

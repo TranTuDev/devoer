@@ -28,14 +28,12 @@
     position: fixed;
     inset: 0;
     z-index: 99999;
-    display: none;
-    /* ẩn ban đầu */
+    display: flex;
     align-items: center;
     justify-content: center;
     pointer-events: none;
     overflow: hidden;
     background: transparent;
-    /* trong suốt để thấy panel */
 }
 
 .panel {
@@ -47,7 +45,6 @@
     z-index: 5;
 }
 
-/* Panel ban đầu che full màn hình */
 .panel-left {
     left: 0;
     transform: translateX(0%);
@@ -60,11 +57,11 @@
 
 .transition-logo {
     font-size: 72px;
-  
+
     font-weight: 900;
-    
+
     letter-spacing: 12px;
-  
+
     color: #fff;
     z-index: 10;
     position: relative;

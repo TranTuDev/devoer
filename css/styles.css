@@ -1219,31 +1219,31 @@ a:focus, a:hover {
  ------------------------------------------------------------ */
 /*---------- Abstracts variable ----------- */
 .tf-btn {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--white-2);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn:hover i {
   transform: translateX(8px);
@@ -1251,10 +1251,14 @@ a:focus, a:hover {
 .tf-btn > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn:not(:hover)::before,
+.tf-btn:not(:hover) i, .tf-btn:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn {
   display: inline-flex !important;
@@ -1269,16 +1273,19 @@ a:focus, a:hover {
   font-family: "Libre Franklin", sans-serif;
   font-size: 14px;
   line-height: 24px;
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn i {
   color: var(--text-color-1);
   font-size: 20px;
   line-height: 20px;
-  transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn:hover {
+  border-color: var(--main-color);
 }
 .tf-btn.style-1 {
   font-weight: 600;
-  padding: 40px 88px !important;
+  padding: 42px 88px !important;
   font-size: 16px;
   line-height: 26px;
 }
@@ -1290,31 +1297,31 @@ a:focus, a:hover {
 }
 
 .tf-btn-1 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-1::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--white-2);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-1:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-1 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-1:hover i {
   transform: translateX(8px);
@@ -1322,10 +1329,14 @@ a:focus, a:hover {
 .tf-btn-1 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-1:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-1:not(:hover)::before,
+.tf-btn-1:not(:hover) i, .tf-btn-1:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-1 {
   display: inline-flex !important;
@@ -1341,12 +1352,15 @@ a:focus, a:hover {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-1 i {
   color: var(--text-color-1);
   font-size: 20px;
   line-height: 20px;
-  transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn-1:hover {
+  border-color: var(--main-color);
 }
 .tf-btn-1.style-1 {
   padding: 30px 42px;
@@ -1356,31 +1370,31 @@ a:focus, a:hover {
 }
 
 .tf-btn-2 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-2::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--main-color);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-2:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-2 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-2:hover i {
   transform: translateX(8px);
@@ -1388,10 +1402,14 @@ a:focus, a:hover {
 .tf-btn-2 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-2:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-2:not(:hover)::before,
+.tf-btn-2:not(:hover) i, .tf-btn-2:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-2 {
   background-color: var(--white-2);
@@ -1407,40 +1425,43 @@ a:focus, a:hover {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-2 i {
   color: var(--text-color-1);
   font-size: 20px;
   line-height: 20px;
-  transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn-2:hover {
+  border-color: var(--main-color);
 }
 
 .tf-btn-3 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-3::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--main-color);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-3:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-3 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-3:hover i {
   transform: translateX(8px);
@@ -1448,10 +1469,14 @@ a:focus, a:hover {
 .tf-btn-3 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-3:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-3:not(:hover)::before,
+.tf-btn-3:not(:hover) i, .tf-btn-3:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-3 {
   background-color: var(--white-2);
@@ -1467,46 +1492,47 @@ a:focus, a:hover {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
-}
-.tf-btn-3:hover {
-  background-color: var(--main-color);
-  color: var(--text-color-1);
-  border: 1px solid var(--main-color);
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-3 i {
   font-size: 20px;
   line-height: 20px;
+}
+.tf-btn-3:hover {
+  background-color: var(--main-color);
+  color: var(--text-color-1);
+  border-color: var(--main-color);
 }
 .tf-btn-3.style-2 {
   padding: 10px 35px;
 }
 
 .tf-btn-4 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-4::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--main-color);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-4:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-4 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-4:hover i {
   transform: translateX(8px);
@@ -1514,10 +1540,14 @@ a:focus, a:hover {
 .tf-btn-4 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-4:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-4:not(:hover)::before,
+.tf-btn-4:not(:hover) i, .tf-btn-4:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-4 {
   background-color: var(--white-2);
@@ -1533,43 +1563,44 @@ a:focus, a:hover {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
-}
-.tf-btn-4:hover {
-  background-color: var(--main-color);
-  color: var(--text-color-1);
-  border: 1px solid var(--main-color);
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-4 i {
   font-size: 20px;
   line-height: 20px;
 }
+.tf-btn-4:hover {
+  background-color: var(--main-color);
+  color: var(--text-color-1);
+  border-color: var(--main-color);
+}
 
 .tf-btn-5 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-5::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--white-2);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-5:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-5 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-5:hover i {
   transform: translateX(8px);
@@ -1577,10 +1608,14 @@ a:focus, a:hover {
 .tf-btn-5 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-5:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-5:not(:hover)::before,
+.tf-btn-5:not(:hover) i, .tf-btn-5:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-5 {
   display: inline-flex !important;
@@ -1596,20 +1631,18 @@ a:focus, a:hover {
   font-size: 12px;
   line-height: 24px;
   font-weight: bold;
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-5 i {
   color: var(--text-color-1);
   font-size: 18px;
   line-height: 18px;
-  transition: transform 0.35s ease, color 0.35s ease;
+}
+.tf-btn-5:hover {
+  border-color: var(--white-2);
 }
 
 .tf-btn-6 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   background-color: var(--white-2);
   border: 1px solid var(--main-color);
   color: var(--text-color-1);
@@ -1623,41 +1656,46 @@ a:focus, a:hover {
   font-size: 12px;
   line-height: 24px;
   font-weight: bold;
-}
-.tf-btn-6:hover {
-  background-color: var(--main-color);
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-6 i {
   font-size: 18px;
   line-height: 18px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tf-btn-6:hover {
+  background-color: var(--main-color);
+}
+.tf-btn-6:hover i {
+  transform: translateX(8px);
 }
 
 .tf-btn-7 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .tf-btn-7::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--main-color);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .tf-btn-7:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .tf-btn-7 i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-7:hover i {
   transform: translateX(8px);
@@ -1665,10 +1703,14 @@ a:focus, a:hover {
 .tf-btn-7 > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-7:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.tf-btn-7:not(:hover)::before,
+.tf-btn-7:not(:hover) i, .tf-btn-7:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .tf-btn-7 {
   background-color: var(--white-2);
@@ -1684,22 +1726,18 @@ a:focus, a:hover {
   font-size: 12px;
   line-height: 24px;
   font-weight: bold;
-}
-.tf-btn-7:hover {
-  border: 1px solid var(--main-color);
+  transition: border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-7 i {
   color: var(--text-color-1);
   font-size: 18px;
   line-height: 18px;
 }
+.tf-btn-7:hover {
+  border-color: var(--main-color);
+}
 
 .tf-btn-8 {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   background-color: var(--white-2);
   border: 1px solid var(--text-color-4);
   color: var(--main-color);
@@ -1713,13 +1751,18 @@ a:focus, a:hover {
   font-size: 12px;
   line-height: 24px;
   font-weight: bold;
-}
-.tf-btn-8:hover {
-  background-color: var(--main-color);
+  transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .tf-btn-8 i {
   font-size: 18px;
   line-height: 18px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.tf-btn-8:hover {
+  background-color: var(--main-color);
+}
+.tf-btn-8:hover i {
+  transform: translateX(8px);
 }
 
 [class^=tf-btn],
@@ -1729,7 +1772,9 @@ a:focus, a:hover {
   justify-content: center;
   gap: 12px;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .btn-boder-1 {
@@ -2086,23 +2131,28 @@ a:focus, a:hover {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .btn-footer::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 0%;
   background: var(--white-2);
   z-index: 1;
-  transition: width 0.45s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 .btn-footer:hover::before {
-  width: 100%;
+  transform: scaleX(1);
 }
 .btn-footer i {
   position: relative;
   z-index: 3;
-  transition: transform 0.35s ease, color 0.35s ease;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .btn-footer:hover i {
   transform: translateX(8px);
@@ -2110,10 +2160,14 @@ a:focus, a:hover {
 .btn-footer > *:not(i) {
   position: relative;
   z-index: 4;
-  transition: color 0.35s ease;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .btn-footer:hover > *:not(i) {
   color: var(--text-color-1) !important;
+}
+.btn-footer:not(:hover)::before,
+.btn-footer:not(:hover) i, .btn-footer:not(:hover) > *:not(i) {
+  will-change: auto;
 }
 .btn-footer {
   display: inline-flex !important;
@@ -2129,6 +2183,10 @@ a:focus, a:hover {
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+}
+.btn-footer i {
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .btn-course {
@@ -3406,15 +3464,24 @@ a:focus, a:hover {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+.swiper-slide-active .box-content b {
+  transition-delay: 1.2s;
+}
+.swiper-slide-active .box-content h1 {
+  transition-delay: 1.4s;
+}
+.swiper-slide-active .box-content p {
+  transition-delay: 1.6s;
+}
+.swiper-slide-active .box-content .tf-btn-1 {
+  transition-delay: 1.8s;
+}
 .swiper-slide-active .box-content b,
 .swiper-slide-active .box-content h1,
 .swiper-slide-active .box-content p,
 .swiper-slide-active .box-content .tf-btn-1 {
   opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.swiper-slide-active .box-content .tf-btn-1 {
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(0);
 }
 
 .sw-dot-default {
@@ -4969,14 +5036,12 @@ a:focus, a:hover {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  display: none;
-  /* ẩn ban đầu */
+  display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
   overflow: hidden;
   background: transparent;
-  /* trong suốt để thấy panel */
 }
 
 .panel {
@@ -4988,7 +5053,6 @@ a:focus, a:hover {
   z-index: 5;
 }
 
-/* Panel ban đầu che full màn hình */
 .panel-left {
   left: 0;
   transform: translateX(0%);
@@ -5139,7 +5203,7 @@ a:focus, a:hover {
 }
 
 #sidebarOffcanvas {
-  width: 320px;
+  width: 350px;
 }
 
 /*-------------- Responsive ----------------- */
@@ -5851,14 +5915,6 @@ a:focus, a:hover {
 /* ============================================================
    SM: max-width 575px (Bootstrap 5: < 576px)
    ============================================================ */
-/* Desktop mặc định giữ nguyên */
-.founder-signature-block {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* MOBILE: ≤575px */
 @media (max-width: 575px) {
   .transition-logo {
     font-size: 26px;
@@ -6383,8 +6439,6 @@ a:focus, a:hover {
   .service-box-card.style-1 .card-info-wrapper {
     bottom: -130px !important;
   }
-}
-@media (max-width: 1199px) {
   .blog-section .row > [class*=col-]:last-of-type .blog-post {
     margin-bottom: 0 !important;
   }
@@ -6710,7 +6764,7 @@ a:focus, a:hover {
   font-weight: 400;
   font-family: "Nunito", sans-serif;
   color: var(--text-color-2);
-  margin-bottom: 0px !important;
+  margin-bottom: 6px !important;
 }
 .header-card.style-1 .price-box {
   display: flex;
@@ -9669,6 +9723,7 @@ a:focus, a:hover {
 }
 .driving-safety .award h2 {
   color: var(--text-color-1);
+  margin-bottom: 15px;
 }
 .driving-safety .award p {
   color: var(--text-color-1);
@@ -9846,6 +9901,12 @@ a:focus, a:hover {
 
 .service-item .heading-section {
   margin-bottom: 70px;
+}
+
+.founder-signature-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

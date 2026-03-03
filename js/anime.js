@@ -1,3 +1,4 @@
+// ===== INFINITE SLIDE =====
 $(document).ready(function () {
   $('.infiniteslide_wrap').each(function () {
     const $wrap = $(this);
@@ -10,7 +11,6 @@ $(document).ready(function () {
       repeat: -1
     });
 
-
     $wrap.hover(
       function () { tl.pause(); },
       function () { tl.resume(); }
@@ -18,7 +18,7 @@ $(document).ready(function () {
   });
 });
 
-
+// ===== DATA ANIMATE =====
 $(document).ready(function () {
   const $items = $('[data-animate]');
 
@@ -26,7 +26,7 @@ $(document).ready(function () {
     const windowBottom = $(window).scrollTop() + $(window).height();
 
     $items.each(function () {
-      const itemTop = $(this).offset().top + 100; // delay 100px cho đẹp
+      const itemTop = $(this).offset().top + 100;
 
       if (windowBottom > itemTop) {
         $(this).addClass('animated');
@@ -35,11 +35,10 @@ $(document).ready(function () {
   }
 
   $(window).on('scroll', checkAnimate);
-  checkAnimate(); // chạy lần đầu khi mới vào trang
+  checkAnimate();
 });
 
-
-
+// ===== GO TOP BUTTON =====
 $(function () {
   const $goTop = $("#goTop");
 
@@ -62,8 +61,6 @@ $(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
   });
 
-
-
   anime({
     targets: '.box',
     translateX: 250,
@@ -74,60 +71,66 @@ $(function () {
   });
 });
 
+// ===== COUNTER ANIMATION=====
+$(document).ready(function () {
+  const $counters = $('[data-target]');
 
+  function checkCounter() {
+    const windowBottom = $(window).scrollTop() + $(window).height();
 
-const counters = document.querySelectorAll('[data-target]');
+    $counters.each(function () {
+      const $el = $(this);
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
+      if ($el.data('animated')) return;
 
-    const el = entry.target;
+      const elementTop = $el.offset().top;
 
-    anime({
-      targets: { value: 0 },
-      value: Number(el.dataset.target),
-      duration: 2000,
-      easing: 'easeOutExpo',
-      round: 1,
-      update: anim => {
-        el.innerHTML =
-          anim.animations[0].currentValue + (el.dataset.suffix || '');
+      if (windowBottom > elementTop + 100) {
+        anime({
+          targets: { value: 0 },
+          value: Number($el.data('target')),
+          duration: 2000,
+          easing: 'easeOutExpo',
+          round: 1,
+          update: function (anim) {
+            $el.html(
+              anim.animations[0].currentValue + ($el.data('suffix') || '')
+            );
+          }
+        });
+
+        $el.data('animated', true);
       }
     });
+  }
 
-    observer.unobserve(el); // chạy 1 lần
-  });
+  $(window).on('scroll', checkCounter);
+  checkCounter();
 });
 
-counters.forEach(el => observer.observe(el));
+// ===== PAGE TRANSITION  =====
+$(document).ready(function () {
 
+  const $overlay = $(".page-transition");
+  const $logo = $(".transition-logo");
 
+  if ($logo.find("span").length === 0) {
+    $logo.html(
+      $logo.text().trim()
+        .split("")
+        .map(l => `<span>${l}</span>`)
+        .join("")
+    );
+  }
 
+  const letters = $(".transition-logo span").toArray();
+  const panelLeft = $(".panel-left")[0];
+  const panelRight = $(".panel-right")[0];
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.querySelector(".page-transition");
-  const logo = document.querySelector(".transition-logo");
-  const links = document.querySelectorAll("a:not([href^='#'])");
-
-  // Split text → span
-  logo.innerHTML = logo.textContent.trim()
-    .split("")
-    .map(l => `<span>${l}</span>`)
-    .join("");
-
-  const letters = document.querySelectorAll(".transition-logo span");
-  const panelLeft = document.querySelector(".panel-left");
-  const panelRight = document.querySelector(".panel-right");
-
-  // ===== ANIMATION DUY NHẤT - Chữ bay lên → Rèm mở =====
-  function playTransition(callback) {
-    overlay.style.display = "flex";
+  function playTransition() {
+    $overlay.css("display", "flex");
 
     anime.timeline({ easing: "easeInOutExpo" })
-      // 1. Chữ bay lên
       .add({
         targets: letters,
         translateY: [60, 0],
@@ -136,16 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: anime.stagger(80),
         duration: 800
       })
-
-      // 2. Chữ biến mất
       .add({
         targets: letters,
         opacity: [1, 0],
         duration: 400,
         delay: 200
       })
-
-      // 3. Rèm mở ra
       .add({
         targets: panelLeft,
         translateX: ["0%", "-100%"],
@@ -156,66 +155,53 @@ document.addEventListener("DOMContentLoaded", () => {
         translateX: ["0%", "100%"],
         duration: 900
       }, "-=900")
-
-      // 4. Complete
       .add({
         complete: () => {
-          overlay.style.display = "none";
+          $overlay.hide();
 
-          // Reset chữ về trạng thái ban đầu cho lần sau
           anime.set(letters, {
             translateY: 60,
             opacity: 0,
             filter: "blur(8px)"
           });
 
-          // Reset panel về vị trí ban đầu
           anime.set([panelLeft, panelRight], {
             translateX: "0%"
           });
-
-          // Callback nếu có (để chuyển trang)
-          if (callback) callback();
         }
       });
   }
 
-
   playTransition();
-
 
 });
 
+
+
+// ===== SECTION TITLE ANIMATION =====
 $(document).ready(function () {
   $('.section-title').each(function () {
     const $title = $(this);
-
-    // ✅ FIX: Lưu text gốc trước khi split
     const text = $title.text().trim();
 
-    // ✅ FIX: Kiểm tra nếu đã được process rồi thì skip
     if ($title.find('.word').length > 0) {
       return;
     }
 
     let newHTML = '';
-    const words = text.split(/\s+/); // ✅ Split by any whitespace
+    const words = text.split(/\s+/);
 
     words.forEach((word, wordIndex) => {
-      // ✅ Bỏ qua word rỗng
       if (!word) return;
 
-      // ✅ Wrap word
       newHTML += '<span class="word">';
 
-      // ✅ Split thành char
       for (let i = 0; i < word.length; i++) {
         const char = word[i];
         newHTML += `<span class="char">${char}</span>`;
       }
 
       newHTML += '</span>';
-
 
       if (wordIndex < words.length - 1) {
         newHTML += ' ';
@@ -225,7 +211,6 @@ $(document).ready(function () {
     $title.html(newHTML);
 
     const chars = $title.find('.char');
-
 
     chars.css({
       'transform': 'translateY(1.2em)',
@@ -254,7 +239,112 @@ $(document).ready(function () {
         });
 
         animated = true;
+        $(window).off('scroll', checkScroll);
+      }
+    }
 
+    $(window).on('scroll', checkScroll);
+    checkScroll();
+  });
+});
+
+// ===== IMAGE PUZZLE ANIMATION =====
+$(document).ready(function () {
+  $('.animation-img').each(function () {
+    const $img = $(this);
+    let animated = false;
+
+    const rows = 2;
+    const cols = 2;
+
+    const $parent = $img.parent();
+
+
+    $parent.css({
+      'position': 'relative',
+      'overflow': 'hidden',
+      'isolation': 'isolate'
+    });
+
+
+    const imgWidth = $img[0].naturalWidth || $img.width();
+    const imgHeight = $img[0].naturalHeight || $img.height();
+
+    if (imgWidth > 0 && imgHeight > 0) {
+      $img.css('opacity', 0);
+    } else {
+
+      $img.on('load', function () {
+        $img.css('opacity', 0);
+      });
+      return;
+    }
+
+    const pieces = [];
+
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const $piece = $('<div></div>');
+
+        $piece.css({
+          'position': 'absolute',
+          'width': imgWidth / cols + 'px',
+          'height': imgHeight / rows + 'px',
+          'left': (c * imgWidth / cols) + 'px',
+          'top': (r * imgHeight / rows) + 'px',
+          'background-image': `url(${$img.attr('src')})`,
+          'background-size': `${imgWidth}px ${imgHeight}px`,
+          'background-position': `-${c * imgWidth / cols}px -${r * imgHeight / rows}px`,
+          'will-change': 'transform, opacity',
+          'backface-visibility': 'hidden',
+          'transform': 'translateZ(0)'
+        });
+
+        $parent.append($piece);
+        pieces.push($piece[0]);
+      }
+    }
+
+    function checkScroll() {
+      if (animated) return;
+
+      const elementTop = $img.offset().top;
+      const windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom > elementTop + 100) {
+
+        anime.set(pieces, {
+          translateY: () => anime.random(-150, 150),
+          translateX: () => anime.random(-150, 150),
+          opacity: 0
+        });
+
+        anime({
+          targets: pieces,
+          translateX: 0,
+          translateY: 0,
+          opacity: 1,
+          delay: anime.stagger(25, { from: 'center' }),
+          duration: 800,
+          easing: 'easeOutCubic',
+          complete: function () {
+            $img.css('opacity', 1);
+
+            anime({
+              targets: pieces,
+              opacity: 0,
+              duration: 200,
+              easing: 'easeOutQuad',
+              complete: function () {
+                $(pieces).remove();
+
+                $img.css('will-change', 'auto');
+              }
+            });
+          }
+        });
+
+        animated = true;
 
         $(window).off('scroll', checkScroll);
       }
@@ -265,92 +355,9 @@ $(document).ready(function () {
   });
 });
 
+// ===== SCROLL ANIMATIONS =====
 $(document).ready(function () {
-
-  $('.animation-img').each(function () {
-
-    const img = this;
-    let animated = false;
-
-    const rows = 4;
-    const cols = 6;
-
-    const parent = img.parentElement;
-    parent.style.position = 'relative';
-    parent.style.overflow = 'hidden';
-
-    const imgWidth = img.offsetWidth;
-    const imgHeight = img.offsetHeight;
-
-    img.style.opacity = 0;
-
-    const pieces = [];
-
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-
-        const piece = document.createElement('div');
-
-        piece.style.position = 'absolute';
-        piece.style.width = imgWidth / cols + 'px';
-        piece.style.height = imgHeight / rows + 'px';
-        piece.style.left = (c * imgWidth / cols) + 'px';
-        piece.style.top = (r * imgHeight / rows) + 'px';
-        piece.style.backgroundImage = `url(${img.src})`;
-        piece.style.backgroundSize = `${imgWidth}px ${imgHeight}px`;
-        piece.style.backgroundPosition =
-          `-${c * imgWidth / cols}px -${r * imgHeight / rows}px`;
-
-        parent.appendChild(piece);
-        pieces.push(piece);
-      }
-    }
-
-    function checkScroll() {
-      if (animated) return;
-
-      const elementTop = $(img).offset().top;
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom > elementTop + 100) {
-
-        anime({
-          targets: pieces,
-          translateY: () => anime.random(-200, 200),
-          translateX: () => anime.random(-200, 200),
-          opacity: [0, 1],
-          duration: 0
-        });
-
-        anime({
-          targets: pieces,
-          translateX: 0,
-          translateY: 0,
-          opacity: 1,
-          delay: anime.stagger(40),
-          duration: 1200,
-          easing: 'easeOutExpo',
-          complete: function () {
-            img.style.opacity = 1;
-            pieces.forEach(p => p.remove());
-          }
-        });
-
-        animated = true;
-      }
-    }
-
-    $(window).on('scroll', checkScroll);
-    checkScroll();
-
-  });
-
-});
-
-$(document).ready(function () {
-
-  const isMobile = window.innerWidth <= 768;
-
+  const isMobile = $(window).width() <= 768;
 
   const moveDistance = isMobile ? 20 : 150;
   const zoomScale = isMobile ? 1.02 : 1.3;
@@ -359,45 +366,48 @@ $(document).ready(function () {
   const animatedElements = [];
 
   function setupElement(el, type, direction = null) {
+    const $el = $(el);
 
-
-    el.style.position = 'relative';
-    el.style.opacity = 0;
-    el.style.willChange = 'transform, opacity';
-    el.style.backfaceVisibility = 'hidden';
-
+    $el.css({
+      'position': 'relative',
+      'opacity': 0,
+      'will-change': 'transform, opacity',
+      'backface-visibility': 'hidden'
+    });
 
     if (isMobile) {
-
-      el.setAttribute('data-mobile-simple', 'true');
+      $el.attr('data-mobile-simple', 'true');
     } else {
-
       if (type === 'slide') {
-        if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
-        if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
-        if (direction === 'top') el.style.transform = `translateY(-${moveDistance}px)`;
-        if (direction === 'bottom') el.style.transform = `translateY(${moveDistance}px)`;
+        if (direction === 'left') $el.css('transform', `translateX(-${moveDistance}px)`);
+        if (direction === 'right') $el.css('transform', `translateX(${moveDistance}px)`);
+        if (direction === 'top') $el.css('transform', `translateY(-${moveDistance}px)`);
+        if (direction === 'bottom') $el.css('transform', `translateY(${moveDistance}px)`);
       }
 
       if (type === 'zoom') {
-        el.style.transform = `scale(${zoomScale})`;
-        el.style.overflow = 'hidden';
+        $el.css({
+          'transform': `scale(${zoomScale})`,
+          'overflow': 'hidden'
+        });
       }
 
       if (type === 'flip') {
-        el.style.transform = 'perspective(1000px) rotateY(90deg)';
+        $el.css('transform', 'perspective(1000px) rotateY(90deg)');
       }
 
       if (type === 'blur') {
-        el.style.transform = `translateY(40px)`;
-        el.style.filter = `blur(${blurAmount}px)`;
+        $el.css({
+          'transform': `translateY(40px)`,
+          'filter': `blur(${blurAmount}px)`
+        });
       }
     }
 
     animatedElements.push({
-      el,
-      type,
-      direction,
+      el: el,
+      type: type,
+      direction: direction,
       animated: false
     });
   }
@@ -431,11 +441,9 @@ $(document).ready(function () {
   });
 
   function checkScroll() {
-
     const windowBottom = $(window).scrollTop() + $(window).height();
 
     animatedElements.forEach(item => {
-
       if (item.animated) return;
 
       const elementTop = $(item.el).offset().top;
@@ -451,7 +459,6 @@ $(document).ready(function () {
           item.animated = true;
           return;
         }
-
 
         if (item.type === 'slide') {
           anime({
@@ -500,12 +507,9 @@ $(document).ready(function () {
 
         item.animated = true;
       }
-
     });
   }
 
   $(window).on('scroll', checkScroll);
   checkScroll();
-
 });
-

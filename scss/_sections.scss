@@ -389,7 +389,7 @@
             font-weight: 400;
             font-family: $font-2;
             color: var(--text-color-2);
-            margin-bottom: 0px !important;
+            margin-bottom: 6px !important;
         }
 
         .price-box {
@@ -1261,7 +1261,7 @@
 
     li {
         font-weight: 400;
-        margin-bottom: 20px ;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         font-family: $font-2;
@@ -1330,7 +1330,7 @@
 
     &.style-3 {
         li {
-           
+
 
             i {
                 font-size: 16px;
@@ -1349,8 +1349,6 @@
     }
 
 }
-
-
 
 
 //===================widget-develop-skills==============//
@@ -4421,6 +4419,7 @@
 
         h2 {
             color: var(--text-color-1);
+            margin-bottom: 15px;
         }
 
         p {
@@ -4651,7 +4650,11 @@
 
 
 
-
+.founder-signature-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
 
 // tu

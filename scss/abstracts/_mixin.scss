@@ -128,41 +128,58 @@
     visibility: visible;
 }
 
-
-@mixin btnFill($bgColor, $textColor: #fff) {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 0%;
-    background: $bgColor;
+@mixin btnFillScale($bgColor, $textColor: #fff) {
+    position: relative;
+    overflow: hidden;
     z-index: 1;
-    transition: width 0.45s ease;
-  }
+    transform: translateZ(0);
+    backface-visibility: hidden;
 
-  &:hover::before { width: 100%; }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: $bgColor;
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: transform;
+    }
 
- 
-  i {
-    position: relative;
-    z-index: 3;
-    transition: transform 0.35s ease, color 0.35s ease;
-  }
-  &:hover i { transform: translateX(8px); }
+    &:hover::before {
+        transform: scaleX(1);
+    }
 
-  
-  & > *:not(i) {
-    position: relative;
-    z-index: 4;
-    transition: color 0.35s ease;
-  }
+    i {
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        transition:
+            transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+            color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
- 
-  &:hover > *:not(i) {
-    color: $textColor !important;
-  }
+    &:hover i {
+        transform: translateX(8px);
+    }
+
+    &>*:not(i) {
+        position: relative;
+        z-index: 4;
+        transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover>*:not(i) {
+        color: $textColor !important;
+    }
+
+    &:not(:hover) {
+
+        &::before,
+        i,
+        &>*:not(i) {
+            will-change: auto;
+        }
+    }
 }
