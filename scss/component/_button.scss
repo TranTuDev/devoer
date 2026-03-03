@@ -26,9 +26,17 @@
 
     &.style-1 {
         font-weight: 600;
-        padding: 40px 85px !important;
+        padding: 40px 88px !important;
         font-size: 16px;
         line-height: 26px;
+    }
+
+    &.header-btn {
+        padding: 18px 32px !important;
+    }
+
+    &.community-btn {
+        padding: 18px 32px !important;
     }
 }
 
@@ -60,6 +68,10 @@
     &.style-1 {
         padding: 30px 42px;
     }
+
+    &.style-2 {
+        padding: 10px 35px;
+    }
 }
 
 .tf-btn-2 {
@@ -85,6 +97,8 @@
         line-height: 20px;
         transition: transform 0.35s ease, color 0.35s ease;
     }
+
+
 
 }
 
@@ -116,6 +130,9 @@
         line-height: 20px;
     }
 
+    &.style-2 {
+        padding: 10px 35px;
+    }
 }
 
 .tf-btn-4 {
@@ -601,8 +618,8 @@
     color: var(--text-color-1);
     text-decoration: none;
     z-index: 2;
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     background-color: var(--white-2);
     border-radius: 50%;
     display: flex;

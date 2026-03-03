@@ -95,6 +95,12 @@
 
 }
 
+@media (min-width: 1440px) {
+    .testimonial-right {
+        margin-left: -25px;
+    }
+}
+
 @media (max-width: 1300px) {
     .testimonial-video {
         .video-play-button {

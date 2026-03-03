@@ -216,9 +216,9 @@ $(document).ready(function () {
 
       newHTML += '</span>';
 
-      
+
       if (wordIndex < words.length - 1) {
-        newHTML += ' '; 
+        newHTML += ' ';
       }
     });
 
@@ -226,7 +226,7 @@ $(document).ready(function () {
 
     const chars = $title.find('.char');
 
-   
+
     chars.css({
       'transform': 'translateY(1.2em)',
       'opacity': '0',
@@ -243,7 +243,7 @@ $(document).ready(function () {
 
       if (windowBottom > elementTop + 50) {
         anime({
-          targets: chars.toArray(), 
+          targets: chars.toArray(),
           translateY: [
             { value: '-0.4em', duration: 400, easing: 'easeOutExpo' },
             { value: 0, duration: 600, easing: 'easeOutBounce' }
@@ -255,7 +255,7 @@ $(document).ready(function () {
 
         animated = true;
 
-        
+
         $(window).off('scroll', checkScroll);
       }
     }
@@ -351,27 +351,27 @@ $(document).ready(function () {
 
   const isMobile = window.innerWidth <= 768;
 
- 
-  const moveDistance = isMobile ? 20 : 150;     
-  const zoomScale = isMobile ? 1.02 : 1.3;      
-  const blurAmount = isMobile ? 3 : 15;          
+
+  const moveDistance = isMobile ? 20 : 150;
+  const zoomScale = isMobile ? 1.02 : 1.3;
+  const blurAmount = isMobile ? 3 : 15;
 
   const animatedElements = [];
 
   function setupElement(el, type, direction = null) {
 
-   
+
     el.style.position = 'relative';
     el.style.opacity = 0;
     el.style.willChange = 'transform, opacity';
     el.style.backfaceVisibility = 'hidden';
 
-   
+
     if (isMobile) {
-      
+
       el.setAttribute('data-mobile-simple', 'true');
     } else {
-    
+
       if (type === 'slide') {
         if (direction === 'left') el.style.transform = `translateX(-${moveDistance}px)`;
         if (direction === 'right') el.style.transform = `translateX(${moveDistance}px)`;
@@ -452,7 +452,7 @@ $(document).ready(function () {
           return;
         }
 
-      
+
         if (item.type === 'slide') {
           anime({
             targets: item.el,

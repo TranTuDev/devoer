@@ -734,8 +734,8 @@ a:focus, a:hover {
   padding-top: 80px;
 }
 
-.pd-160-top {
-  padding-top: 160px;
+.pd-180-top {
+  padding-top: 180px;
 }
 
 [data-grid=grid-1] {
@@ -1278,9 +1278,15 @@ a:focus, a:hover {
 }
 .tf-btn.style-1 {
   font-weight: 600;
-  padding: 40px 85px !important;
+  padding: 40px 88px !important;
   font-size: 16px;
   line-height: 26px;
+}
+.tf-btn.header-btn {
+  padding: 18px 32px !important;
+}
+.tf-btn.community-btn {
+  padding: 18px 32px !important;
 }
 
 .tf-btn-1 {
@@ -1344,6 +1350,9 @@ a:focus, a:hover {
 }
 .tf-btn-1.style-1 {
   padding: 30px 42px;
+}
+.tf-btn-1.style-2 {
+  padding: 10px 35px;
 }
 
 .tf-btn-2 {
@@ -1467,6 +1476,9 @@ a:focus, a:hover {
 .tf-btn-3 i {
   font-size: 20px;
   line-height: 20px;
+}
+.tf-btn-3.style-2 {
+  padding: 10px 35px;
 }
 
 .tf-btn-4 {
@@ -2020,8 +2032,8 @@ a:focus, a:hover {
   color: var(--text-color-1);
   text-decoration: none;
   z-index: 2;
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   background-color: var(--white-2);
   border-radius: 50%;
   display: flex;
@@ -2154,13 +2166,13 @@ a:focus, a:hover {
 .header-inner .header-right {
   display: flex;
   gap: 60px;
-  padding-right: 140px;
+  padding-right: 150px;
 }
 .header-inner.style-1 {
   justify-content: space-between;
 }
 .header-inner.style-1 .header-right {
-  padding-right: 85px;
+  padding-right: 100px;
 }
 .header-inner.style-2 {
   height: 110px;
@@ -2297,7 +2309,7 @@ a:focus, a:hover {
 
 .box-nav-menu {
   gap: 60px;
-  padding-right: 130px;
+  padding-right: 135px;
 }
 .box-nav-menu.style-1 {
   gap: 65px;
@@ -3606,8 +3618,8 @@ a:focus, a:hover {
 }
 .slider-home-right .slider-wrap .content-slider {
   background-color: var(--white-2);
-  padding: 60px;
-  clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 70%, 70% 100%, 19% 100%, 0 100%, 0 0);
+  padding: 60px 62px 60px 60px;
+  clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 69%, 72% 100%, 20% 100%, 0 100%, 0 0);
   width: fit-content;
 }
 .slider-home-right .slider-wrap .content-slider .intro-text {
@@ -3781,7 +3793,7 @@ a:focus, a:hover {
 
 @media (min-width: 1200px) {
   .slider-wrap.style-2 .box-content {
-    margin-left: calc((100vw - 1170px) / 2 - 110px);
+    margin-left: calc((100vw - 1170px) / 2 - 115px);
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -5189,6 +5201,11 @@ a:focus, a:hover {
   .box-nav-menu.style-3 {
     gap: 30px !important;
     padding-left: 50px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .testimonial-right {
+    margin-left: -25px;
   }
 }
 @media (max-width: 1300px) {
@@ -7095,7 +7112,8 @@ a:focus, a:hover {
 
 .course-section.style-1 {
   background-color: var(--text-color-1);
-  padding-bottom: 185px;
+  padding-bottom: 200px;
+  padding-top: 120px;
 }
 .course-section .heading-section {
   margin-bottom: 70px;
@@ -7400,9 +7418,6 @@ a:focus, a:hover {
 }
 .list-benefit.style-2 li:last-child {
   margin-bottom: 0;
-}
-.list-benefit.style-3 li {
-  margin-bottom: 20px;
 }
 .list-benefit.style-3 li i {
   font-size: 16px;
@@ -7873,7 +7888,7 @@ a:focus, a:hover {
 }
 
 .course-img {
-  margin-top: -100px;
+  margin-top: -110px;
   width: 100%;
   clip-path: polygon(0 0%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
 }
@@ -7939,7 +7954,7 @@ a:focus, a:hover {
   align-items: center;
   position: relative;
   padding-left: 50px;
-  margin-left: 30px;
+  margin-left: 25px;
 }
 .about-metrics-media .metric-text {
   font-family: "Libre Franklin", sans-serif;
@@ -7969,24 +7984,28 @@ a:focus, a:hover {
 
 .heading-section {
   text-align: center;
-  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.heading-section .tagline {
+.heading-section p {
   color: var(--text-color-1);
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+  font-weight: 600;
 }
 .heading-section .step-number {
   background-color: var(--main-color);
   color: var(--text-color-1);
   border-radius: 50%;
-  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
 }
 .heading-section .section-title {
   color: var(--text-color-1);
@@ -7995,6 +8014,7 @@ a:focus, a:hover {
   word-wrap: normal;
   overflow-wrap: normal;
   white-space: normal;
+  margin: 0;
 }
 .heading-section.style-1 {
   text-align: start;
@@ -8003,7 +8023,7 @@ a:focus, a:hover {
   align-items: start;
   justify-content: start;
 }
-.heading-section.style-2 .tagline {
+.heading-section.style-2 p {
   color: var(--main-color);
 }
 .heading-section.style-2 .step-number {
@@ -8015,12 +8035,10 @@ a:focus, a:hover {
 }
 .heading-section.style-3 {
   text-align: start;
-  display: flex;
-  flex-direction: column;
   align-items: start;
   justify-content: start;
 }
-.heading-section.style-3 .tagline {
+.heading-section.style-3 p {
   color: var(--main-color) !important;
 }
 .heading-section.style-3 .section-title {
@@ -8047,9 +8065,12 @@ a:focus, a:hover {
   align-items: center;
   gap: 30px;
 }
-.founder-info .founder-text p {
+.founder-info .founder-text .founder-name {
+  color: var(--text-color-1);
+}
+.founder-info .founder-text .founder-role {
   margin-top: 0 !important;
-  color: var(--text-color-2);
+  color: var(--text-color-3);
 }
 .founder-info.style-1 {
   gap: 15px !important;
@@ -8225,8 +8246,8 @@ a:focus, a:hover {
   display: block;
 }
 .about-us-section.style-3 .about-details-content {
-  padding-left: 40px;
-  padding-right: 11px;
+  padding-left: 42px;
+  padding-right: 13px;
 }
 .about-us-section.style-3 .about-details-content .heading-section {
   margin-bottom: 20px !important;
@@ -8360,7 +8381,6 @@ a:focus, a:hover {
 .service-card.style-1 .service-item-icon {
   color: var(--main-color);
   font-size: 60px;
-  margin-bottom: 30px;
   background-color: transparent;
 }
 .service-card.style-1 h6 {
@@ -8426,6 +8446,8 @@ a:focus, a:hover {
 }
 .service-card.style-3 .card-body p {
   color: var(--white-2);
+  letter-spacing: -0.009em;
+  margin-bottom: 15px !important;
 }
 .service-card.style-3 .card-body a {
   color: var(--white-2);
@@ -8441,6 +8463,7 @@ a:focus, a:hover {
 .service-card.style-3 .service-decoration-img {
   position: absolute;
   left: 55%;
+  top: 25%;
 }
 .service-card.style-3 .service-decoration-img img {
   height: auto;
@@ -8523,7 +8546,7 @@ a:focus, a:hover {
 }
 .service-media .video-play-button {
   position: absolute;
-  top: 50%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 12px;
@@ -8618,7 +8641,7 @@ a:focus, a:hover {
   bottom: 20px;
   left: 30px;
   display: inline-flex;
-  padding: 6px 18px;
+  padding: 6px 12px;
   background-color: var(--main-color);
   white-space: nowrap;
 }
@@ -8714,8 +8737,8 @@ a:focus, a:hover {
   position: absolute;
   z-index: 2;
   left: 20px;
-  bottom: -90px;
-  width: 73%;
+  bottom: -80px;
+  width: 72%;
   padding: 0px;
   box-shadow: none;
   background-color: unset;
@@ -8992,11 +9015,6 @@ a:focus, a:hover {
   z-index: 1;
 }
 
-@media (min-width: 1440px) {
-  .testimonial-right {
-    margin-left: -30px;
-  }
-}
 .swiper-testimonial-left {
   width: 100%;
 }
@@ -9031,7 +9049,7 @@ a:focus, a:hover {
 }
 
 .swiper-box.style-1 {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .swiper-box.style-1 .quote-box {
   display: block;
@@ -9041,10 +9059,10 @@ a:focus, a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -30px;
+  margin-top: -25px;
 }
 .swiper-box.style-1 .quote-box .abc img {
-  margin-right: 30px;
+  margin-right: 35px;
 }
 .swiper-box.style-1 .quote-box .testimonial-info.style-1 {
   margin-top: 20px;
@@ -9091,7 +9109,7 @@ a:focus, a:hover {
   transform: translateY(-50%);
   z-index: 15;
   gap: 10px;
-  right: 140px;
+  right: 150px;
 }
 .sw-navigation-wrap.style-1 {
   left: 110px;
@@ -9110,7 +9128,7 @@ a:focus, a:hover {
   transition: all 0.3s ease;
 }
 .sw-btn-next i {
-  font-size: 20px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9135,7 +9153,7 @@ a:focus, a:hover {
   transition: all 0.3s ease;
 }
 .sw-btn-prev i {
-  font-size: 20px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9315,6 +9333,7 @@ a:focus, a:hover {
 }
 .blog-post.style-1 .post-media {
   z-index: 0;
+  padding-bottom: 20px;
 }
 .blog-post.style-1 .post-media img {
   width: 100%;
@@ -9420,8 +9439,8 @@ a:focus, a:hover {
 }
 .blog-post-1 .post-media .blog-date {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 30px;
+  left: 30px;
   z-index: 2;
 }
 .blog-post-1 .post-info-wrapper {
@@ -9633,8 +9652,9 @@ a:focus, a:hover {
   margin-bottom: 50px;
 }
 .driving-safety .award {
-  padding: 50px 40px;
+  padding: 65px 40px;
   max-width: 202px;
+  height: 222px;
   background-color: var(--main-color);
   flex-direction: column;
   gap: 15px;

@@ -258,8 +258,8 @@
 
         .content-slider {
             background-color: var(--white-2);
-            padding: 60px;
-            clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 70%, 70% 100%, 19% 100%, 0 100%, 0 0);
+            padding: 60px 62px 60px 60px;
+            clip-path: polygon(20% 0%, 100% 0, 100% 20%, 100% 69%, 72% 100%, 20% 100%, 0 100%, 0 0);
             width: fit-content;
 
             .intro-text {
@@ -493,7 +493,7 @@
 @media (min-width: 1200px) {
     .slider-wrap.style-2 {
         .box-content {
-            margin-left: calc((100vw - 1170px) / 2 - 110px);
+            margin-left: calc((100vw - 1170px) / 2 - 115px);
             margin-right: auto;
             padding-left: 15px;
             padding-right: 15px;
@@ -737,7 +737,7 @@
 
 .slider-images img {
     position: absolute;
-   
+
     transform: translateX(100px);
     transition: all 0.8s ease;
 }
@@ -753,9 +753,11 @@
     bottom: 80px;
     z-index: 1;
 }
-.course-slider{
+
+.course-slider {
     padding-top: 120px;
-    h3{
+
+    h3 {
         display: flex;
         justify-content: center;
         margin-bottom: 30px;
