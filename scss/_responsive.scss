@@ -274,6 +274,14 @@
 }
 
 @media (max-width: 991px) {
+
+    .work-process {
+        .process {
+            padding-top: 30px;
+            margin-left: 0px !important;
+        }
+    }
+
     .transition-logo {
         font-size: 48px;
         letter-spacing: 8px;
@@ -528,6 +536,15 @@
         .about-metrics-media {
             justify-content: center;
             padding-left: 0 !important;
+            margin-left: 0 !important;
+
+            .media-image-wrapper {
+                margin-left: 10px;
+
+                img {
+                    width: 100% !important;
+                }
+            }
         }
 
         .about-metrics-media::before {

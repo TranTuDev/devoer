@@ -3409,7 +3409,7 @@ a:focus, a:hover {
   border-color: var(--line-2) !important;
 }
 .form-search-siderbar input::placeholder {
-  color: var(--white);
+  color: var(--white-1);
 }
 .form-search-siderbar .tf-btn-search {
   position: absolute;
@@ -3443,6 +3443,21 @@ a:focus, a:hover {
 }
 .form-newsletter .subscribe-content {
   position: relative;
+}
+
+.subscribe-email {
+  padding: 10px 55px !important;
+  height: 60px;
+  border: 1px solid var(--text-color-2) !important;
+  color: var(--white-1) !important;
+}
+.subscribe-email::placeholder {
+  color: var(--text-color-2) !important;
+  opacity: 1 !important;
+}
+.subscribe-email:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
 }
 
 /*------------ silder ---------------- */
@@ -5392,6 +5407,10 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 991px) {
+  .work-process .process {
+    padding-top: 30px;
+    margin-left: 0px !important;
+  }
   .transition-logo {
     font-size: 48px;
     letter-spacing: 8px;
@@ -5541,6 +5560,13 @@ a:focus, a:hover {
   .company-about .about-metrics-media {
     justify-content: center;
     padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  .company-about .about-metrics-media .media-image-wrapper {
+    margin-left: 10px;
+  }
+  .company-about .about-metrics-media .media-image-wrapper img {
+    width: 100% !important;
   }
   .company-about .about-metrics-media::before {
     display: none;
