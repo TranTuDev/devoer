@@ -17,7 +17,6 @@ $(document).ready(function () {
     );
   });
 });
-
 // ===== DATA ANIMATE =====
 $(document).ready(function () {
   const $items = $('[data-animate]');

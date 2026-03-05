@@ -16,7 +16,7 @@
     .infiniteslide {
         display: flex;
         gap: 158px;
-
+        animation: scrollBrand 25s linear infinite;
         width: max-content;
     }
 
@@ -41,5 +41,15 @@
         mask-size: 0% 0%;
         background-color: var(--text-color-1);
         padding: 80px 0px !important;
+    }
+}
+
+@keyframes scrollBrand {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }

@@ -2699,57 +2699,99 @@
     }
 
     &.style-1 {
-
+        position: relative;
+        padding-bottom: 60px;
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 50px;
-        padding-bottom: 60px;
+
+        .service-icon-wrapper {
+            margin-bottom: 30px !important;
+        }
 
         .service-item-icon {
             color: var(--main-color);
             font-size: 60px;
-
             background-color: transparent;
         }
 
         h6 {
-
             margin-bottom: 15px;
         }
 
         p {
-            margin-bottom: 0px !important;
+            margin-bottom: 0 !important;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+
+            background: linear-gradient(to right,
+                    var(--line-18),
+                    var(--line-7),
+                    var(--line-18));
+
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover::before {
+            width: 100%;
+            transform: scaleX(1);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--main-color);
+            opacity: 0;
+            transition: 0.4s ease;
         }
 
         a {
-
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
             opacity: 0;
+            transition: 0.4s ease;
+            z-index: 2;
 
             i {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
-                color: var(--text-color-1);
                 background-color: var(--main-color);
-                font-size: 16px;
+                color: var(--text-color-1);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-bottom: -125px;
+                font-size: 16px;
             }
         }
 
         &:hover {
-            background-color: transparent;
-            border-bottom: 2px solid var(--main-color);
-            border-left: 1px solid var(--line-17);
-            border-right: 1px solid var(--line-17);
-            border-top: 1px solid transparent;
-            // border-image: linear-gradient(to right,
-            //         var(--line-18) 0%,
-            //         var(--line-7) 60%,
-            //         var(--line-18) 100%) 1;
+            background-color: transparent !important;
+            border: 1px solid var(--line-17) !important;
 
+            &::after {
+                opacity: 1;
+            }
+
+            a {
+                opacity: 1;
+            }
 
             h6 {
                 color: var(--text-color-1);
@@ -2758,13 +2800,9 @@
             p {
                 color: var(--text-color-2);
             }
-
-            a {
-                color: var(--text-color-1);
-                opacity: 1;
-            }
         }
     }
+
 
     &.style-2 {
         .service-item-icon {
@@ -2824,15 +2862,18 @@
 
         }
 
-        .service-decoration-img {
+        .service-decoration-number {
             position: absolute;
             left: 55%;
             top: 25%;
 
-            img {
-                height: auto;
-                width: 100%;
-                object-fit: cover;
+            .number {
+                font-weight: 400;
+                font-size: 150px;
+                line-height: 100px;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+                -webkit-text-fill-color: transparent;
             }
         }
 
@@ -3216,7 +3257,7 @@
             position: absolute;
             z-index: 2;
             left: 20px;
-            bottom: -80px;
+            bottom: -85px;
             width: 72%;
             padding: 0px;
             box-shadow: none;
@@ -3791,7 +3832,7 @@
     z-index: 20;
 }
 
-.bcv {
+.service {
     padding-bottom: 100px;
 }
 
@@ -4313,11 +4354,11 @@
 
     .start-course-content {
         background-color: var(--white-3);
-        padding-left: 140px;
-        padding-top: 20px;
+        padding-left: 145px;
+        padding-top: 120px;
         margin-top: 60px;
         width: 55.78%;
-        padding-bottom: 20px;
+        padding-bottom: 120px;
         margin-left: -70px;
         padding-right: 350px;
 
@@ -4391,9 +4432,13 @@
             margin-bottom: 30px;
         }
 
-        .text-tagline {
-            color: var(--text-color-2);
+        .driving-safety-text {
             margin-bottom: 30px;
+        }
+
+        li {
+            color: var(--text-color-2);
+            margin-bottom: 20px;
         }
 
         .list-benefit {
@@ -4633,6 +4678,10 @@
 
 .testimonial-section {
     background-color: var(--white-3);
+
+    &.style-1 {
+        background-color: var(--white-2) !important;
+    }
 }
 
 

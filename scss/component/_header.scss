@@ -448,7 +448,7 @@
                 top: 100%;
 
                 &.style-1 {
-                    top: 110% !important;
+                    top: 100% !important;
                 }
             }
         }
@@ -466,7 +466,7 @@
 
 .menu-item {
     .item-link.style-1 {
-
+        line-height: 105px !important;
         color: var(--white-1);
 
     }
@@ -499,7 +499,7 @@
     overflow: hidden;
 
     &.style-1 {
-        top: 110% !important;
+        top: 100% !important;
     }
 
     .menu-list {

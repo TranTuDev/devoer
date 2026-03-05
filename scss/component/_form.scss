@@ -59,6 +59,7 @@
             font-size: 20px;
             color: var(--primary);
         }
+
     }
 }
 
@@ -70,7 +71,7 @@
             height: 60px;
 
             &::placeholder {
-                color: var(--text-color-3);
+                color: var(--text-color-6);
             }
 
         }
@@ -111,4 +112,14 @@
         border-color: var(--primary-color) !important;
         box-shadow: none !important;
     }
+}
+
+.search-box__input {
+    &::placeholder {
+        color: var(--text-color-6) !important;
+        opacity: 1 !important;
+    }
+}
+.form-content{
+    padding: 35px 42px !important;
 }

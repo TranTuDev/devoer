@@ -2174,14 +2174,14 @@ a:focus, a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 10px 30px;
+  padding: 20px 50px;
   font-weight: 600;
   color: var(--white-2);
   background-color: var(--text-color-1);
   border: 1px solid var(--text-color-1);
   font-family: "Libre Franklin", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 26px;
   font-weight: bold;
 }
 .btn-footer i {
@@ -2542,13 +2542,14 @@ a:focus, a:hover {
   top: 100%;
 }
 .menu-item.menu-item-has-children:hover .sub-menu.style-1 {
-  top: 110% !important;
+  top: 100% !important;
 }
 .menu-item:hover .item-link::before {
   width: 100%;
 }
 
 .menu-item .item-link.style-1 {
+  line-height: 105px !important;
   color: var(--white-1);
 }
 
@@ -2576,7 +2577,7 @@ a:focus, a:hover {
   overflow: hidden;
 }
 .sub-menu.style-1 {
-  top: 110% !important;
+  top: 100% !important;
 }
 .sub-menu .menu-list a {
   padding: 10px;
@@ -3428,7 +3429,7 @@ a:focus, a:hover {
   height: 60px;
 }
 .form-newsletter fieldset input::placeholder {
-  color: var(--text-color-3);
+  color: var(--text-color-6);
 }
 .form-newsletter .button-submit {
   position: absolute;
@@ -3458,6 +3459,15 @@ a:focus, a:hover {
 .subscribe-email:focus {
   border-color: var(--primary-color) !important;
   box-shadow: none !important;
+}
+
+.search-box__input::placeholder {
+  color: var(--text-color-6) !important;
+  opacity: 1 !important;
+}
+
+.form-content {
+  padding: 35px 42px !important;
 }
 
 /*------------ silder ---------------- */
@@ -4479,7 +4489,7 @@ a:focus, a:hover {
 
 .subscribe-footer {
   background-color: var(--main-color);
-  clip-path: polygon(0 0, 80% 0, 75% 100%, 0% 100%);
+  clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
 }
 .subscribe-footer .subscribe {
   display: flex;
@@ -4487,7 +4497,7 @@ a:focus, a:hover {
   justify-content: space-between;
   padding-top: 80px;
   padding-bottom: 80px;
-  padding-right: 200px;
+  padding-right: 150px;
 }
 .subscribe-footer .subscribe-title h3 {
   margin-bottom: 15px;
@@ -4988,6 +4998,7 @@ a:focus, a:hover {
 .infiniteslide_wrap .infiniteslide {
   display: flex;
   gap: 158px;
+  animation: scrollBrand 25s linear infinite;
   width: max-content;
 }
 .infiniteslide_wrap.style-1 {
@@ -5010,6 +5021,14 @@ a:focus, a:hover {
   padding: 80px 0px !important;
 }
 
+@keyframes scrollBrand {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 /*------------ _animation ---------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -5789,6 +5808,9 @@ a:focus, a:hover {
    MD: max-width 767px (Bootstrap 5: < 768px)
    ============================================================ */
 @media (max-width: 767px) {
+  .service {
+    padding-bottom: 200px !important;
+  }
   .feature {
     display: block !important;
   }
@@ -8453,10 +8475,14 @@ a:focus, a:hover {
   color: var(--main-color);
 }
 .service-card.style-1 {
+  position: relative;
+  padding-bottom: 60px;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 50px;
-  padding-bottom: 60px;
+}
+.service-card.style-1 .service-icon-wrapper {
+  margin-bottom: 30px !important;
 }
 .service-card.style-1 .service-item-icon {
   color: var(--main-color);
@@ -8467,39 +8493,71 @@ a:focus, a:hover {
   margin-bottom: 15px;
 }
 .service-card.style-1 p {
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
+}
+.service-card.style-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, var(--line-18), var(--line-7), var(--line-18));
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+.service-card.style-1:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+}
+.service-card.style-1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  opacity: 0;
+  transition: 0.4s ease;
 }
 .service-card.style-1 a {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
   opacity: 0;
+  transition: 0.4s ease;
+  z-index: 2;
 }
 .service-card.style-1 a i {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: var(--text-color-1);
   background-color: var(--main-color);
-  font-size: 16px;
+  color: var(--text-color-1);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -125px;
+  font-size: 16px;
 }
 .service-card.style-1:hover {
-  background-color: transparent;
-  border-bottom: 2px solid var(--main-color);
-  border-left: 1px solid var(--line-17);
-  border-right: 1px solid var(--line-17);
-  border-top: 1px solid transparent;
+  background-color: transparent !important;
+  border: 1px solid var(--line-17) !important;
+}
+.service-card.style-1:hover::after {
+  opacity: 1;
+}
+.service-card.style-1:hover a {
+  opacity: 1;
 }
 .service-card.style-1:hover h6 {
   color: var(--text-color-1);
 }
 .service-card.style-1:hover p {
   color: var(--text-color-2);
-}
-.service-card.style-1:hover a {
-  color: var(--text-color-1);
-  opacity: 1;
 }
 .service-card.style-2 .service-item-icon {
   border-radius: 50%;
@@ -8540,15 +8598,18 @@ a:focus, a:hover {
   border: 1px solid var(--line-1);
   color: var(--main-color);
 }
-.service-card.style-3 .service-decoration-img {
+.service-card.style-3 .service-decoration-number {
   position: absolute;
   left: 55%;
   top: 25%;
 }
-.service-card.style-3 .service-decoration-img img {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
+.service-card.style-3 .service-decoration-number .number {
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 100px;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+  -webkit-text-fill-color: transparent;
 }
 .service-card.style-3:hover {
   background-color: var(--text-color-1);
@@ -8817,7 +8878,7 @@ a:focus, a:hover {
   position: absolute;
   z-index: 2;
   left: 20px;
-  bottom: -80px;
+  bottom: -85px;
   width: 72%;
   padding: 0px;
   box-shadow: none;
@@ -9263,7 +9324,7 @@ a:focus, a:hover {
   z-index: 20;
 }
 
-.bcv {
+.service {
   padding-bottom: 100px;
 }
 
@@ -9666,11 +9727,11 @@ a:focus, a:hover {
 }
 .start-course .start-course-content {
   background-color: var(--white-3);
-  padding-left: 140px;
-  padding-top: 20px;
+  padding-left: 145px;
+  padding-top: 120px;
   margin-top: 60px;
   width: 55.78%;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
   margin-left: -70px;
   padding-right: 350px;
 }
@@ -9724,9 +9785,12 @@ a:focus, a:hover {
 .driving-safety .driving-safety-content .heading-section {
   margin-bottom: 30px;
 }
-.driving-safety .driving-safety-content .text-tagline {
-  color: var(--text-color-2);
+.driving-safety .driving-safety-content .driving-safety-text {
   margin-bottom: 30px;
+}
+.driving-safety .driving-safety-content li {
+  color: var(--text-color-2);
+  margin-bottom: 20px;
 }
 .driving-safety .driving-safety-content .list-benefit {
   margin-bottom: 50px;
@@ -9919,6 +9983,9 @@ a:focus, a:hover {
 
 .testimonial-section {
   background-color: var(--white-3);
+}
+.testimonial-section.style-1 {
+  background-color: var(--white-2) !important;
 }
 
 .service-item-grid {

@@ -239,9 +239,7 @@
 .subscribe-footer {
     background-color: var(--main-color);
 
-    clip-path: polygon(0 0, 80% 0, 75% 100%, 0% 100%);
-
-
+    clip-path: polygon(0 0, 80% 0, 77% 100%, 0% 100%);
 
     .subscribe {
         display: flex;
@@ -249,9 +247,7 @@
         justify-content: space-between;
         padding-top: 80px;
         padding-bottom: 80px;
-        padding-right: 200px;
-
-
+        padding-right: 150px;
     }
 
     .subscribe-title {
