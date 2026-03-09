@@ -11,7 +11,11 @@
 
 
         .accordion-button {
-            padding: 21px 40px !important;
+
+            padding-left: 40px !important;
+            padding-right: 28px !important;
+            padding-top: 22px !important;
+            padding-bottom: 10px !important;
             background-color: var(--white-3);
             border: none !important;
             transition: all 0.3s ease;
@@ -88,7 +92,10 @@
     &.style-1 {
 
         .accordion-button {
-            padding: 22px 30px !important;
+            padding-left: 28px !important;
+            padding-right: 28px !important;
+            padding-top: 16px !important;
+            padding-bottom: 10px !important;
 
             p {
                 font-weight: 700;
@@ -107,20 +114,24 @@
                 padding-bottom: 30px;
                 padding-top: 0 !important;
                 padding-left: 0 !important;
-                padding-right: 40px !important;
+                padding-right: 50px !important;
+                display: flex;
+                gap: 10px;
 
                 p {
                     font-family: $font-2;
                     color: var(--text-color-2);
                     font-weight: 400;
 
-                    .answer-label {
-                        font-weight: 700;
-                        color: var(--text-color-1);
-                        font-weight: bold;
-                        margin-right: 13px;
-                        font-family: $font-main;
-                    }
+
+                }
+
+                .answer-label {
+                    font-weight: 700;
+                    color: var(--text-color-1);
+                    font-weight: bold;
+
+                    font-family: $font-main;
                 }
             }
         }
@@ -129,7 +140,7 @@
 
     &.style-2 {
         .accordion-button {
-            padding-top: 21px !important;
+            padding-top: 10px !important;
             padding-bottom: 23px !important;
             padding-left: 30px !important;
             padding-right: 20px !important;

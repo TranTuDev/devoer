@@ -440,6 +440,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
+    row-gap: 35px;
 }
 
 
@@ -525,7 +526,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 0px;
+
+    padding-top: 35px;
 
     h5 {
         font-family: $font-main;
@@ -674,6 +676,7 @@
     }
 
     .form-massage {
+        padding: 20px 30px;
         border: 1px solid var(--line-2) !important;
         width: 100%;
         height: 138px;
@@ -788,7 +791,7 @@
         height: 100px;
         background-color: var(--natural-1);
         margin-right: 50px;
-        margin-left: 33px;
+        margin-left: 80px;
     }
 
     .feature-right {
@@ -1685,8 +1688,8 @@
     .video-content {
         width: fit-content;
         background: var(--white-2);
-        clip-path: polygon(0% 0%, 60% 0, 100% 45%, 100% 100%, 0% 100%);
-        padding: 75px 74px 75px 60px;
+        clip-path: polygon(0% 0%, 55% 0, 100% 45%, 100% 100%, 0% 100%);
+        padding: 72px 75px 75px 60px;
         z-index: 10;
         pointer-events: auto;
     }
@@ -2234,7 +2237,9 @@
         gap: 30px;
 
         .founder-text {
-
+            h6 {
+                letter-spacing: -0.09em;
+            }
 
             p {
                 margin-top: 0 !important;
@@ -2243,20 +2248,9 @@
         }
     }
 
-    // .founder-sub {
-    //     &.style-1 {
-    //         b {
-    //             font-weight: 600;
-    //             color: var(--text-color-2);
-    //         }
-
-    //         p {
-    //             font-weight: 400;
-    //             color: var(--text-color-3);
-    //             margin-bottom: 0px !important;
-    //         }
-    //     }
-    // }
+    &.style-1 {
+        gap: 100px;
+    }
 }
 
 .founder-info {
@@ -2425,6 +2419,8 @@
 
         .btn-about-us {
             margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
         }
 
         .story-text {
@@ -2614,7 +2610,7 @@
 //===================widget-service-item===================//
 
 .service-card {
-    padding: 30px 30px;
+    padding: 30px 25px;
     border: 1px solid var(--line-17);
     display: flex;
     flex-direction: column;
@@ -2703,10 +2699,10 @@
         padding-bottom: 60px;
         padding-left: 40px;
         padding-right: 40px;
-        padding-top: 50px;
+        padding-top: 35px;
 
         .service-icon-wrapper {
-            margin-bottom: 30px !important;
+            margin-bottom: 20px !important;
         }
 
         .service-item-icon {
@@ -2841,7 +2837,7 @@
             p {
                 color: var(--white-2);
                 letter-spacing: -0.009em;
-                margin-bottom: 15px !important;
+                margin-bottom: 20px !important;
             }
 
             a {
@@ -2864,8 +2860,8 @@
 
         .service-decoration-number {
             position: absolute;
-            left: 55%;
-            top: 25%;
+            left: 52%;
+            top: 28%;
 
             .number {
                 font-weight: 400;
@@ -2974,7 +2970,7 @@
 .service-media {
     position: relative;
     display: inline-block;
-    margin-top: -175px;
+    margin-top: -180px;
 
     img {
         width: 100%;
@@ -3015,7 +3011,7 @@
     align-items: center;
     gap: 35px;
     margin-bottom: 120px;
-    padding-top: 70px;
+    padding-top: 95px;
 
     p {
         color: var(--text-color-6);
@@ -3257,11 +3253,21 @@
             position: absolute;
             z-index: 2;
             left: 20px;
-            bottom: -85px;
+            bottom: -80px;
             width: 72%;
             padding: 0px;
             box-shadow: none;
             background-color: unset;
+
+            &.style-1 {
+                bottom: -88px;
+                width: 72%;
+            }
+
+            &.style-2 {
+                bottom: -88px;
+                width: 73%;
+            }
 
             .price-block {
                 height: 30px;
@@ -3556,7 +3562,7 @@
 
     &.style-1 {
         padding: 0px !important;
-        gap: 40px !important;
+        gap: 30px !important;
         box-shadow: none !important;
         align-items: stretch;
 
@@ -3567,7 +3573,7 @@
 
             img {
                 border-radius: 9999px;
-                width: auto !important;
+                width: auto;
             }
         }
 
@@ -3576,7 +3582,7 @@
 
 .testimonial-right {
     position: relative;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-right: 30px;
     padding-left: 30px;
 }
@@ -3665,7 +3671,7 @@
 
 .swiper-box {
     &.style-1 {
-        padding-top: 15px;
+        padding-top: 20px;
 
         .quote-box {
             display: block;
@@ -3818,8 +3824,8 @@
 
 .course-details-slider {
     position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .sw-nav {
@@ -3833,7 +3839,7 @@
 }
 
 .service {
-    padding-bottom: 100px;
+    padding-bottom: 85px;
 }
 
 .sw-next {
@@ -4492,7 +4498,10 @@
 
 .fun-pack-card {
     position: relative;
-    padding: 80px 70px;
+    padding-top: 100px;
+    padding-left: 65px;
+    padding-right: 80px;
+    padding-bottom: 80px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -4519,6 +4528,10 @@
     p {
         color: var(--text-color-1);
     }
+
+    &.style-1 {
+        padding-top: 80px;
+    }
 }
 
 
@@ -4533,7 +4546,10 @@
 
 //========course-details-section====
 .box-content-course {
-    padding: 50px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
     border: 1px solid var(--line-2);
 }
 
@@ -4611,7 +4627,7 @@
 
         h6 {
             color: var(--text-color-1);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         p {
@@ -4649,6 +4665,7 @@
     justify-content: space-between;
     margin-bottom: 30px;
     border-bottom: 1px solid var(--line-2);
+    padding-right: 50px;
 
     a {
         font-weight: bold;

@@ -79,6 +79,16 @@
     &.style-2 {
         padding: 10px 35px;
     }
+
+    &.style-3 {
+        padding: 16px 48px;
+    }
+
+    &.style-4 {
+       padding: 17px 35px;
+    }
+
+    
 }
 
 // ✅ tf-btn-2
@@ -142,6 +152,10 @@
 
     &.style-2 {
         padding: 10px 35px;
+    }
+
+    &.style-3 {
+        padding: 16px 48px;
     }
 }
 
@@ -711,6 +725,7 @@
     font-size: 16px;
     line-height: 26px;
     font-weight: bold;
+
     i {
         font-size: 20px;
         line-height: 20px;

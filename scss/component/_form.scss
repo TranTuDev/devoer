@@ -98,7 +98,8 @@
 
 
 .subscribe-email {
-    padding: 10px 55px !important;
+    width: 320px !important;
+    padding: 10px 30px !important;
     height: 60px;
     border: 1px solid var(--text-color-2) !important;
     color: var(--white-1) !important;
@@ -120,6 +121,7 @@
         opacity: 1 !important;
     }
 }
-.form-content{
-    padding: 35px 42px !important;
+
+.form-content {
+    padding: 34px 30px !important;
 }

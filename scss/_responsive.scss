@@ -54,6 +54,12 @@
    XXL: max-width 1600px
    ============================================================ */
 @media (max-width: 1600px) {
+    .service-decoration-number {
+        .number {
+            font-size: 120px !important;
+        }
+    }
+
     .start-course {
         .start-course-content {
             padding-left: 100px !important;
@@ -102,6 +108,24 @@
 }
 
 @media (max-width: 1199px) {
+    .btn-consulting {
+        display: none !important;
+    }
+
+    .swiper-testimonial-all {
+        &.style-1 {
+
+            .swiper-testimonial-left {
+
+                img {
+                    width: 100% !important;
+                }
+
+            }
+
+        }
+    }
+
     .fun-pack-card {
         padding: 40px !important;
     }
@@ -274,6 +298,11 @@
 }
 
 @media (max-width: 991px) {
+    .service-decoration-number {
+        .number {
+            font-size: 100px !important;
+        }
+    }
 
     .work-process {
         .process {
@@ -886,6 +915,12 @@
 
 
 @media (max-width: 767px) {
+    .service-decoration-number {
+        .number {
+            font-size: 100px !important;
+        }
+    }
+
     .service {
         padding-bottom: 200px !important;
     }

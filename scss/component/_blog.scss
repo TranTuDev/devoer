@@ -268,7 +268,7 @@
 
     &.sidebar-categories {
         .item {
-            padding-bottom: 15px;
+            padding-bottom: 25px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -298,6 +298,9 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
                 border-bottom: none;
+            }
+            &.style-1{
+                margin-bottom: 5px;
             }
         }
     }
