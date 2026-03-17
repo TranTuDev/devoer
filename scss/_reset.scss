@@ -133,44 +133,6 @@ body::-webkit-scrollbar {
 }
 
 
-
-
-// .row {
-// 	margin-right: -15px;
-// 	margin-left: -15px;
-
-// 	>* {
-// 		padding-left: 15px !important;
-// 		padding-right: 15px !important;
-// 	}
-// }
-
-.row-1 {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
-	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
-
-	>* {
-		padding-left: 1px;
-		padding-right: 1px;
-	}
-}
-
-.row-2 {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
-
-	>* {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-}
-
-
 li {
 	list-style-type: none;
 	margin-bottom: 0;
