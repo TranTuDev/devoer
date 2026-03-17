@@ -81,6 +81,11 @@ if ($(".slider-home-right").length > 0) {
     speed: 1500,
     loop: true,
 
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
     navigation: {
       nextEl: ".sw-btn-next",
       prevEl: ".sw-btn-prev",
@@ -92,6 +97,7 @@ if ($(".slider-home-right").length > 0) {
     },
   });
 }
+
 
 
 // ================= PORTFOLIO SLIDER =================
@@ -131,13 +137,13 @@ $(document).ready(function () {
   $('.video-play-button').on('click', function (e) {
     e.preventDefault();
     var videoSrc = $(this).attr('data-video');
-    $('#videoFrame').attr('src', videoSrc); 
+    $('#videoFrame').attr('src', videoSrc);
     $('#videoPopup').css('display', 'flex');
   });
 
- 
+
   $('#videoClose').on('click', function () {
-    $('#videoFrame').attr('src', ''); 
+    $('#videoFrame').attr('src', '');
     $('#videoPopup').css('display', 'none');
   });
 

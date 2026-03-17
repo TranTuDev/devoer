@@ -28,8 +28,8 @@
     }
 
     .footer-top {
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 88px;
+        padding-bottom: 100px;
         display: flex;
         justify-content: space-between;
         gap: 30px;
@@ -41,7 +41,7 @@
     }
 
     .footer-left {
-        max-width: 300px;
+        max-width: 288px;
 
         .logo-footer {
             margin-bottom: 20px;
@@ -60,7 +60,6 @@
 
     .title-mobile {
         display: flex;
-
         align-items: center;
         gap: 25px;
 
@@ -76,11 +75,11 @@
     }
 
     ul {
-        margin-top: 18px;
+        margin-top: 25px;
     }
 
     li {
-        margin-bottom: 24px;
+        margin-bottom: 18px;
         display: flex;
         align-items: center;
         gap: 9px;
@@ -190,15 +189,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     flex-wrap: wrap;
     text-align: center;
     gap: 30px;
 
     ul {
         display: flex;
-        gap: 15px;
+        gap: 22px;
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
@@ -207,7 +206,7 @@
     li {
         a {
             border-right: 1px solid var(--text-color-4);
-            padding-right: 15px;
+            padding-right: 28px;
             color: var(--text-color-4);
         }
 

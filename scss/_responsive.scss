@@ -26,7 +26,7 @@
 
     .header-right {
         gap: 30px !important;
-        padding-right: 75px !important;
+        padding-right: 40px !important;
 
         &.style-2 {
             padding-right: 0px !important;
@@ -54,6 +54,8 @@
    XXL: max-width 1600px
    ============================================================ */
 @media (max-width: 1600px) {
+
+
     .service-decoration-number {
         .number {
             font-size: 120px !important;
@@ -108,6 +110,8 @@
 }
 
 @media (max-width: 1199px) {
+
+
     .btn-consulting {
         display: none !important;
     }
@@ -298,6 +302,80 @@
 }
 
 @media (max-width: 991px) {
+    .heading-section {
+        margin-bottom: 30px !important;
+    }
+
+    .service-box-details {
+        justify-content: flex-start !important;
+    }
+
+    .pd-115-bt {
+        padding-bottom: 55px;
+    }
+
+    .pd-120 {
+        padding: 60px 0px;
+    }
+
+    .pd-267-top {
+        padding-top: 133.5px;
+    }
+
+    .pd-200-bt {
+        padding-bottom: 100px;
+    }
+
+    .pd-188-bt {
+        padding-bottom: 94px;
+    }
+
+    .pd-65-top {
+        padding-top: 32.5px;
+    }
+
+    .pd-115-top {
+        padding-top: 57.5px;
+    }
+
+    .pd-100-bt {
+        padding-bottom: 50px;
+    }
+
+    .pd-50-top {
+        padding-top: 25px;
+    }
+
+    .pd-15 {
+        padding: 7.5px;
+    }
+
+    .pd-120-bt {
+        padding-bottom: 60px;
+    }
+
+    .pd-160-bt {
+        padding-bottom: 60px;
+    }
+
+    .pd-120-top {
+        padding-top: 60px;
+    }
+
+    .pd-80-top {
+        padding-top: 40px;
+    }
+
+    .pd-180-top {
+        padding-top: 90px;
+    }
+
+    .blog-section {
+        .heading-section {
+            margin-bottom: 30px !important;
+        }
+    }
+
     .service-decoration-number {
         .number {
             font-size: 100px !important;
@@ -727,7 +805,7 @@
         .footer-top {
             padding-top: 50px;
             padding-bottom: 50px;
-            grid-gap: 40px 20px;
+            grid-gap: 20px 20px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             display: grid;
@@ -1006,7 +1084,7 @@
 
         .logo-header {
             height: 70px !important;
-            padding: 15px 20px !important;
+            padding: 15px 25px !important;
         }
     }
 
@@ -1123,6 +1201,7 @@
                 justify-content: center !important;
                 margin-top: 0px !important;
                 padding-top: 10px !important;
+                padding-bottom: 10px !important;
             }
         }
     }
@@ -1440,13 +1519,13 @@
     }
 
     h2 {
-        font-size: 38px;
-        line-height: 48px;
+        font-size: 38px !important;
+        line-height: 48px !important;
     }
 
     h2.size-2 {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 40px !important;
+        line-height: 50px !important;
     }
 
     h3 {
@@ -1559,13 +1638,13 @@
     }
 
     h2 {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 30px !important;
+        line-height: 40px !important;
     }
 
     h2.size-2 {
-        font-size: 32px;
-        line-height: 42px;
+        font-size: 32px !important;
+        line-height: 42px !important;
     }
 
     h3 {
@@ -1676,8 +1755,6 @@
         height: 60px;
     }
 
-
-
     .swiper-testimonial-all {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
@@ -1716,150 +1793,6 @@
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
-    h2 {
-        font-size: 26px;
-        line-height: 36px;
-    }
-
-    h2.size-2 {
-        font-size: 28px;
-        line-height: 38px;
-    }
-
-    h3 {
-        font-size: 22px;
-        line-height: 32px;
-    }
-
-    h4 {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    h5 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    h5.size-2,
-    h5.size-3 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    h6 {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    h6.size-1 {
-        font-size: 15px;
-        line-height: 24px;
-    }
-
-    .text-xxl {
-        font-size: 48px;
-        line-height: 52px;
-    }
-
-    .text-xl {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    .text-xl-2 {
-        font-size: 26px;
-        line-height: 34px;
-    }
-
-    .text-xl-3 {
-        font-size: 34px;
-        line-height: 40px;
-    }
-
-    .text-lg {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .text-lg-1 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .text-lg-2 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .text-paragraph {
-        font-size: 15px;
-        line-height: 24px;
-    }
-
-    .text-paragraph-2 {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .text-paragraph-3 {
-        font-size: 15px;
-        line-height: 24px;
-    }
-
-    .text-tagline {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .text-tagline.tagline-2 {
-        font-size: 13px;
-        line-height: 22px;
-    }
-
-    .text-body-2,
-    .text-body-3,
-    .text-body-4 {
-        font-size: 15px;
-        line-height: 24px;
-    }
-
-    .testimonial-video .video {
-        width: 70px !important;
-        height: 70px !important;
-        font-size: 11px;
-    }
-
-    .icon-play-video {
-        border-left-width: 14px;
-        border-top-width: 9px;
-        border-bottom-width: 9px;
-    }
-
-    .pd-120 {
-        padding: 40px 0;
-    }
-
-    .img-video {
-        height: 300px;
-    }
-
-
-
-    .icon-qoutes-1 {
-        font-size: 40px;
-    }
-}
-
-
-
-
 @media (max-width: 991px) {
     .pricing-card {
         text-align: center;
@@ -1875,10 +1808,7 @@
     }
 }
 
-
 @media (max-width: 1199px) {
-
-
     .course-section .row>[class*="col-"]:last-of-type .service-box-card {
         margin-bottom: 0 !important;
     }
@@ -1916,7 +1846,6 @@
 
     @media (max-width: 991.98px) {
         padding: 14px 22px !important;
-        font-size: 13px !important;
         line-height: 22px !important;
 
         i {
@@ -1926,7 +1855,6 @@
 
     @media (max-width: 767.98px) {
         padding: 12px 18px !important;
-        font-size: 12.5px !important;
         line-height: 20px !important;
 
         i {
@@ -1936,7 +1864,7 @@
 
     @media (max-width: 575.98px) {
         padding: 10px 15px !important;
-        font-size: 12px !important;
+
 
         i {
             font-size: 16px !important;
