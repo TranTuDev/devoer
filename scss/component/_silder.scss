@@ -165,7 +165,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    height: calc(102vh - 150px);
+    min-height: calc(100vh - 150px);
 
     &.style-2 {
         height: 95vh;

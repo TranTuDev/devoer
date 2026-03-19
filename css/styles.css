@@ -217,6 +217,15 @@ li {
   list-style: none;
 }
 
+.row {
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+}
+.row > * {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -237,8 +246,8 @@ li {
 .container.w-1650 {
   max-width: 1650px;
 }
-.container.w-1856 {
-  max-width: 1856px;
+.container.w-1885 {
+  max-width: 1885px;
 }
 .container.w-1890 {
   max-width: 1890px;
@@ -706,12 +715,28 @@ a:focus, a:hover {
   padding-bottom: 115px;
 }
 
+.pd-140-bt {
+  padding-bottom: 140px;
+}
+
 .pd-50-top {
   padding-top: 50px;
 }
 
+.pd-52-top {
+  padding-top: 52px;
+}
+
 .pd-115-bt {
   padding-bottom: 115px;
+}
+
+.pd-213-bt {
+  padding-bottom: 213px;
+}
+
+.pd-95-bt {
+  padding-bottom: 95px;
 }
 
 .pd-15 {
@@ -736,6 +761,14 @@ a:focus, a:hover {
 
 .pd-180-top {
   padding-top: 180px;
+}
+
+.mg-10-top {
+  margin-top: -10px;
+}
+
+.mg-10-left {
+  margin-left: -5px;
 }
 
 .mg-25-bt {
@@ -1390,7 +1423,8 @@ a:focus, a:hover {
   padding: 30px 42px;
 }
 .tf-btn-1.style-2 {
-  padding: 10px 35px;
+  padding: 10px 33px;
+  height: 50px;
 }
 .tf-btn-1.style-3 {
   padding: 16px 48px;
@@ -2092,8 +2126,8 @@ a:focus, a:hover {
 
 .video-play-button {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 46%;
+  left: 53%;
   transform: translate(-50%, -50%);
   font-size: 12px;
   color: var(--text-color-1);
@@ -3584,6 +3618,38 @@ a:focus, a:hover {
   padding: 34px 30px !important;
 }
 
+.subscribe-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.subscribe-content .input-form {
+  width: 100%;
+  height: 70px;
+  padding: 12px 30px;
+  box-sizing: border-box;
+  background-color: var(--white-3);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--text-color-1);
+  border-radius: 0;
+}
+.subscribe-content .input-massage {
+  width: 100%;
+  height: 175px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  background-color: var(--white-3);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--text-color-1);
+  border-radius: 0;
+  resize: none;
+  vertical-align: top;
+}
+
 /*------------ silder ---------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -3737,7 +3803,7 @@ a:focus, a:hover {
   display: flex;
   position: relative;
   overflow: hidden;
-  height: calc(102vh - 150px);
+  min-height: calc(100vh - 150px);
 }
 .tf-slider-show.style-2 {
   height: 95vh;
@@ -4445,7 +4511,7 @@ a:focus, a:hover {
   display: block;
 }
 .footer .footer-top {
-  padding-top: 88px;
+  padding-top: 90px;
   padding-bottom: 100px;
   display: flex;
   justify-content: space-between;
@@ -4986,9 +5052,9 @@ a:focus, a:hover {
   border-radius: 50%;
   font-size: 20px;
   line-height: 1;
-  padding: 10px;
   font-weight: bold;
   transition: all 0.3s ease;
+  padding: 10px;
 }
 .accordion-flush .accordion-item .accordion-button::after {
   display: none !important;
@@ -5017,7 +5083,7 @@ a:focus, a:hover {
 .accordion-flush.style-1 .accordion-button {
   padding-left: 28px !important;
   padding-right: 28px !important;
-  padding-top: 16px !important;
+  padding-top: 15px !important;
   padding-bottom: 10px !important;
 }
 .accordion-flush.style-1 .accordion-button p {
@@ -5051,10 +5117,10 @@ a:focus, a:hover {
   font-family: "Arimo", sans-serif;
 }
 .accordion-flush.style-2 .accordion-button {
-  padding-top: 10px !important;
+  padding-top: 20px !important;
   padding-bottom: 23px !important;
   padding-left: 30px !important;
-  padding-right: 20px !important;
+  padding-right: 15px !important;
 }
 .accordion-flush.style-2 .accordion-button span {
   font-weight: 700;
@@ -5062,6 +5128,7 @@ a:focus, a:hover {
   font-weight: bold;
 }
 .accordion-flush.style-2 .accordion-button i {
+  padding: 0px !important;
   border: none;
   border-radius: 0% !important;
 }
@@ -5072,7 +5139,7 @@ a:focus, a:hover {
 }
 .accordion-flush.style-2 .accordion-collapse .accordion-body {
   background-color: var(--white-3);
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 0px !important;
@@ -5139,7 +5206,8 @@ a:focus, a:hover {
   mask-repeat: no-repeat;
   mask-size: 0% 0%;
   background-color: var(--text-color-1);
-  padding: 80px 0px !important;
+  padding-top: 80px !important;
+  padding-bottom: 75px !important;
 }
 
 @keyframes scrollBrand {
@@ -5334,7 +5402,7 @@ a:focus, a:hover {
 }
 
 .tf-sidebar {
-  margin-right: 75px;
+  margin-right: 70px;
 }
 .tf-sidebar.style-1 {
   margin-right: 0px !important;
@@ -6718,38 +6786,6 @@ a:focus, a:hover {
   margin-top: 20px;
 }
 
-.subscribe-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.subscribe-content .input-form {
-  width: 100%;
-  height: 70px;
-  padding: 12px 30px;
-  box-sizing: border-box;
-  background-color: var(--white-3);
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: var(--text-color-1);
-  border-radius: 0;
-}
-.subscribe-content .input-massage {
-  width: 100%;
-  height: 174px;
-  padding: 12px 30px;
-  box-sizing: border-box;
-  background-color: var(--white-3);
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: var(--text-color-1);
-  border-radius: 0;
-  resize: none;
-  vertical-align: top;
-}
-
 .pricing-grid {
   display: grid;
   box-shadow: 0px 10px 50px var(--line-2);
@@ -6770,7 +6806,7 @@ a:focus, a:hover {
 }
 .price-section.style-1 .pricing-card {
   padding-left: 40px;
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 40px;
   padding-right: 45px;
   background-color: var(--white-2);
@@ -6888,7 +6924,7 @@ a:focus, a:hover {
   font-weight: 400;
   font-family: "Nunito", sans-serif;
   color: var(--text-color-2);
-  margin-bottom: 6px !important;
+  margin-bottom: 8px !important;
 }
 .header-card.style-1 .price-box {
   display: flex;
@@ -7291,7 +7327,7 @@ a:focus, a:hover {
 
 .course-section.style-1 {
   background-color: var(--text-color-1);
-  padding-bottom: 200px;
+  padding-bottom: 212px;
   padding-top: 120px;
 }
 .course-section .heading-section {
@@ -7612,14 +7648,15 @@ a:focus, a:hover {
 }
 
 .develop-skills {
+  padding-bottom: 115px;
   margin-top: -60px;
   background-color: var(--text-color-1);
 }
 .develop-skills .develop-skills-content {
   display: flex;
-  align-items: center;
 }
 .develop-skills .develop-skills-left {
+  width: 30%;
   margin-right: 60px;
 }
 .develop-skills .develop-skills-left img {
@@ -7629,7 +7666,7 @@ a:focus, a:hover {
 }
 .develop-skills .develop-skills-center {
   width: 40.5%;
-  margin-top: -5px;
+  margin-top: 20px;
 }
 .develop-skills .develop-skills-center .heading-section {
   margin-bottom: 20px !important;
@@ -7641,12 +7678,12 @@ a:focus, a:hover {
   margin-bottom: 35px;
 }
 .develop-skills .develop-skills-center input {
-  width: 68%;
-  padding: 30px 35px;
+  width: 66%;
+  padding: 30px 30px;
   background-color: var(--line-9);
   border: none;
   color: var(--white-2);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .develop-skills .develop-skills-center input::placeholder {
   color: var(--text-color-4);
@@ -7654,11 +7691,10 @@ a:focus, a:hover {
   line-height: 24px;
 }
 .develop-skills .develop-skills-right {
-  margin-left: 42px;
-  width: 22%;
+  margin-left: 35px;
 }
 .develop-skills .develop-skills-right .counter {
-  padding: 50px 60px;
+  padding: 50px 58px 50px 60px;
   background-color: var(--main-color);
   color: var(--text-color-1);
 }
@@ -7814,7 +7850,8 @@ a:focus, a:hover {
 
 .testimonial-video {
   position: relative;
-  padding: 120px 0px;
+  padding-top: 117px;
+  padding-bottom: 113px;
   z-index: 2;
   width: 100%;
   display: flex;
@@ -7823,7 +7860,7 @@ a:focus, a:hover {
 }
 .testimonial-video h2 {
   color: var(--white-2);
-  width: 60%;
+  width: 62%;
 }
 
 .wg-join-community {
@@ -8043,7 +8080,7 @@ a:focus, a:hover {
   margin-bottom: 15px;
 }
 .course-content .course-header p {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .course-content .course-header:hover {
   transition: all 0.3s ease;
@@ -8069,9 +8106,9 @@ a:focus, a:hover {
 }
 
 .course-img {
-  margin-top: -110px;
+  margin-top: -120px;
   width: 100%;
-  clip-path: polygon(0 0%, 100% 50%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 53%, 100% 100%, 100% 100%, 0 100%);
 }
 .course-img img {
   height: auto;
@@ -8229,7 +8266,7 @@ a:focus, a:hover {
 
 .founder-signature-block {
   display: flex;
-  gap: 63px;
+  gap: 85px;
   align-items: center;
 }
 .founder-signature-block .founder-info {
@@ -8278,12 +8315,13 @@ a:focus, a:hover {
 }
 .about-us-section .text-description {
   font-family: "Nunito", sans-serif;
+  padding-right: 25px;
 }
 .about-us-section .story-text {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 .about-us-section .about-details-content {
-  padding-right: 50px;
+  padding-right: 40px;
 }
 .about-us-section .image-banner {
   position: relative;
@@ -8341,7 +8379,8 @@ a:focus, a:hover {
   top: 180px;
   left: 0px;
   right: 215px;
-  border: 10px solid var(--white-2);
+  border: 15px solid var(--white-2);
+  margin-left: -15px;
 }
 .about-us-section.style-1 .image-banner .image-1 .img-style {
   height: 100%;
@@ -8371,7 +8410,7 @@ a:focus, a:hover {
   gap: 10px;
 }
 .about-us-section.style-1 .story-text {
-  margin-bottom: 20px !important;
+  margin-bottom: 23px !important;
 }
 .about-us-section.style-1 .list-benefit.style-2 {
   padding-bottom: 30px;
@@ -8385,6 +8424,9 @@ a:focus, a:hover {
 }
 .about-us-section.style-2 .heading-section {
   margin-bottom: 40px !important;
+}
+.about-us-section.style-2 .heading-section h2 {
+  letter-spacing: -0.19em;
 }
 .about-us-section.style-2 .about-main-image img {
   height: auto;
@@ -8436,8 +8478,8 @@ a:focus, a:hover {
   display: block;
 }
 .about-us-section.style-3 .about-details-content {
-  padding-left: 42px;
-  padding-right: 13px;
+  padding-left: 40px;
+  padding-right: 15px;
 }
 .about-us-section.style-3 .about-details-content .heading-section {
   margin-bottom: 20px !important;
@@ -8473,7 +8515,7 @@ a:focus, a:hover {
   background-color: var(--natural-1);
   height: 60px;
   margin-right: 30px;
-  margin-left: 30px;
+  margin-left: 28px;
 }
 
 .about-us-actions {
@@ -8482,14 +8524,14 @@ a:focus, a:hover {
 
 .story-block {
   gap: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 37px;
 }
 .story-block .story-media {
   position: relative;
   display: inline-block;
 }
 .story-block .story-text p {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   color: var(--text-color-2);
   font-family: "Nunito", sans-serif;
 }
@@ -8570,7 +8612,7 @@ a:focus, a:hover {
   padding-top: 35px;
 }
 .service-card.style-1 .service-icon-wrapper {
-  margin-bottom: 20px !important;
+  margin-bottom: 25px !important;
 }
 .service-card.style-1 .service-item-icon {
   color: var(--main-color);
@@ -8660,7 +8702,7 @@ a:focus, a:hover {
   display: flex !important;
   flex-direction: row;
   background-color: var(--text-color-1);
-  padding: 80px 50px !important;
+  padding: 85px 50px 79px 50px !important;
   align-items: normal;
   position: relative;
 }
@@ -8876,7 +8918,7 @@ a:focus, a:hover {
   bottom: 20px;
   left: 30px;
   display: inline-flex;
-  padding: 6px 12px;
+  padding: 3px 12px;
   background-color: var(--main-color);
   white-space: nowrap;
 }
@@ -8897,7 +8939,7 @@ a:focus, a:hover {
   color: var(--black);
 }
 .service-box-card .card-info-wrapper {
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 30px;
@@ -8905,7 +8947,7 @@ a:focus, a:hover {
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
 }
 .service-box-card .card-info-wrapper .service-box-top {
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 .service-box-card .card-info-wrapper .service-box-top h4 {
   font-weight: 600;
@@ -8977,8 +9019,8 @@ a:focus, a:hover {
   position: absolute;
   z-index: 2;
   left: 20px;
-  bottom: -80px;
-  width: 72%;
+  bottom: -91px;
+  width: 73%;
   padding: 0px;
   box-shadow: none;
   background-color: unset;
@@ -9087,10 +9129,10 @@ a:focus, a:hover {
 .media-portfolio-card .img-wrap i {
   font-size: 20px;
   position: absolute;
-  bottom: 100px;
+  bottom: 115px;
   left: 31px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: var(--main-color);
   color: var(--text-color-1);
@@ -9106,7 +9148,7 @@ a:focus, a:hover {
 .media-portfolio-card .img-wrap h3 {
   position: absolute;
   bottom: 25px;
-  left: 30px;
+  left: 32px;
   color: var(--white-2);
   z-index: 2;
   opacity: 0;
@@ -9214,19 +9256,20 @@ a:focus, a:hover {
 }
 .portfolio-sub .sw-pagination-portfolio {
   width: 50%;
+  margin-bottom: 1px;
 }
 
 .swiper-testimonial-all {
   display: flex;
-  gap: 80px;
-  padding: 80px 80px;
+  gap: 90px;
+  padding: 80px 80px 80px 80px;
   box-shadow: 0px 10px 50px 0px var(--line-10);
   background-color: var(--white-2);
   align-items: center;
 }
 .swiper-testimonial-all.style-1 {
   padding: 0px !important;
-  gap: 25px !important;
+  gap: 35px !important;
   box-shadow: none !important;
   align-items: stretch;
   background-color: transparent !important;
@@ -9243,7 +9286,7 @@ a:focus, a:hover {
   position: relative;
   padding-top: 25px;
   padding-right: 30px;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
 .testimonial-right::before {
@@ -9267,7 +9310,6 @@ a:focus, a:hover {
   width: 100%;
 }
 .swiper-testimonial-left .swiper-wrapper img {
-  width: 100%;
   height: auto;
   object-fit: cover;
   cursor: pointer;
@@ -9313,7 +9355,7 @@ a:focus, a:hover {
   margin-right: 35px;
 }
 .swiper-box.style-1 .quote-box .testimonial-info.style-1 {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .testimonial-info {
@@ -9733,8 +9775,8 @@ a:focus, a:hover {
 .blog-text {
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 35px;
+  padding-bottom: 20px;
 }
 .blog-text h4 {
   color: var(--text-color-1);
@@ -9942,7 +9984,7 @@ a:focus, a:hover {
 
 .fun-pack-card {
   position: relative;
-  padding-top: 100px;
+  padding-top: 78px;
   padding-left: 65px;
   padding-right: 80px;
   padding-bottom: 80px;
@@ -10107,14 +10149,18 @@ a:focus, a:hover {
   gap: 30px;
 }
 
+.service-item {
+  padding-top: 118px;
+  padding-bottom: 122px;
+}
 .service-item .heading-section {
-  margin-bottom: 70px;
+  margin-bottom: 68px;
 }
 
 .founder-signature-block.style-1 {
   display: flex;
   align-items: center;
-  gap: 75px;
+  gap: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */

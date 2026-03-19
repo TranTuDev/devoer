@@ -52,9 +52,9 @@
                 border-radius: 50%;
                 font-size: 20px;
                 line-height: 1;
-                padding: 10px;
                 font-weight: bold;
                 transition: all 0.3s ease;
+                padding: 10px;
             }
 
             &::after {
@@ -94,7 +94,7 @@
         .accordion-button {
             padding-left: 28px !important;
             padding-right: 28px !important;
-            padding-top: 16px !important;
+            padding-top: 15px !important;
             padding-bottom: 10px !important;
 
             p {
@@ -140,10 +140,10 @@
 
     &.style-2 {
         .accordion-button {
-            padding-top: 10px !important;
+            padding-top: 20px !important;
             padding-bottom: 23px !important;
             padding-left: 30px !important;
-            padding-right: 20px !important;
+            padding-right: 15px !important;
 
             span {
                 font-weight: 700;
@@ -152,8 +152,7 @@
             }
 
             i {
-
-
+                padding: 0px !important;
                 border: none;
                 border-radius: 0% !important;
 
@@ -167,7 +166,7 @@
 
             .accordion-body {
                 background-color: var(--white-3);
-                padding-bottom: 30px;
+                padding-bottom: 25px;
                 padding-top: 0 !important;
                 padding-left: 0 !important;
                 padding-right: 0px !important;
