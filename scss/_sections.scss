@@ -1597,7 +1597,7 @@
 .testimonial-video {
     position: relative;
     padding-top: 117px;
-    padding-bottom: 113px;
+    padding-bottom: 110px;
     z-index: 2;
     width: 100%;
     display: flex;
@@ -2802,7 +2802,7 @@
         display: flex !important;
         flex-direction: row;
         background-color: var(--text-color-1);
-        padding: 85px 50px 79px 50px !important;
+        padding: 85px 50px 82px 50px !important;
         align-items: normal;
         position: relative;
 
@@ -3546,8 +3546,8 @@
 //===================widget-testimonial==============//
 .swiper-testimonial-all {
     display: flex;
-    gap: 90px;
-    padding: 80px 80px 80px 80px;
+    gap: 80px;
+    padding: 65px 80px  75px 80px;
     box-shadow: 0px 10px 50px 0px var(--line-10);
     background-color: var(--white-2);
     align-items: center;
@@ -3620,7 +3620,7 @@
 
     .swiper-wrapper {
         img {
-            
+
             height: auto;
             object-fit: cover;
             cursor: pointer;
@@ -3693,7 +3693,7 @@
 
 
 .testimonial-info {
-    padding-top: 40px;
+    padding-top: 47px;
     margin-left: 70px;
 
     p {
@@ -3909,11 +3909,13 @@
 
     .post-media {
         position: relative;
+        display: flex;
 
         img {
-            height: auto;
+            height: 100%;
             width: 100%;
             object-fit: cover;
+            aspect-ratio: calc(370 / 400);
         }
 
         .over-play {
@@ -4014,8 +4016,8 @@
         overflow: unset !important;
 
         .post-media {
-            z-index: 0;
-            padding-bottom: 20px;
+           
+            padding-bottom: 92px;
 
             img {
                 width: 100%;
@@ -4032,7 +4034,7 @@
             margin: 0px 20px;
             padding-left: 40px;
             padding-right: 40px;
-            padding-top: 30px;
+            padding-top: 35px;
             padding-bottom: 40px;
             background-color: var(--white-2);
             position: absolute;
@@ -4040,7 +4042,7 @@
             background: var(--white-2);
             max-height: 180px;
             transition: max-height 0.3s ease !important;
-            margin-top: -128px;
+            margin-top: -222px;
             overflow: hidden;
             transition: max-height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
             border-bottom: none !important;
@@ -4074,7 +4076,7 @@
 
     .post-title {
         color: var(--text-color-1);
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     .post-btn {
@@ -4721,5 +4723,14 @@
     }
 }
 
+.left-testimonial {
+    width: 25%;
+    margin-top: 15px;
+}
+
+.right-testimonial {
+    width: 68%;
+    margin-top: 8px;
+}
 
 // tu

@@ -32,7 +32,7 @@ $(document).ready(function () {
   if ($(".swiper-testimonial-left").length > 0) {
     swiperTestimonialLeft = new Swiper(".swiper-testimonial-left", {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 0,
       speed: 800,
       loop: true,
       allowTouchMove: true,
@@ -81,10 +81,10 @@ if ($(".slider-home-right").length > 0) {
     speed: 1500,
     loop: true,
 
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
 
     navigation: {
       nextEl: ".sw-btn-next",
