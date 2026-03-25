@@ -1900,7 +1900,7 @@ a:focus, a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 .btn-arrow-details .top-btn i {
   color: var(--text-color-1);
@@ -1921,6 +1921,9 @@ a:focus, a:hover {
 .btn-arrow-details .bottom-btn .name-post {
   margin-bottom: 8px;
   color: var(--text-color-1);
+}
+.btn-arrow-details .bottom-btn.style-1 {
+  gap: 20px;
 }
 .btn-arrow-details.next-details .top-btn {
   justify-content: flex-end;
@@ -3053,15 +3056,33 @@ a:focus, a:hover {
 .meta-post .meta-post-item.style-1 {
   padding-right: 24px;
 }
+.meta-post .meta-post-item.style-2 {
+  gap: 13px;
+  padding-right: 20px;
+}
+.meta-post .meta-post-item.style-3 {
+  gap: 13px;
+  padding-right: 20px;
+}
 .meta-post.style-1 {
   padding-top: 5px;
   padding-bottom: 23px;
   margin-bottom: 20px;
+  gap: 10px 30px;
+}
+.meta-post.style-2 {
+  gap: 10px 30px;
+}
+.meta-post.style-3 {
+  gap: 10px 30px;
+}
+.meta-post.style-5 {
+  gap: 10px 30px;
 }
 
 .wg-quote {
   background-color: var(--natural-2);
-  padding: 40px 60px;
+  padding: 45px 60px 40px 60px;
   position: relative;
 }
 .wg-quote img {
@@ -3097,7 +3118,7 @@ a:focus, a:hover {
 }
 .wg-quote.style-2 {
   background-color: var(--text-color-1);
-  padding: 60px 80px;
+  padding: 60px 60px 63px 80px;
 }
 .wg-quote.style-2 i {
   position: absolute;
@@ -3117,7 +3138,7 @@ a:focus, a:hover {
   padding-left: 16px;
   position: relative;
   font-weight: 500;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 .list-benefit .benefit-item:last-child {
   margin-bottom: 0;
@@ -3143,7 +3164,7 @@ a:focus, a:hover {
 
 .tabs-list {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 .tabs-list .tabs-item {
@@ -3219,7 +3240,7 @@ a:focus, a:hover {
   max-width: 300px;
 }
 .sidebar-item .title-content {
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   margin-bottom: 30px;
   position: relative;
 }
@@ -3232,6 +3253,10 @@ a:focus, a:hover {
   height: 1px;
   background-color: var(--main-color);
 }
+.sidebar-item .title-content.style-1 {
+  padding-bottom: 6px;
+  margin-bottom: 33px;
+}
 .sidebar-item h4 {
   letter-spacing: 0.1px !important;
   padding-bottom: 24px !important;
@@ -3241,6 +3266,9 @@ a:focus, a:hover {
   padding: 40px;
   border: 1px solid var(--line-2);
 }
+.sidebar-item.sidebar-content.style-1 {
+  padding: 40px 40px 30px 40px;
+}
 .sidebar-item.sidebar-search .title-content {
   padding-bottom: 0 !important;
   margin-bottom: 23px;
@@ -3249,11 +3277,11 @@ a:focus, a:hover {
   display: none !important;
 }
 .sidebar-item.sidebar-categories .item {
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   justify-content: space-between;
   border-bottom: 1px solid var(--line-2);
 }
@@ -3279,10 +3307,16 @@ a:focus, a:hover {
   border-bottom: none;
 }
 .sidebar-item.sidebar-categories .item.style-1 {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.sidebar-item.sidebar-categories .item.style-1:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 .sidebar-item.sidebar-recent-post .post-list {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 .sidebar-item.sidebar-recent-post .post-list:last-child {
   margin-bottom: 0;
@@ -3446,6 +3480,14 @@ a:focus, a:hover {
 .post-gird .post-content.style-1 {
   margin-top: -136px;
 }
+.post-gird .post-content.style-2 {
+  margin-top: -157px;
+  padding: 35px 40px 40px 40px;
+}
+.post-gird .post-content.style-3 {
+  margin-top: -155px;
+  padding: 35px 40px 40px 40px;
+}
 .post-gird .title {
   margin-bottom: 20px;
 }
@@ -3505,6 +3547,11 @@ a:focus, a:hover {
   border-right: 1px solid var(--natural-2);
 }
 
+.blog-details {
+  padding-top: 120px;
+  padding-bottom: 117px;
+}
+
 /*------------ form ---------------- */
 /* ---------------------------------------------------------
  * Name: 
@@ -3562,7 +3609,7 @@ a:focus, a:hover {
 .form-search-siderbar .tf-btn-search {
   position: absolute;
   top: 50%;
-  right: 24px;
+  right: 30px;
   transform: translateY(-50%);
 }
 .form-search-siderbar .tf-btn-search i {
@@ -5397,7 +5444,7 @@ a:focus, a:hover {
 }
 .tf-sidebar.style-1 {
   margin-right: 0px !important;
-  margin-left: 75px;
+  margin-left: 70px;
 }
 
 .wg-course-details {
