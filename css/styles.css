@@ -4713,7 +4713,7 @@ a:focus, a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 73px;
   padding-bottom: 80px;
   padding-right: 150px;
 }
@@ -4726,7 +4726,8 @@ a:focus, a:hover {
 .subscribe-footer .subscribe-form {
   display: flex;
 }
-.subscribe-footer .subscribe-form input {
+.subscribe-footer .subscribe-form .form-footer {
+  padding: 35px 42px;
   border: none;
   background: var(--white-2);
 }
@@ -4819,7 +4820,7 @@ a:focus, a:hover {
 }
 
 .footer-section .subscribe-footer {
-  margin-bottom: -90px;
+  margin-bottom: -60px;
   position: relative;
   z-index: 2;
 }
@@ -10229,7 +10230,7 @@ a:focus, a:hover {
 .founder-signature-block.style-1 {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 70px;
 }
 
 .left-testimonial {

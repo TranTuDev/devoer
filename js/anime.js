@@ -356,159 +356,83 @@ $(document).ready(function () {
 
 // ===== SCROLL ANIMATIONS =====
 $(document).ready(function () {
-  const isMobile = $(window).width() <= 768;
-
-  const moveDistance = isMobile ? 20 : 150;
-  const zoomScale = isMobile ? 1.02 : 1.3;
-  const blurAmount = isMobile ? 3 : 15;
+  const isMobile = window.innerWidth <= 768;
+  const moveDistance = isMobile ? 20 : 50;
 
   const animatedElements = [];
 
-  function setupElement(el, type, direction = null) {
+  $('html, body').css('overflow-x', 'hidden');
+
+  function setupElement(el) {
     const $el = $(el);
-
-    $el.css({
-      'position': 'relative',
-      'opacity': 0,
-      'will-change': 'transform, opacity',
-      'backface-visibility': 'hidden'
-    });
-
-    if (isMobile) {
-      $el.attr('data-mobile-simple', 'true');
-    } else {
-      if (type === 'slide') {
-        if (direction === 'left') $el.css('transform', `translateX(-${moveDistance}px)`);
-        if (direction === 'right') $el.css('transform', `translateX(${moveDistance}px)`);
-        if (direction === 'top') $el.css('transform', `translateY(-${moveDistance}px)`);
-        if (direction === 'bottom') $el.css('transform', `translateY(${moveDistance}px)`);
-      }
-
-      if (type === 'zoom') {
-        $el.css({
-          'transform': `scale(${zoomScale})`,
-          'overflow': 'hidden'
-        });
-      }
-
-      if (type === 'flip') {
-        $el.css('transform', 'perspective(1000px) rotateY(90deg)');
-      }
-
-      if (type === 'blur') {
-        $el.css({
-          'transform': `translateY(40px)`,
-          'filter': `blur(${blurAmount}px)`
-        });
-      }
+    const rawDelay = $el.attr('data-delay');
+    // Hỗ trợ cả "0.1s" lẫn "100" (ms)
+    let customDelay = 0;
+    if (rawDelay) {
+      customDelay = rawDelay.includes('s')
+        ? parseFloat(rawDelay) * 1000
+        : parseInt(rawDelay);
     }
 
-    animatedElements.push({
-      el: el,
-      type: type,
-      direction: direction,
-      animated: false
+    $el.css({
+      opacity: 0,
+      transform: `translateY(${moveDistance}px)`,
+      willChange: 'transform, opacity',
+      backfaceVisibility: 'hidden'
+    });
+
+    animatedElements.push({ el, delay: customDelay, animated: false });
+  }
+
+  // Chỉ target các section, bỏ qua header và slider
+  const EXCLUDED = '.tf-topbar, #header, .tf-slider-show, footer, .video-popup';
+
+  $('section .animation-bottom, div:not(' + EXCLUDED + ') > .animation-bottom').each(function () {
+    // Bỏ qua nếu nằm trong vùng excluded
+    if ($(this).closest(EXCLUDED).length) return;
+    setupElement(this);
+  });
+
+  function animateElement(item) {
+    anime({
+      targets: item.el,
+      translateY: [moveDistance, 0],
+      opacity: [0, 1],
+      duration: 750,
+      delay: item.delay,
+      easing: 'cubicBezier(0.22, 1, 0.36, 1)' // spring-like, mượt hơn easeOutCubic
     });
   }
 
-  $('.animation-left').each(function () {
-    setupElement(this, 'slide', 'left');
-  });
-
-  $('.animation-right').each(function () {
-    setupElement(this, 'slide', 'right');
-  });
-
-  $('.animation-top').each(function () {
-    setupElement(this, 'slide', 'top');
-  });
-
-  $('.animation-bottom').each(function () {
-    setupElement(this, 'slide', 'bottom');
-  });
-
-  $('.anim-zoom').each(function () {
-    setupElement(this, 'zoom');
-  });
-
-  $('.anim-flip').each(function () {
-    setupElement(this, 'flip');
-  });
-
-  $('.anim-blur').each(function () {
-    setupElement(this, 'blur');
-  });
-
   function checkScroll() {
-    const windowBottom = $(window).scrollTop() + $(window).height();
+    const viewportBottom = window.innerHeight + window.scrollY;
 
     animatedElements.forEach(item => {
       if (item.animated) return;
 
-      const elementTop = $(item.el).offset().top;
+      const rect = item.el.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
 
-      if (windowBottom > elementTop + 80) {
-        if (isMobile) {
-          anime({
-            targets: item.el,
-            opacity: [0, 1],
-            duration: 600,
-            easing: 'easeOutQuad'
-          });
-          item.animated = true;
-          return;
-        }
-
-        if (item.type === 'slide') {
-          anime({
-            targets: item.el,
-            translateX: 0,
-            translateY: 0,
-            opacity: [0, 1],
-            duration: 900,
-            easing: 'easeOutExpo'
-          });
-        }
-
-        if (item.type === 'zoom') {
-          anime({
-            targets: item.el,
-            scale: [zoomScale, 1],
-            opacity: [0, 1],
-            duration: 1000,
-            easing: 'easeOutExpo'
-          });
-        }
-
-        if (item.type === 'flip') {
-          anime({
-            targets: item.el,
-            rotateY: [90, 0],
-            opacity: [0, 1],
-            duration: 1000,
-            easing: 'easeOutExpo'
-          });
-        }
-
-        if (item.type === 'blur') {
-          anime({
-            targets: item.el,
-            translateY: 0,
-            opacity: [0, 1],
-            duration: 1000,
-            easing: 'easeOutExpo',
-            update: function (anim) {
-              const progress = anim.progress / 100;
-              item.el.style.filter = `blur(${blurAmount - (blurAmount * progress)}px)`;
-            }
-          });
-        }
-
+      // Trigger khi element vào 85% viewport
+      if (viewportBottom > elementTop + (item.el.offsetHeight * 0.15)) {
+        animateElement(item);
         item.animated = true;
       }
     });
   }
 
-  $(window).on('scroll', checkScroll);
-  checkScroll();
+  let ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        checkScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Delay nhẹ để DOM render xong rồi mới check
+  setTimeout(checkScroll, 100);
 });
+
