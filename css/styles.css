@@ -8929,7 +8929,6 @@ a:focus, a:hover {
 .stat-grid-item {
   padding-right: 40px;
   padding-bottom: 40px;
-  margin-right: 10px;
   border-right: 1px solid var(--line-3);
   border-bottom: 1px solid var(--line-3);
 }
