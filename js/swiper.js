@@ -81,10 +81,7 @@ if ($(".slider-home-right").length > 0) {
     speed: 1500,
     loop: true,
 
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+   
 
     navigation: {
       nextEl: ".sw-btn-next",

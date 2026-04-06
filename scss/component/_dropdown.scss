@@ -3,7 +3,7 @@
 @import url(../../css/bootstrap-select.min.css);
 
 .dropdown {
-    // reset margin, padding mặc định
+
 
     .btn.dropdown-toggle {
         background: var(--text-color-1) !important;
@@ -11,7 +11,7 @@
         color: var(--white-2);
         box-shadow: none !important;
         padding: 0;
-        // font-weight: normal;
+
         border-radius: 0px;
         padding: 3px 21px;
         position: relative;
@@ -60,16 +60,16 @@
     }
 }
 
-.nice-select {
-    background-color: transparent;
-    position: relative;
-    border: 1px solid var(--line-1) !important;
-    width: auto !important;
+.nice-select::after {
+    display: none !important;
+}
+
+
+.languages {
 
     &::before {
         content: '\e928';
         font-family: $fontIcon;
-
         position: absolute;
         right: 20px;
         top: 50%;
@@ -87,8 +87,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 30px;
-        color: var(--white-2);
-        padding-right: 20px;
+        padding-right: 40px;
 
     }
 
@@ -98,15 +97,11 @@
         }
     }
 
-    &.open {
-        z-index: 50;
-
-        &::before {
-            transform: translateY(-50%) rotate(180deg);
-        }
-    }
+ 
 }
-
+.nice-select.open .languages::before {
+    transform: translateY(-50%) rotate(180deg);
+}
 
 
 
@@ -115,6 +110,7 @@
 
     .nav-mb-item {
         border-bottom: 1px solid var(--text-color-4);
+
         &:last-child {
             border-bottom: none;
         }

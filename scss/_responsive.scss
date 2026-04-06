@@ -1,13 +1,13 @@
 @use "./abstracts/index" as *;
 @media (max-width: 1700px) {
-    .logo-header {
-        max-width: 200px !important;
-        padding: 28px 30px;
+    // .logo-header {
+    //     max-width: 200px !important;
+    //     padding: 28px 30px;
 
-        &.style-3 {
-            padding: 35px 30px 35px 30px !important;
-        }
-    }
+    //     &.style-3 {
+    //         padding: 35px 30px 35px 30px !important;
+    //     }
+    // }
 
     .box-nav-menu {
         padding-right: 0;
@@ -20,9 +20,9 @@
         }
     }
 
-    .nav-icon {
-        gap: 30px;
-    }
+    // .nav-icon {
+    //     gap: 30px;
+    // }
 
     .header-right {
         gap: 30px !important;
@@ -1117,14 +1117,14 @@
         }
     }
 
-    .header-inner {
-        height: 70px !important;
+    // .header-inner {
+    //     height: 70px !important;
 
-        .logo-header {
-            height: 70px !important;
-            padding: 15px 25px !important;
-        }
-    }
+    //     .logo-header {
+    //         height: 70px !important;
+    //         padding: 15px 25px !important;
+    //     }
+    // }
 
     .blog-section {
         .blog-post {
